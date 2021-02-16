@@ -1,23 +1,31 @@
-# README
+![](https://jaki-jezyk-programowania.pl/img/technologies/rubyonrails.png)
 
-In this README, Walczyk made some changes. First of all I want to say its for educational purpouses only. Now this is just a simple app, nothing fancy.
+# Learning Ruby on Rails
 
-* Ruby version 2.7.0
+In this repository I've gather some useful programs, tutorials and websites, that will help me to learn Ruby on Rails programming.  
+Ruby on Rails ( just “Rails”) is a free and open-source web devel-opment framework written in theRubyprogramming language.  
 
-* System dependencies
+[Yarn](https://yarnpkg.com/ "Yarn - package manager")  
 
-* Configuration
+# Rails and Yarn instalation
 
-* Database creation
+Ruby gem instalation:  
+>gem install rails -v6.0.2.1  
 
-* Database initialization
+Checking version of rails:  
+>rails -v   
 
-* How to run the test suite
+Instalation of NVM - Node Version Manager:  
+>wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash  
 
-* Services (job queues, cache servers, search engines, etc.)
+Nodejs instalation:   
+>sudo apt install nodejs    
 
-* Deployment instructions
+NPM instalation:
+>sudo apt install npm    
 
-* ...
-# rails_nauka
-# rails_nauka
+Cmdtest:  
+>sudo apt install cmdtest  
+
+Yarn instalation:   
+>sudo apt update && sudo apt install yarn  
