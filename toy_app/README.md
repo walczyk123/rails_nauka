@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Excercises for toy app
 
-Things you may want to cover:
+* CSS id for text "User was syccessfuly created" -> id="notice"  
 
-* Ruby version
+* new user without mail? -> no problem, created withoud mail  
 
-* System dependencies
+* new user with invalid adress -> created with shitty mail  
 
-* Configuration
+* destroying all of users -> 1) "Are you sure?" 2) "user was succesfully destroyed"  
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
