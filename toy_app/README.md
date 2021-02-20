@@ -40,7 +40,7 @@ excercises after content validation:
 
 * cant create over 140 char length content, but no error is shown
 
-* no error shown so no css style was open (i'll check on other browser)
+* no error shown - no id to check,  (i'll check on other browser)
 
 Merged user with his microposts excercises:  
 
@@ -52,5 +52,5 @@ Merged user with his microposts excercises:
 
 My issues to this moment:  
 
-* users with no micropost, eg. the new one, will not show up, bc lack of this param.  
+* users with no micropost, eg. the new one, will not show up, bc lack of this object.  
 
