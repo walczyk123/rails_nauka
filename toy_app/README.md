@@ -54,3 +54,11 @@ My issues to this moment:
 
 * users with no micropost, eg. the new one, will not show up, bc lack of this object.  
 
+## inheritance excersises  
+
+* ApplicationController inherit from Action-Controler::Base in AplicationController.rb, line  
+class ApplicationController < ActionController::Base  
+
+* class ApplicationRecord < ActiveRecord::Base in application_record.rb  
+  
+## end of toy_app excercise
