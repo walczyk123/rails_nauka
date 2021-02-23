@@ -17,6 +17,9 @@
 
 * rails destroy controller Foo bar baz  
 
+## New dynamic page excercise  
+
+* Added Contact page successfully
 
 ## Issues
 assert_select: command not found
