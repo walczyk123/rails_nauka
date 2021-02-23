@@ -18,4 +18,8 @@
 * rails destroy controller Foo bar baz  
 
 
+## Issues
+assert_select: command not found
+
+
 
