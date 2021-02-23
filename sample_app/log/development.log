@@ -69,3 +69,121 @@ Entrypoint application = js/application-07e792d2b65403c647a1.js js/application-0
 Completed 200 OK in 17306ms (Views: 17304.2ms | ActiveRecord: 0.0ms | Allocations: 1399974)
 
 
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-02-23 11:44:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4344)
+Completed 200 OK in 18ms (Views: 16.0ms | Allocations: 5511)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-02-23 11:44:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-02-23 11:45:09 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4304)
+Completed 200 OK in 16ms (Views: 13.7ms | Allocations: 5494)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-02-23 11:45:11 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4055)
+Completed 200 OK in 13ms (Views: 11.5ms | Allocations: 4495)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2021-02-23 11:45:12 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.7ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4128)
+Completed 200 OK in 14ms (Views: 11.0ms | Allocations: 4694)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-02-23 11:45:47 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 4300)
+Completed 200 OK in 46ms (Views: 39.9ms | Allocations: 5479)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2021-02-23 11:46:30 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4300)
+Completed 200 OK in 17ms (Views: 14.5ms | Allocations: 5447)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-02-23 11:46:31 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 4153)
+Completed 200 OK in 23ms (Views: 21.0ms | Allocations: 4714)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2021-02-23 11:46:33 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4051)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 4485)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-02-23 11:46:33 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4051)
+Completed 200 OK in 15ms (Views: 12.9ms | Allocations: 4484)
+
+
