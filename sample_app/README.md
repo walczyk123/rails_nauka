@@ -11,9 +11,11 @@
 * rails server  
 
 
-##  
+## Controller excercises  
 
-*   
+* rails generate controller Foo bar baz  
+
+* rails destroy controller Foo bar baz  
 
 
 
