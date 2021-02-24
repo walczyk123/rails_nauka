@@ -47,3 +47,29 @@ state = "malopolska"
 
 * '#{city}, #{state}'   ->  "\#{city}, \#{state}"
 
+## Objects and message passing excercises  
+
+* "racecar".length -> 7    
+
+* !!"racecar".reverse -> "true"  
+
+* s = "racecar"  
+s == s.reverse ? "they are the same" : "kinda diffrent tho"  
+-> "they are the same"  
+
+* s = "onomatopeja"  
+s == s.reverse ? "they are the same" : "kinda diffrent tho"  
+-> "kinda diffrent tho"  
+
+## Method definitions excercises
+
+
+
+
+
+
+
+
+
+
+
