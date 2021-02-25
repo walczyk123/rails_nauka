@@ -61,7 +61,30 @@ s == s.reverse ? "they are the same" : "kinda diffrent tho"
 s == s.reverse ? "they are the same" : "kinda diffrent tho"  
 -> "kinda diffrent tho"  
 
-## Method definitions excercises
+## Method definitions excercises  
+
+* #palindromes testing  
+def palindrome_tester(s)  
+    if s == s.reverse  
+        puts "it's a palindrome!"  
+    else
+        puts "it's not a palindrome!"  
+    end  
+end  
+->  
+>> palindrome_tester("kajak")  
+it's a palindrome!  
+=> nil  
+
+>> palindrome_tester("kajaki")  
+it's not a palindrome!  
+=> nil  
+
+* Confirmed by puting "kajak" and "kajaki" in tester  
+
+* palindrome_tester("kajaki").nil?  
+it's not a palindrome!  
+=> true  
 
 
 
