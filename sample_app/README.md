@@ -115,8 +115,16 @@ b[7]
 b[-7]  
 => "t"  
 
-### Blocks
+### Blocks  
+
+* (0..16).each do |i|     
+    puts "kwadratem liczby #{i} jest #{i**2}"  
+  end  
   
+  -> works fine, but output is kinda long, so i dont put it here  
+
+
+    
 
 
 
