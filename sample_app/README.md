@@ -86,8 +86,37 @@ it's not a palindrome!
 it's not a palindrome!  
 => true  
 
+## Other data structures  
+### Arrays  
 
+* a = "A man, a plan, a canal, Panama".split(', ')  
+a  
+=> ["A man", "a plan", "a canal", "Panama"]  
 
+* s = a.join  
+s  
+=> "A mana plana canalPanama"  
+
+* spl = s.split(' ').join  
+spl  
+=> "AmanaplanacanalPanama"  
+
+palindrome_tester(spl)  
+it's not a palindrome!  
+
+palindrome_tester(spl.downcase)  
+it's a palindrome!  
+
+* b = ("a".."z").to_a  
+
+b[7]  
+=> "h"  
+
+b[-7]  
+=> "t"  
+
+### Blocks
+  
 
 
 
