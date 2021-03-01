@@ -186,7 +186,40 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
 * Returns a new ActionController::Parameters with all keys from other_hash merged into current hash.  
 {"a"=>100,"b"=>200}.merge({"b"=>300}) changes "b" in first hash to 300, so output is: "a"=100, "b"=300  
   
-### CSS 
+### Classes  
+
+#### Constructors  
+
+* (1..10) -> literal constructor, range constructor is just Range(1,10)  
+
+* c = Range.new(1,10)  where 1 is starting point and 10 is end point  
+
+* (1..10) -> literal constructor , Range.new(1,10) -> named constructor  
+(1..10) == Range.new(1,10)  
+=> true  
+
+#### Inheritance  
+
+* Inheritance hierarchy for:  
+- Range - Object - Basic Object  
+- Hash - Object - Basic Object  
+- Symbol - object - Basic Object  
+
+* class Word < String
+    def palindrome?
+      self == reverse
+    end
+  end
+  
+  s = Word.new("level")
+  s.palindrome?
+  >
+  
+  => true
+  
+#### Modyfing built-in classes
+
+
 
 
 
