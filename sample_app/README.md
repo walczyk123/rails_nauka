@@ -205,19 +205,50 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
 - Hash - Object - Basic Object  
 - Symbol - object - Basic Object  
 
-* class Word < String
-    def palindrome?
-      self == reverse
-    end
-  end
+* class Word < String  
+    def palindrome?  
+      self == reverse  
+    end  
+  end  
   
-  s = Word.new("level")
-  s.palindrome?
-  >
+  s = Word.new("level")  
+  s.palindrome?  
+  >  
   
-  => true
+  => true  
   
-#### Modyfing built-in classes
+#### Modyfing built-in classes  
+
+* class String  
+    def palindrome?  
+      self == self.reverse  
+    end  
+  end  
+  >>   "racecar".palindrome?  
+  => true  
+  >>   "onomatopeia".palindrome?  
+  => false  
+  >>   "Malayalam".downcase.palindrome?  
+  => true  
+  
+* class String  
+    def shuffle  
+      self.split('').shuffle.join    
+    end  
+  end  
+  >> "majo".shuffle
+  => "amjo"
+
+* class String  
+    def shuffle  
+      split('').shuffle.join    
+    end  
+  end  
+"majo".shuffle  
+=> "oajm"  
+
+#### Controller Class
+
 
 
 
