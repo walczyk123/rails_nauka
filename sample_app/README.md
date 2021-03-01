@@ -127,7 +127,7 @@ b[-7]
    upc = arr.map{ |i| i.upcase}  
    puts upc.join  
   end  
-......................... 
+.........................  
   -> yaller(['o','l','d'])  
   OLD  
   
@@ -149,10 +149,44 @@ fgbdadcd
 string_shuffle("foobar")    
 => "oofrab"  
 
+### Hashes and symbols  
 
+* lang = { one: "uno", two: "dos", tree: "tres" }   
+  lang.each do |eng,esp|  
+    puts "#{eng} in spanish is #{esp}"  
+  end  
+.........................  
+one in spanish is uno  
+two in spanish is dos  
+tree in spanish is tres  
+=> {:one=>"uno", :two=>"dos", :tree=>"tres"}  
 
+* person = {} 
+params = {} 
+person[:person1] = { frst: "name1", last: "last1" }  
+person[:person2] = { frst: "name2", last: "last2" }  
+person[:person3] = { frst: "name3", last: "last3" }  
+params[:father] = person[:person1]  
+params[:mother] = person[:person2]  
+params[:child] = person[:person3]  
+params[:father][:frst]  
+=> "name1"  
 
-
+* def random_pswd(lngth)  
+    letters = ('a'..'z').to_a  
+    pswd = (0..lngth).map {letters[rand(lngth)]}  
+    return pswd.join  
+  end   
+  user = { name: "Kamil", email: "random@random.com", password: random_pswd(15) }  
+  puts "#{user[:name]} ,#{user[:email]} ,#{user[:password]}"  
+.........................   
+Kamil ,random@random.com ,hmbhmnhffbgeiblm  
+=> nil  
+ 
+* Returns a new ActionController::Parameters with all keys from other_hash merged into current hash.  
+{"a"=>100,"b"=>200}.merge({"b"=>300}) changes "b" in first hash to 300, so output is: "a"=100, "b"=300  
+  
+### CSS 
 
 
 
