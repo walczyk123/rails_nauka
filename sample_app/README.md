@@ -123,8 +123,34 @@ b[-7]
   
   -> works fine, but output is kinda long, so i dont put it here  
 
+* def yaller(arr)  
+   upc = arr.map{ |i| i.upcase}  
+   puts upc.join  
+  end  
+......................... 
+  -> yaller(['o','l','d'])  
+  OLD  
+  
+* def random_subdomain  
+    letters = ('a'..'z').to_a  
+    sub_dom = (0..7).map {letters[rand(7)]}  
+    puts sub_dom.join  
+  end  
+.........................  
+random_subdomain  
+fgbdadcd  
+=> nil  
 
-    
+* def string_shuffle(s)  
+    s.split('').shuffle.join    
+  end  
+  string_shuffle("foobar")  
+.........................  
+string_shuffle("foobar")    
+=> "oofrab"  
+
+
+
 
 
 
