@@ -224,11 +224,11 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
       self == self.reverse  
     end  
   end  
-  >>   "racecar".palindrome?  
+  "racecar".palindrome?  
   => true  
-  >>   "onomatopeia".palindrome?  
+  "onomatopeia".palindrome?  
   => false  
-  >>   "Malayalam".downcase.palindrome?  
+  "Malayalam".downcase.palindrome?  
   => true  
   
 * class String  
@@ -236,7 +236,7 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
       self.split('').shuffle.join    
     end  
   end  
-  >> "majo".shuffle
+  "majo".shuffle
   => "amjo"
 
 * class String  
@@ -249,7 +249,76 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
 
 #### Controller Class
 
+* user = User.new  
+  user.class  
+  => User(id: integer, name: string, email: string, created_at: datetime, updated_at: datetime)  
+  
+* hierarchy  
+  user - ApplicationRecord - ActiveRecord::Base - Object  
+  
+#### User Class  
 
+* class User  
+    attr_accessor :first, :last, :email  
+    
+    def initialize(attributes = {})
+      @first = attributes[:first]  
+      @last = attributes[:last]   
+      @email = attributes[:email]   
+    end  
+    
+    def formated_email  
+      "#{@first} #{last} <#{email}> "  
+    end  
+  end         
+  user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
+  user.formated_email  
+  => "Kamil Wlcz <rand@rand.com> "  
+
+* class User  
+    attr_accessor :first, :last, :email  
+    
+    def initialize(attributes = {})
+      @first = attributes[:first]  
+      @last = attributes[:last]   
+      @email = attributes[:email]   
+    end  
+    
+    def formated_email  
+      "#{@first} #{last} <#{email}> "  
+    end  
+    
+    def alph_name  
+      "#{@first}_#{@last}"  
+    end  
+  end
+  user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
+  user.alph_name      
+  => "Kamil_Wlcz"  
+
+* class User  
+    attr_accessor :first, :last, :email  
+    
+    def initialize(attributes = {})
+      @first = attributes[:first]  
+      @last = attributes[:last]   
+      @email = attributes[:email]   
+    end  
+    
+    def formated_email  
+      "#{@first} #{last} <#{email}> "  
+    end  
+    
+    def alph_name  
+      "#{@first}_#{@last}"  
+    end  
+    
+    def full_name  
+      split('_')  
+    end  
+  end
+  user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
+  user.alph_name.full_name
 
 
 
