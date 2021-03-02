@@ -320,6 +320,7 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
   user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
   user.alph_name.full_name
 
+### End of chapter 4  
 
 
 
