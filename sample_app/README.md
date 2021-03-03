@@ -38,165 +38,234 @@ assert_select: command not found -> problem solved
 
 ## String excercises  
 
-* city = "krakow"  
-state = "malopolska"  
+* ex1
+  ``` ruby
+  city = "krakow"  
+  state = "malopolska"  
+  ```
+* ex2
+  ``` ruby
+  "#{city}, #{state}"  ->  "krakow, malopolska"
+  ```
 
-* "#{city}, #{state}"  ->  "krakow, malopolska"
-
-* "#{city}, #{state}"    (no diffrence between them)
-
-* '#{city}, #{state}'   ->  "\#{city}, \#{state}"
-
+* ex3
+  ``` ruby 
+  "#{city}, #{state}"    
+  ```
+  (no diffrence between them)
+* ex4
+  ``` ruby
+  '#{city}, #{state}' 
+  ```
+  ``` bash
+  ->  "\#{city}, \#{state}"
+  ```
 ## Objects and message passing excercises  
 
-* "racecar".length -> 7    
-
-* !!"racecar".reverse -> "true"  
-
-* s = "racecar"  
-s == s.reverse ? "they are the same" : "kinda diffrent tho"  
--> "they are the same"  
-
-* s = "onomatopeja"  
-s == s.reverse ? "they are the same" : "kinda diffrent tho"  
--> "kinda diffrent tho"  
-
+* ex1
+  ``` ruby
+  "racecar".length -> 7    
+  ```
+  ``` bash
+    -> 7
+  ```
+* ex2
+    ``` ruby  
+    !!"racecar".reverse  
+    ```  
+    ``` bash
+    -> "true"
+    ```
+* ex3
+  ``` ruby  
+  s = "racecar"  
+  s == s.reverse ? "they are the same" : "kinda diffrent tho"  
+  ```
+  ``` bash
+  -> "they are the same"  
+  ```
+* ex 4
+  ``` ruby  
+  s = "onomatopeja"  
+  s == s.reverse ? "they are the same" : "kinda diffrent tho"  
+  ```
+  ``` bash  
+  -> "kinda diffrent tho"  
+  ```  
 ## Method definitions excercises  
 
-* #palindromes testing  
-def palindrome_tester(s)  
-    if s == s.reverse  
-        puts "it's a palindrome!"  
-    else
-        puts "it's not a palindrome!"  
-    end  
-end  
-->  
->> palindrome_tester("kajak")  
-it's a palindrome!  
-=> nil  
+* ex1  
+  palindrome testing
+    ```ruby  
+    def palindrome_tester(s)  
+        if s == s.reverse  
+            puts "it's a palindrome!"  
+        else
+            puts "it's not a palindrome!"  
+        end  
+    end 
+    ```
+    ``` bash 
+    >> palindrome_tester("kajak")  
+    it's a palindrome!  
+    => nil  
+    
+    >> palindrome_tester("kajaki")  
+    it's not a palindrome!  
+    => nil  
+    ```
+* ex2   
+  Confirmed by puting "kajak" and "kajaki" in tester  
 
->> palindrome_tester("kajaki")  
-it's not a palindrome!  
-=> nil  
-
-* Confirmed by puting "kajak" and "kajaki" in tester  
-
-* palindrome_tester("kajaki").nil?  
-it's not a palindrome!  
-=> true  
-
+* ex3  
+    ``` bash
+    palindrome_tester("kajaki").nil?  
+    it's not a palindrome!  
+    => true  
+    ```
 ## Other data structures  
 ### Arrays  
 
-* a = "A man, a plan, a canal, Panama".split(', ')  
-a  
-=> ["A man", "a plan", "a canal", "Panama"]  
-
-* s = a.join  
-s  
-=> "A mana plana canalPanama"  
-
-* spl = s.split(' ').join  
-spl  
-=> "AmanaplanacanalPanama"  
-.........................  
-palindrome_tester(spl)  
-=>it's not a palindrome!  
-.........................  
-palindrome_tester(spl.downcase)  
-=>it's a palindrome!  
-
-* b = ("a".."z").to_a  
-.........................  
-b[7]  
-=> "h"  
-.........................  
-b[-7]  
-=> "t"  
-
+* ex1
+  ``` bash
+  a = "A man, a plan, a canal, Panama".split(', ')  
+  a  
+  => ["A man", "a plan", "a canal", "Panama"]  
+  ```
+* ex2
+  ``` bash  
+  s = a.join  
+  s
+  => "A mana plana canalPanama"  
+  ```
+* ex3  
+  ``` bash
+  spl = s.split(' ').join  
+  spl  
+  => "AmanaplanacanalPanama"  
+  palindrome_tester(spl)  
+  => it's not a palindrome!  
+  palindrome_tester(spl.downcase)  
+  =>it's a palindrome!  
+  ``` 
+* ex4
+  ``` bash
+  b = ("a".."z").to_a  
+  b[7]  
+  => "h"
+  b[-7]  
+  => "t"  
+  ```
 ### Blocks  
 
-* (0..16).each do |i|     
+* ex1  
+  ``` ruby
+  (0..16).each do |i|     
     puts "kwadratem liczby #{i} jest #{i**2}"  
-  end  
+  end 
+   ```
   
   -> works fine, but output is kinda long, so i dont put it here  
 
-* def yaller(arr)  
-   upc = arr.map{ |i| i.upcase}  
-   puts upc.join  
-  end  
-.........................  
-  -> yaller(['o','l','d'])  
-  OLD  
-  
-* def random_subdomain  
+* ex2  
+    ``` ruby  
+    def yaller(arr)  
+       upc = arr.map{ |i| i.upcase}  
+       puts upc.join  
+    end 
+    ``` 
+    ``` bash
+    -> yaller(['o','l','d'])`  
+    OLD  
+    ```  
+* ex3  
+  ``` ruby 
+  def random_subdomain  
     letters = ('a'..'z').to_a  
     sub_dom = (0..7).map {letters[rand(7)]}  
     puts sub_dom.join  
-  end  
-.........................  
-random_subdomain  
-fgbdadcd  
-=> nil  
-
-* def string_shuffle(s)  
-    s.split('').shuffle.join    
-  end  
-  string_shuffle("foobar")  
-.........................  
-string_shuffle("foobar")    
-=> "oofrab"  
+  end
+  ```  
+    ``` bash  
+    random_subdomain  
+    fgbdadcd  
+    => nil  
+    ```
+* ex4
+    ``` ruby
+    def string_shuffle(s)  
+        s.split('').shuffle.join    
+      end  
+      string_shuffle("foobar")  
+    ```
+    ``` bash
+    string_shuffle("foobar")    
+    => "oofrab"  
+    ```
 
 ### Hashes and symbols  
 
-* lang = { one: "uno", two: "dos", tree: "tres" }   
+* ex1
+  ``` ruby
+  lang = { one: "uno", two: "dos", tree: "tres" }   
   lang.each do |eng,esp|  
     puts "#{eng} in spanish is #{esp}"  
   end  
-.........................  
-one in spanish is uno  
-two in spanish is dos  
-tree in spanish is tres  
-=> {:one=>"uno", :two=>"dos", :tree=>"tres"}  
-
-* person = {} 
-params = {} 
-person[:person1] = { frst: "name1", last: "last1" }  
-person[:person2] = { frst: "name2", last: "last2" }  
-person[:person3] = { frst: "name3", last: "last3" }  
-params[:father] = person[:person1]  
-params[:mother] = person[:person2]  
-params[:child] = person[:person3]  
-params[:father][:frst]  
-=> "name1"  
-
-* def random_pswd(lngth)  
+  ```
+  ``` bash
+  one in spanish is uno  
+  two in spanish is dos  
+  tree in spanish is tres  
+  => {:one=>"uno", :two=>"dos", :tree=>"tres"}  
+  ```
+* ex2
+  ``` ruby 
+  person = {} 
+  params = {} 
+  person[:person1] = { frst: "name1", last: "last1" }  
+  person[:person2] = { frst: "name2", last: "last2" }  
+  person[:person3] = { frst: "name3", last: "last3" }  
+  params[:father] = person[:person1]  
+  params[:mother] = person[:person2]  
+  params[:child] = person[:person3]  
+  params[:father][:frst]  
+  ``` 
+  ``` bash
+  => "name1"  
+  ```
+* ex3
+  ``` ruby
+  def random_pswd(lngth)  
     letters = ('a'..'z').to_a  
     pswd = (0..lngth).map {letters[rand(lngth)]}  
     return pswd.join  
   end   
   user = { name: "Kamil", email: "random@random.com", password: random_pswd(15) }  
   puts "#{user[:name]} ,#{user[:email]} ,#{user[:password]}"  
-.........................   
-Kamil ,random@random.com ,hmbhmnhffbgeiblm  
-=> nil  
- 
-* Returns a new ActionController::Parameters with all keys from other_hash merged into current hash.  
-{"a"=>100,"b"=>200}.merge({"b"=>300}) changes "b" in first hash to 300, so output is: "a"=100, "b"=300  
+  ```
+  ``` bash  
+  Kamil ,random@random.com ,hmbhmnhffbgeiblm  
+  => nil  
+  ```
+* ex4
+  ``` ruby
+  Returns a new ActionController::Parameters with all keys from other_hash merged into current hash.  
+  {"a"=>100,"b"=>200}.merge({"b"=>300}) changes "b" in first hash to 300, so output is: "a"=100, "b"=300  
+  ```
   
 ### Classes  
 
 #### Constructors  
 
-* (1..10) -> literal constructor, range constructor is just Range(1,10)  
+* `(1..10)` -> literal constructor, range constructor is just Range(1,10)  
 
-* c = Range.new(1,10)  where 1 is starting point and 10 is end point  
+* `c = Range.new(1,10)`  where 1 is starting point and 10 is end point  
 
-* (1..10) -> literal constructor , Range.new(1,10) -> named constructor  
-(1..10) == Range.new(1,10)  
-=> true  
+* `(1..10)` -> literal constructor , `Range.new(1,10)` -> named constructor  
+`(1..10) == Range.new(1,10)`
+  ``` bash
+  => true 
+  ```
 
 #### Inheritance  
 
@@ -205,48 +274,62 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
 - Hash - Object - Basic Object  
 - Symbol - object - Basic Object  
 
-* class Word < String  
+* ex1
+  ``` ruby 
+  class Word < String  
     def palindrome?  
       self == reverse  
     end  
   end  
-  
+  ```
+  ``` bash
   s = Word.new("level")  
   s.palindrome?  
-  >  
-  
   => true  
-  
+  ```
 #### Modyfing built-in classes  
 
-* class String  
+* ex2
+  ``` ruby
+  class String  
     def palindrome?  
       self == self.reverse  
     end  
-  end  
+  end
+  ```
+  ``` bash  
   "racecar".palindrome?  
   => true  
   "onomatopeia".palindrome?  
   => false  
   "Malayalam".downcase.palindrome?  
   => true  
-  
-* class String  
+  ```
+* ex3
+  ```ruby
+  class String  
     def shuffle  
       self.split('').shuffle.join    
     end  
-  end  
+  end
+  ```
+  ``` bash  
   "majo".shuffle
   => "amjo"
-
-* class String  
+  ```
+  
+* ex4
+  ``` ruby
+  class String  
     def shuffle  
       split('').shuffle.join    
     end  
-  end  
-"majo".shuffle  
-=> "oajm"  
-
+  end
+  ```
+  ``` bash  
+  "majo".shuffle  
+  => "oajm"  
+  ````
 #### Controller Class
 
 * user = User.new  
@@ -258,7 +341,9 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
   
 #### User Class  
 
-* class User  
+* ex1
+  ``` ruby
+  class User  
     attr_accessor :first, :last, :email  
     
     def initialize(attributes = {})
@@ -270,12 +355,17 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
     def formated_email  
       "#{@first} #{last} <#{email}> "  
     end  
-  end         
+  end
+  ```
+  ``` bash         
   user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
   user.formated_email  
   => "Kamil Wlcz <rand@rand.com> "  
-
-* class User  
+  ```
+  
+* ex2
+  ``` ruby
+  class User  
     attr_accessor :first, :last, :email  
     
     def initialize(attributes = {})
@@ -292,11 +382,16 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
       "#{@first}_#{@last}"  
     end  
   end
+  ```
+  ``` bash
   user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
   user.alph_name      
   => "Kamil_Wlcz"  
-
-* class User  
+  ```
+  
+* ex3
+  ``` ruby
+  class User  
     attr_accessor :first, :last, :email  
     
     def initialize(attributes = {})
@@ -317,9 +412,11 @@ Kamil ,random@random.com ,hmbhmnhffbgeiblm
       split('_')  
     end  
   end
+  ```
+  ``` bash
   user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
   user.alph_name.full_name
-
+  ```
 ### End of chapter 4  
 
 

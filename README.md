@@ -29,3 +29,8 @@ Cmdtest:
 
 Yarn instalation:   
 >sudo apt update && sudo apt install yarn  
+
+# Binding pry  
+before_action do  
+    binding.pry  
+end  
