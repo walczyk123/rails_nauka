@@ -332,12 +332,18 @@ assert_select: command not found -> problem solved
   ````
 #### Controller Class
 
-* user = User.new  
+* ex1
+  ``` bash
+  user = User.new  
   user.class  
   => User(id: integer, name: string, email: string, created_at: datetime, updated_at: datetime)  
+  ```
   
-* hierarchy  
+* ex2
+  ``` bash
+  hierarchy  
   user - ApplicationRecord - ActiveRecord::Base - Object  
+  ```
   
 #### User Class  
 
