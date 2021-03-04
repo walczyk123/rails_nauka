@@ -1693,3 +1693,149 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 550998ms (Views: 3880.4ms | ActiveRecord: 0.0ms | Allocations: 1426987)
 
 
+Started GET "/static_pages/home" for 127.0.0.1 at 2021-03-04 23:20:58 +0100
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+Started GET "/static_pages/help" for 127.0.0.1 at 2021-03-04 23:21:00 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 34.8ms | Allocations: 23216)
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:21:01 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7944.1ms | Allocations: 2438085)
+  Rendered layout layouts/application.html.erb (Duration: 8098.0ms | Allocations: 2488625)
+Completed 200 OK in 8140ms (Views: 8108.9ms | ActiveRecord: 0.0ms | Allocations: 2491466)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 9702.9ms | Allocations: 2663080)
+Completed 200 OK in 9710ms (Views: 9705.9ms | ActiveRecord: 0.0ms | Allocations: 2663837)
+
+
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 8559.2ms | Allocations: 2496858)
+  Rendered layout layouts/application.html.erb (Duration: 8581.7ms | Allocations: 2500965)
+Completed 200 OK in 8586ms (Views: 8583.4ms | ActiveRecord: 0.0ms | Allocations: 2501899)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:21:27 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.2ms | Allocations: 745)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5044)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 6171)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:21:35 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 5.6ms | Allocations: 736)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5032)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 6153)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:21:42 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 5.7ms | Allocations: 738)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 5041)
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 0.0ms | Allocations: 6178)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:21:47 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 5.2ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 5035)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 6163)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:21:51 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 7.1ms | Allocations: 736)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 5032)
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 6143)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:22:41 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.6ms | Allocations: 733)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5029)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 6136)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:22:49 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 4.2ms | Allocations: 736)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 5032)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 6149)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:22:55 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.5ms | Allocations: 738)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 5034)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6165)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:23:01 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 5.1ms | Allocations: 734)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5030)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 6143)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:23:25 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.7ms | Allocations: 737)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5033)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 6150)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:23:31 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 3.1ms | Allocations: 733)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5032)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 6146)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:24:27 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.6ms | Allocations: 736)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5032)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 6158)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2021-03-04 23:24:58 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.4ms | Allocations: 737)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 5033)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 6161)
+
+
