@@ -9,28 +9,37 @@ Ruby on Rails ( just “Rails”) is a free and open-source web devel-opment fra
 
 # Rails and Yarn instalation
 
-Ruby gem instalation:  
->gem install rails -v6.0.2.1  
-
-Checking version of rails:  
+Ruby gem instalation:
+``` bash  
+gem install rails -v6.0.2.1  
+```
+Checking version of rails:
+``` bash
 >rails -v   
-
-Instalation of NVM - Node Version Manager:  
+```
+Instalation of NVM - Node Version Manager:
+``` bash  
 >wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash  
-
+```
 Nodejs instalation:   
+``` bash
 >sudo apt install nodejs    
-
+```
 NPM instalation:
+``` bash
 >sudo apt install npm    
-
+```
 Cmdtest:  
+``` bash
 >sudo apt install cmdtest  
-
+```
 Yarn instalation:   
+``` bash
 >sudo apt update && sudo apt install yarn  
-
-# Binding pry  
+```
+# Binding pry
+``` ruby  
 before_action do  
     binding.pry  
 end  
+```
