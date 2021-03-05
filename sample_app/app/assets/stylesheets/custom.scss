@@ -22,7 +22,12 @@ textarea {
 }
 
 /* typo */
-
+$col_light_red: #ff0000;
+$col_red: #cc0000;
+$col_strong_red: #B00100;
+$col_light_gray: #BBBBBB;
+$col_gray: #999999;
+$col_strong_gray: #454545;
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -54,13 +59,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #B00100;
+  color: $col_strong_red;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: revert;
   &:hover{
-    color: #666666;
+    color: $col_strong_gray;
     text-decoration: none;
   }
 }
@@ -82,26 +87,29 @@ img {
 
 footer {
   margin-left: 20px;
+  margin-right: 20px;
   margin-top: 45px;
   padding-top: 5px;
-  border-top: #B00100;
-  color: #cc0000;
+  padding-left: 15px;
+  border-top: $col_strong_red;
+  color: $col_red;
+  background-color: #eeeeee;
   a {
-    color: #999999;
+    color: $col_light_red;
     &:hover {
-      color: #BBBBBB;
+      color: $col_strong_gray;
     }
   }
 }
 
 footer ul {
   float: right;
-  margin-right: 20px;
+  background-color: #dddddd;
   list-style: none;
   li {
+    padding-left: 15px;
+    padding-right: 25px;
     float: left;
-    margin-left: 20px;
-    margin-left: 15px;
   }
 }
 
