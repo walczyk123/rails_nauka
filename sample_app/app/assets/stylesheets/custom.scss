@@ -41,7 +41,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #F7F7F7;
+  color: #2E2F30;
 }
 
 p {
@@ -70,4 +70,34 @@ p {
 /* hide img for exercises */
 img {
   display: none;
+}
+
+/* footer */
+
+footer {
+  margin-left: 20px;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: #B00100;
+  color: #cc0000;
+}
+
+footer a {
+  color: #999999;
+}
+
+footer a:hover {
+  color: #BBBBBB;
+}
+
+footer ul {
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 20px;
+  margin-left: 15px;
 }
