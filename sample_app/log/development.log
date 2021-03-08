@@ -3877,3 +3877,16 @@ Processing by StaticPagesController#about as HTML
 Completed 200 OK in 36ms (Views: 35.3ms | Allocations: 12730)
 
 
+Started GET "/about" for 127.0.0.1 at 2021-03-08 19:51:58 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 140)
+  Rendered layouts/_shim.html.erb (Duration: 1.1ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 30.2ms | Allocations: 12295)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 221)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 13612)
+Completed 200 OK in 43ms (Views: 41.1ms | Allocations: 14745)
+
+
