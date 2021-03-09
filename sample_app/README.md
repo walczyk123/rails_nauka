@@ -423,7 +423,17 @@ assert_select: command not found -> problem solved
   user = User.new(first: "Kamil", last: "Wlcz", email: "rand@rand.com")  
   user.alph_name.full_name
   ```
-### End of chapter 4  
+## Chapter 5  
+
+### Integration test  
+
+* ex1  
+  after changing about_path to contact_path in _footer partial, integration test has catched this   problem.  
+  
+* ex2  
+  ASK RADEK! or check it when rested.  (page 282)
+  
+### User signup  
 
 
 
