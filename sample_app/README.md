@@ -433,10 +433,25 @@ assert_select: command not found -> problem solved
 * ex2  
   ASK RADEK! or check it when rested.  (page 282)
   
-### User signup  
 
+## Chapter 6   
 
+### new user exercises  
 
+* ex1  
+  ```bash
+  User.new.class
+  => User(id: integer, name: string, email: string, created_at: datetime, updated_at: datetime)
+  User.new.class.superclass
+  => ApplicationRecord(abstract)
+  ```
 
+* ex2  
+  ```ruby
+  class ApplicationRecord < ActiveRecord::Base
+  .
+  .
+  .
+  ```
 
 
