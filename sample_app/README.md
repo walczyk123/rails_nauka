@@ -454,4 +454,20 @@ assert_select: command not found -> problem solved
   .
   ```
 
+### User object  
 
+* ex1  
+  ```bash
+  foo.name.class
+  => String
+  foo.email.class
+  => String
+  ```
+
+* ex2   
+  ```bash
+  foo.updated_at.class
+  => NilClass
+  foo.created_at.class
+  => NilClass
+  ```
