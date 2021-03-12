@@ -496,5 +496,50 @@ assert_select: command not found -> problem solved
   => 4
   ```  
 
-  
+### Updating user objects  
+
+* ex1 Find the user by name. Confirm that find_by_nameworks as well.
+  ```bash
+  user = User.first
+  User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  user
+  => #<User id: 1, name: "ble", email: "dzik@dzik.com", created_at: "2020-03-12 19:52:34.503747000 +0000", updated_at: "2021-03-12 19:52:34.504881000 +0000">
+  user.name = "dzik"
+  user.save
+  TRANSACTION (0.1ms)  begin transaction
+  User Update (0.5ms)  UPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["name", "dzik"], ["updated_at", "2021-03-12 19:57:41.194030"], ["id", 1]]
+  TRANSACTION (100.0ms)  commit transaction
+  => true
+   user.name
+  => "dzik"
+  ```
+
+* ex2 Update the user’s email address using a call toupdate.
+  ```bash
+  User.first.update(email: "dzik@dzik.com")
+  User Load (0.2ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  TRANSACTION (0.1ms)  begin transaction
+  User Update (0.5ms)  UPDATE "users" SET "email" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["email", "dzik@dzik.com"], ["updated_at", "2021-03-12 19:42:48.357524"], ["id", 1]]
+  TRANSACTION (71.9ms)  commit transaction
+  => true
+  User.first.save
+  User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  => true
+  User.first
+  User Load (0.5ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  => #<User id: 1, name: "ble", email: "dzik@dzik.com", created_at: "2021-03-11 18:17:02.482912000 +0000", updated_at: "2021-03-12 19:42:48.357524000 +0000">
+  ```
+ 
+* ex3 Confirm that you can change the magic columns directly by updatingthecreated_atcolumn using assignment and a save
+  ```bash  
+  >> User.first.update_attribute(:created_at, 1.year.ago)
+  User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  TRANSACTION (0.2ms)  begin transaction
+  User Update (1.0ms)  UPDATE "users" SET "created_at" = ?, "updated_at" = ? WHERE "users"."id"   = ?  [["created_at", "2020-03-12 19:52:34.503747"], ["updated_at", "2021-03-12 19:52:34.504881"], ["id", 1]]
+  TRANSACTION (132.4ms)  commit transaction
+  => true
+  User.first.created_at
+  User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  Thu, 12 Mar 2020 19:52:34.503747000 UTC +00:00
+  ```
   
