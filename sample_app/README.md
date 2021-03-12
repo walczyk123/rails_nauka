@@ -432,6 +432,7 @@ assert_select: command not found -> problem solved
   
 * ex2  
   ASK RADEK! or check it when rested.  (page 282)
+  edit: understood.
   
 
 ## Chapter 6   
@@ -471,3 +472,29 @@ assert_select: command not found -> problem solved
   foo.created_at.class
   => NilClass
   ```
+  
+### Finding user objects  
+
+* ex1 Find the user byname. Confirm thatfind_by_nameworks as well.
+  ```bash
+  User.find_by(name:ble)
+  => #<User id: 1, name: "ble", email: "bl@bl.com", created_at: "2021-03-11 18:17:02.482912000     +0000", updated_at: "2021-03-11 18:17:02.482912000 +0000">
+  User.find_by_name(ble)==User.find_by(name:ble)
+  => true
+  ```
+  
+* ex2 User.allacts like an array, but confirmthat in fact it’s of classUser::ActiveRecord_Relation.
+  ```bash
+  >> User.all.class
+  => User::ActiveRecord_Relation
+  ```
+  
+* ex3 Confirm that you can find the length of User.all by passing it the length method 
+  ```bash
+  User.all.length
+  User Load (0.3ms)  SELECT "users".* FROM "users"
+  => 4
+  ```  
+
+  
+  

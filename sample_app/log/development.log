@@ -4189,3 +4189,125 @@ Migrating to CreateUsers (20210310192141)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Create (18.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ble"], ["email", "bl@bl.com"], ["created_at", "2021-03-11 18:17:02.482912"], ["updated_at", "2021-03-11 18:17:02.482912"]]
   [1m[36mTRANSACTION (134.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-03-11 19:53:38 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4670.1ms | Allocations: 1401589)
+  Rendered layouts/_shim.html.erb (Duration: 15.8ms | Allocations: 77)
+  Rendered layouts/_head.html.erb (Duration: 273.9ms | Allocations: 14734)
+  Rendered layouts/_header.html.erb (Duration: 21.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 16.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 5004.0ms | Allocations: 1417531)
+Completed 200 OK in 5136ms (Views: 5033.5ms | ActiveRecord: 0.0ms | Allocations: 1421286)
+
+
+Started GET "/about" for 127.0.0.1 at 2021-03-11 19:53:57 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 37.7ms | Allocations: 138)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 95.9ms | Allocations: 13545)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 75)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 137.9ms | Allocations: 14057)
+Completed 200 OK in 146ms (Views: 140.0ms | ActiveRecord: 0.0ms | Allocations: 14597)
+
+
+Started GET "/help" for 127.0.0.1 at 2021-03-11 19:54:06 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 11.3ms | Allocations: 114)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 81.3ms | Allocations: 13546)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 75)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 96.6ms | Allocations: 14034)
+Completed 200 OK in 104ms (Views: 100.9ms | ActiveRecord: 0.0ms | Allocations: 14582)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2021-03-11 19:54:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/contact"):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/help" for 127.0.0.1 at 2021-03-11 19:55:17 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 95.0ms | Allocations: 13574)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 99.0ms | Allocations: 13946)
+Completed 200 OK in 106ms (Views: 103.4ms | ActiveRecord: 0.0ms | Allocations: 14361)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-03-11 19:55:25 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 12.1ms | Allocations: 659)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 109.1ms | Allocations: 13397)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 60)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 127.3ms | Allocations: 14412)
+Completed 200 OK in 131ms (Views: 129.0ms | ActiveRecord: 0.0ms | Allocations: 14824)
+
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (20.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "A Nother"], ["email", "another@example.org"], ["created_at", "2021-03-12 19:26:14.979353"], ["updated_at", "2021-03-12 19:26:14.979353"]]
+  [1m[36mTRANSACTION (83.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "A Nother"], ["email", "another@example.org"], ["created_at", "2021-03-12 19:26:23.635128"], ["updated_at", "2021-03-12 19:26:23.635128"]]
+  [1m[36mTRANSACTION (65.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "A Nother3"], ["email", "another@example.org3"], ["created_at", "2021-03-12 19:26:31.525698"], ["updated_at", "2021-03-12 19:26:31.525698"]]
+  [1m[36mTRANSACTION (76.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "ble"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "ble"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "ble"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
