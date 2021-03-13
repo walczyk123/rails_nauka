@@ -4390,3 +4390,4 @@ Completed 200 OK in 131ms (Views: 129.0ms | ActiveRecord: 0.0ms | Allocations: 1
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "dzik"], ["updated_at", "2021-03-12 19:57:41.194030"], ["id", 1]]
   [1m[36mTRANSACTION (100.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m

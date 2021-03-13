@@ -475,7 +475,7 @@ assert_select: command not found -> problem solved
   
 ### Finding user objects  
 
-* ex1 Find the user byname. Confirm thatfind_by_nameworks as well.
+* ex1 - Find the user byname. Confirm thatfind_by_nameworks as well.
   ```bash
   User.find_by(name:ble)
   => #<User id: 1, name: "ble", email: "bl@bl.com", created_at: "2021-03-11 18:17:02.482912000     +0000", updated_at: "2021-03-11 18:17:02.482912000 +0000">
@@ -483,13 +483,13 @@ assert_select: command not found -> problem solved
   => true
   ```
   
-* ex2 User.allacts like an array, but confirmthat in fact it’s of classUser::ActiveRecord_Relation.
+* ex2 - User.allacts like an array, but confirmthat in fact it’s of classUser::ActiveRecord_Relation.
   ```bash
   >> User.all.class
   => User::ActiveRecord_Relation
   ```
   
-* ex3 Confirm that you can find the length of User.all by passing it the length method 
+* ex3 - Confirm that you can find the length of User.all by passing it the length method 
   ```bash
   User.all.length
   User Load (0.3ms)  SELECT "users".* FROM "users"
@@ -498,7 +498,7 @@ assert_select: command not found -> problem solved
 
 ### Updating user objects  
 
-* ex1 Find the user by name. Confirm that find_by_nameworks as well.
+* ex1 - Find the user by name. Confirm that find_by_nameworks as well.
   ```bash
   user = User.first
   User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
@@ -514,7 +514,7 @@ assert_select: command not found -> problem solved
   => "dzik"
   ```
 
-* ex2 Update the user’s email address using a call toupdate.
+* ex2 - Update the user’s email address using a call toupdate.
   ```bash
   User.first.update(email: "dzik@dzik.com")
   User Load (0.2ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
@@ -530,7 +530,7 @@ assert_select: command not found -> problem solved
   => #<User id: 1, name: "ble", email: "dzik@dzik.com", created_at: "2021-03-11 18:17:02.482912000 +0000", updated_at: "2021-03-12 19:42:48.357524000 +0000">
   ```
  
-* ex3 Confirm that you can change the magic columns directly by updatingthecreated_atcolumn using assignment and a save
+* ex3 - Confirm that you can change the magic columns directly by updatingthecreated_atcolumn using assignment and a save
   ```bash  
   >> User.first.update_attribute(:created_at, 1.year.ago)
   User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
@@ -542,4 +542,21 @@ assert_select: command not found -> problem solved
   User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
   Thu, 12 Mar 2020 19:52:34.503747000 UTC +00:00
   ```
-  
+
+### User validation
+
+* ex1 - In the console, confirm that a new user is currently valid.
+  ```bash
+  >> @user = User.new(name: "ziomek1", email: "ziom1@ziom.com")
+/home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sqlite3-1.4.1/lib/sqlite3/database.rb:89: warning: rb_check_safe_obj will be removed in Ruby 3.0
+   (2.0ms)  SELECT sqlite_version(*)
+  >> @user.valid?
+  => true
+  ```
+
+* ex2 - Confirm that the user created in Section 6.1.3 is also valid.
+  ```bash
+  >> user=User.new(name:"Michael Hartl",email:"michael@example.com")
+  >> user.valid?
+  => true
+  ```
