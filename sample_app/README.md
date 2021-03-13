@@ -563,7 +563,7 @@ assert_select: command not found -> problem solved
   
 ### Validating pressence
 
-* Important to remember
+* Important to remember  
 
   ```bash
   >> user = User.new(name: "",email: "elo@elo")
@@ -618,7 +618,8 @@ assert_select: command not found -> problem solved
   
 ### Format validation
 
-    
+* Important to remember  
+  %w[]    
   
   
   
