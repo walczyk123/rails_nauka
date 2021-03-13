@@ -560,3 +560,44 @@ assert_select: command not found -> problem solved
   >> user.valid?
   => true
   ```
+  
+### Validating pressence
+
+* Important to remember
+
+  ```bash
+  >> user = User.new(name: "",email: "elo@elo")
+   (1.0ms)  SELECT sqlite_version(*)
+  >> user.valid?
+  => false
+  >> user.errors.full_messages
+  => ["Name can't be blank"]
+  ```
+
+* ex1 - Make a new user called u and confirm that it’s initially invalid. What are the full error messages?
+  ```bash
+  >> u = User.new
+   (0.8ms)  SELECT sqlite_version(*)
+  >> u.valid?
+  => false
+  >> u.errors.full_messages
+  => ["Name can't be blank", "Email can't be blank"]
+  ```
+
+* ex2 - Confirm that u.errors.messages is a hash of errors. How would you access just the email errors?
+
+  ```bash
+  >> u.errors.messages
+  => {:name=>["can't be blank"], :email=>["can't be blank"]}
+  >> u.errors.messages[:email]
+  => ["can't be blank"] 
+  ```
+### Validating length
+  
+  
+  
+  
+  
+  
+  
+  
