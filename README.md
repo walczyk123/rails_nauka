@@ -7,6 +7,8 @@ Ruby on Rails ( just “Rails”) is a free and open-source web devel-opment fra
 
 [Yarn](https://yarnpkg.com/ "Yarn - package manager")  
 
+[Rubular - testing regex](https://rubular.com/ "Rubular - testing regex")
+
 # Rails and Yarn instalation
 
 Ruby gem instalation:
