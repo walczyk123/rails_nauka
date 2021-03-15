@@ -548,7 +548,6 @@ assert_select: command not found -> problem solved
 * ex1 - In the console, confirm that a new user is currently valid.
   ```bash
   >> @user = User.new(name: "ziomek1", email: "ziom1@ziom.com")
-/home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sqlite3-1.4.1/lib/sqlite3/database.rb:89: warning: rb_check_safe_obj will be removed in Ruby 3.0
    (2.0ms)  SELECT sqlite_version(*)
   >> @user.valid?
   => true
@@ -621,7 +620,16 @@ assert_select: command not found -> problem solved
 * Important to remember  
   %w[]    
   
+* ex1 - Done in Rubular
   
+* ex2 
+  ```ruby
+  #VER -> VALID_EMAIL_REGEX
+  VER=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  ```
+
+* ex3 - Done in Rubular 
   
-  
-  
+### Uniqueness validation
+
+
