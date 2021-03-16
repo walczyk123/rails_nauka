@@ -632,4 +632,5 @@ assert_select: command not found -> problem solved
   
 ### Uniqueness validation
 
-
+* Important to remember  
+  rails db:migrate:reset -> db:drop db:create db:migrate  

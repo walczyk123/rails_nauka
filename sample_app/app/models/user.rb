@@ -1,7 +1,9 @@
 class User < ApplicationRecord
+  before_save { self.email = email.downcase}
   validates(:name, presence: true, length: {maximum:50})
   #VER VALID_EMAIL_REGEX
   VER=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   #validation of email, it has to be input, with max length 255, fulfill regex format, be unique and no case sEnSiTiVe
-  validates(:email, presence: true, length: {maximum:255, format: {with: /VER/}}, uniqueness: {  case_sensitive: false })
+  # since we added callback before_save, which put all letters downcase, we also use uniqueness:true again
+  validates(:email, presence: true, length: {maximum:255, format: {with: /VER/}}, uniqueness: true )
 end
