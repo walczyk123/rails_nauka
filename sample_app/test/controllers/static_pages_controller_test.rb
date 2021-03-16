@@ -4,6 +4,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   def setup
     @base_title = "Walczyk App"
   end
+
   test "should get root" do
     get root_path
     assert_response :success
