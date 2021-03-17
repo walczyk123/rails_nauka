@@ -636,5 +636,6 @@ assert_select: command not found -> problem solved
   rails db:migrate:reset -> db:drop db:create db:migrate  
   
 * ex1  
-  When before_save in user.rb is commented out, test gives negative RED
+  When before_save in user.rb is commented out, test gives negative RED  
+  edit: after uncomment before_save, tests are going GREEN
   
