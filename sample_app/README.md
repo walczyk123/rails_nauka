@@ -634,3 +634,7 @@ assert_select: command not found -> problem solved
 
 * Important to remember  
   rails db:migrate:reset -> db:drop db:create db:migrate  
+  
+* ex1  
+  When before_save in user.rb is commented out, test gives negative RED
+  
