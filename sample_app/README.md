@@ -659,12 +659,26 @@ assert_select: command not found -> problem solved
   .  
   hash function -> bcrypt  
   
-
+* ex1 - Confirm that a user with valid name and email still isn’t valid overall.  
+  ```bash
+  >> u=User.new(name: "Badek", email: "jolo@wpier.olo")
+  >> u.valid?
+  User Exists? (0.4ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "jolo@wpier.olo"], ["LIMIT", 1]]
+  => false
+  >> u2=User.new(name: "Badek", email: "jolo@wpier.olo", password: "elo", password_confirmation: "elo")
+  >> u2.valid?
+  User Exists? (0.6ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "jolo@wpier.olo"], ["LIMIT", 1]]
+  => true
+  ```
   
+* ex2 - What are the error messages for a user with no password?  
+  ```bash
+  >> u.errors.messages
+  => {:password=>["can't be blank"]}
+  ```
+  This indicates, that password is required  
   
-  
-  
-  
+### Minimum password standards
   
   
   
