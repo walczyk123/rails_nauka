@@ -680,10 +680,21 @@ assert_select: command not found -> problem solved
   
 ### Minimum password standards
   
-  
-  
-  
-  
+* ex1 - Confirm that a user with valid name and email but a too-short password isn’t valid.
+  ```bash
+  >> r = User.new(name: "ziomek12", email: "ziom12@ziom.com", password: "1qaz", password_confirmation:"1qaz")
+  >> r.valid?
+  User Exists? (0.4ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "ziom12@ziom.com"], ["LIMIT", 1]]
+  => false
+  ```  
+
+* ex2 - What are the associated error messages?
+  ```bash
+  >> yt.valid?
+  => false
+  >> yt.errors.messages
+  => {:password=>["is too short (minimum is 6 characters)"]}
+  ```
   
   
   

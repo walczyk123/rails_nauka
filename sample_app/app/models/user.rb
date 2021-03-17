@@ -7,4 +7,5 @@ class User < ApplicationRecord
   # since we added callback before_save, which put all letters downcase, we also use uniqueness:true again
   validates(:email, presence: true, length: {maximum:255, format: {with: /VER/}}, uniqueness: true )
   has_secure_password
+  validates :password,  presence: true, length: { minimum: 6}
 end
