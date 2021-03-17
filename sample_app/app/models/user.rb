@@ -6,4 +6,5 @@ class User < ApplicationRecord
   #validation of email, it has to be input, with max length 255, fulfill regex format, be unique and no case sEnSiTiVe
   # since we added callback before_save, which put all letters downcase, we also use uniqueness:true again
   validates(:email, presence: true, length: {maximum:255, format: {with: /VER/}}, uniqueness: true )
+  has_secure_password
 end

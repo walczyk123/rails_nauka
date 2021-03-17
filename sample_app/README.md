@@ -648,4 +648,39 @@ assert_select: command not found -> problem solved
   ```ruby 
   before_save { email.downcase! }
   ```
+
+
+### Secure password
+
+* Important to remember  
+  password -> hashed password  
+  loging with password -> hashing password  
+  compare two hashed passwords  
+  .  
+  hash function -> bcrypt  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
