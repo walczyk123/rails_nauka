@@ -9,6 +9,8 @@ Ruby on Rails ( just “Rails”) is a free and open-source web devel-opment fra
 
 [Rubular - testing regex](https://rubular.com/ "Rubular - testing regex")
 
+[Ruby Tutorial PDF - online](https://tiny.pl/rnz23 "Ruby Tutorial PDF - online")
+
 # Rails and Yarn instalation
 
 Ruby gem instalation:

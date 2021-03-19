@@ -704,11 +704,30 @@
 * Important to remember:  
   user.authenticate returns false for invalid password and returns user when password is ok.
   
+* ex1 -  Quit and restart the console, and then find the user created in this section.  
+  ```bash
+  >> User.find_by(name: "Kamil Wlcz")
+  => #<User id: 1, name: "Kamil Wlcz", email: "wlcz.kml@gmail.end", created_at: "2021-03-19 17:23:50.609684000 +0000", updated_at: "2021-03-19 17:23:50.609684000 +0000", password_digest: [FILTERED]>
+  ```
   
+* ex2 - Try changing the name by assigning a new name and calling save. Why didn’t it work?  
+  ```bash
+  >> u=User.find_by(name: "Kamil Wlcz")
+  >> u.name = "Rad Big"
+  >> u.save
+  TRANSACTION (0.2ms)  begin transaction
+  User Exists? (0.3ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" !  = ? LIMIT ?  [["email", "wlcz.kml@gmail.end"], ["id", 1], ["LIMIT", 1]]
+  TRANSACTION (0.1ms)  rollback transaction
+  => false
+  >> u.errors.messages
+  => {:password=>["can't be blank", "is too short (minimum is 6 characters)"]}
+  ```
+  So I think you need to authenticate by password to edit some attributes, so this prevents to change for ex. password without password.
+
+* ex3 - Update user’s name to use your name.
+  ```bash
   
-  
-  
-  
+  ```
   
   
   

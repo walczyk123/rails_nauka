@@ -1,4 +1,4 @@
-# This is a database user create, finding and authentication excercise
+# This is a database user create, finding and authentication exercise
 
 ```bash
 >> User.create(name: "Kamil Wlcz", email: "wlcz.kml@gmail.end", password: "elo123melo", password_confirmation: "elo123melo")
