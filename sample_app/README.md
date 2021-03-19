@@ -726,7 +726,12 @@
 
 * ex3 - Update user’s name to use your name.
   ```bash
-  
+  >> u.update(name: "Rad Big", password:"elo123melo")
+  TRANSACTION (0.1ms)  begin transaction
+  User Exists? (0.3ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?  [["email", "wlcz.kml@gmail.end"], ["id", 1], ["LIMIT", 1]]
+  User Update (0.5ms)  UPDATE "users" SET "name" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?  [["name", "Rad Big"], ["updated_at", "2021-03-19 17:52:24.588885"], ["password_digest", "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"], ["id", 1]]
+  TRANSACTION (88.0ms)  commit transaction
+  => true
   ```
   
   
