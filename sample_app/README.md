@@ -734,8 +734,34 @@
   => true
   ```
   
-  
-  
+## Chapter 7 
+
+  Rails tree environments:
+  Production:
+  ```bash
+  rails console --environment production
+  ```
+  Test:
+  ```bash
+  rails console --environment test
+  ```
+  Development:
+  ```bash
+  #default
+  rails c 
+  # or
+  rails console --environment development
+  ```
+  It also works with short versions of environment names:
+  ```bash
+  rails c --environment p
+  rails c --environment t
+  rails c --environment d
+  ```
+  Also it works with short names of __S__erver, __C__onsole or __T__est, f.eg.
+  ```bash
+  rails s --environment p
+  ```
   
   
   

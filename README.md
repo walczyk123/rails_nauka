@@ -3,7 +3,7 @@
 # Learning Ruby on Rails
 
 In this repository I've gather some useful programs, tutorials and websites, that will help me to learn Ruby on Rails programming.  
-Ruby on Rails ( just “Rails”) is a free and open-source web devel-opment framework written in theRubyprogramming language.  
+Ruby on Rails ( just “Rails”) is a free and open-source web devel-opment framework written in the Ruby programming language.  
 
 [Yarn](https://yarnpkg.com/ "Yarn - package manager")  
 
