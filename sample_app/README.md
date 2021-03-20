@@ -3,16 +3,17 @@
 ## Sample application 
 
 Model - Viewer - Controller  
-```mermaid
-stateDiagram-v2
+    ```mermaid
 
-    Viewer --> Model
-    Model --> Viewer
-    Viewer --> Controller
-    Controller --> Viewer
-    Controller --> Database
-    Database --> Controller
-```     
+    graph LR
+    M(Model) -- users --> V[Viever]
+    V -- HTML --> M
+    V -- user.all --> C{Controller}
+    C -->V
+    C --> D((Database))
+    D --o C
+
+    ```    
       
 # Chapter 3  
 
