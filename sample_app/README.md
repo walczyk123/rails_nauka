@@ -5,15 +5,14 @@
 Model - Viewer - Controller  
 
   ```mermaid
-  graph LR
-  M(Model) -- users --> V[Viever]
-  V -- HTML --> M
-  V -- user.all --> C{Controller}
-  C -->V
-  C --> D((Database))
-  D --> C
-  ```    
-      
+  graph LR;
+  M(Model) -- users --> V[Viever];
+  V -- HTML --> M;
+  V -- user.all --> C{Controller};
+  C -->V;
+  C --> D((Database));
+  D --> C;
+  ```      
 # Chapter 3  
 
 ### common commands  
