@@ -769,10 +769,60 @@ Model - Viewer - Controller
   rails c --environment t
   rails c --environment d
   ```
-  Also it works with short names of <S> erver, <C> onsole or <T> est, f.eg.
+  Also it works with short names of Server, Console or Test, f.eg.
   ```bash
   rails s --environment p
   ```
+
+* ex1 - Visit /about in browser and use debug information the controller and action of the params hash 
+  ```
+  --- !ruby/object:ActionController::Parameters
+  parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  controller: static_pages
+  action: about
+  permitted: false
+  ``
+
+* ex2 - In the Rails console, pull the first user out of the database and assign it to the variable user. What is the output ofputs user.attributes.-to_yaml?
   
-  
+  ```bash
+  >> user = User.first
+  >> user
+  => #<User id: 1, name: "Rad Big", email: "wlcz.kml@gmail.end", created_at: "2021-03-19 17:23:50.609684000 +0000", updated_at: "2021-03-19 17:52:24.588885000 +0000", password_digest: [FILTERED]>
+  # to yaml
+  >> puts user.attributes.to_yaml
+  ---
+  id: 1
+  name: Rad Big
+  email: wlcz.kml@gmail.end
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-19 17:23:50.609684000 Z
+  zone: &1 !ruby/object:ActiveSupport::TimeZone
+  name: Etc/UTC
+  time: 2021-03-19 17:23:50.609684000 Z 
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-19 17:52:24.588885000 Z
+  zone: *1
+  time: 2021-03-19 17:52:24.588885000 Z 
+  password_digest: "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"
+  => nil
+  # y user.attributes
+  >> y user.attributes
+  ---
+  id: 1
+  name: Rad Big
+  email: wlcz.kml@gmail.end
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-19 17:23:50.609684000 Z
+  zone: &1 !ruby/object:ActiveSupport::TimeZone
+  name: Etc/UTC
+  time: 2021-03-19 17:23:50.609684000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-19 17:52:24.588885000 Z
+  zone: *1
+  time: 2021-03-19 17:52:24.588885000 Z
+  password_digest: "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"
+  => nil
+  #basically its the same 
+  ```
   

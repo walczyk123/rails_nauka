@@ -4488,3 +4488,115 @@ Migrating to AddPasswordDigestToUsers (20210317075611)
   [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "wlcz.kml@gmail.end"], ["id", 1], ["LIMIT", 1]]
   [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["name", "Rad Big"], ["updated_at", "2021-03-19 17:52:24.588885"], ["password_digest", "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"], ["id", 1]]
   [1m[36mTRANSACTION (88.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-03-20 13:06:01 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7155.0ms | Allocations: 2820406)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/kamil/enviromnent/sample_app/public/packs
+[Webpacker] Hash: f86639f4459f31b34f60
+Version: webpack 4.46.0
+Time: 5015ms
+Built at: 20.03.2021 13:06:22
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-07e792d2b65403c647a1.js    124 KiB  application  [emitted] [immutable]  application
+js/application-07e792d2b65403c647a1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-07e792d2b65403c647a1.js js/application-07e792d2b65403c647a1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layouts/_shim.html.erb (Duration: 14.4ms | Allocations: 77)
+  Rendered layouts/_head.html.erb (Duration: 13490.7ms | Allocations: 20358)
+  Rendered layouts/_header.html.erb (Duration: 18.9ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 15.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 20686.6ms | Allocations: 2842123)
+Completed 200 OK in 20722ms (Views: 20693.7ms | ActiveRecord: 0.0ms | Allocations: 2844698)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-20 13:06:40 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 658)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.7ms | Allocations: 13449)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 14584)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 15002)
+
+
+Started GET "/help" for 127.0.0.1 at 2021-03-20 13:06:41 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 16.7ms | Allocations: 114)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 30.1ms | Allocations: 13542)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 14152)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 14693)
+
+
+Started GET "/help" for 127.0.0.1 at 2021-03-20 13:06:43 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.7ms | Allocations: 13538)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 14033)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 14444)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-03-20 13:07:11 +0100
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 74)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 30.1ms | Allocations: 13501)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 75)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 14071)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.0ms | Allocations: 14998)
+
+
+Started GET "/home" for 127.0.0.1 at 2021-03-20 13:07:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 663)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 28.8ms | Allocations: 13399)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 14542)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 14945)
+
+
+Started GET "/about" for 127.0.0.1 at 2021-03-20 13:08:13 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 27.3ms | Allocations: 138)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 32.2ms | Allocations: 13542)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 14173)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.0ms | Allocations: 14706)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
