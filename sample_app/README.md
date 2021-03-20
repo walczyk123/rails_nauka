@@ -3,7 +3,7 @@
 ## Sample application 
 
 Model - Viewer - Controller  
-
+```mermaid
 stateDiagram-v2
 
     Viewer --> Model
@@ -12,7 +12,7 @@ stateDiagram-v2
     Controller --> Viewer
     Controller --> Database
     Database --> Controller
-      
+```     
       
 # Chapter 3  
 
