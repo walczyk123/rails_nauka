@@ -3,17 +3,16 @@
 ## Sample application 
 
 Model - Viewer - Controller  
-    ```mermaid
 
-    graph LR
-    M(Model) -- users --> V[Viever]
-    V -- HTML --> M
-    V -- user.all --> C{Controller}
-    C -->V
-    C --> D((Database))
-    D --o C
-
-    ```    
+  ```mermaid
+  graph LR
+  M(Model) -- users --> V[Viever]
+  V -- HTML --> M
+  V -- user.all --> C{Controller}
+  C -->V
+  C --> D((Database))
+  D --> C
+  ```    
       
 # Chapter 3  
 
