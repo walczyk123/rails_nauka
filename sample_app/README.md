@@ -2,6 +2,18 @@
 
 ## Sample application 
 
+Model - Viewer - Controller  
+
+stateDiagram-v2
+
+    Viewer --> Model
+    Model --> Viewer
+    Viewer --> Controller
+    Controller --> Viewer
+    Controller --> Database
+    Database --> Controller
+      
+      
 # Chapter 3  
 
 ### common commands  
@@ -758,7 +770,7 @@
   rails c --environment t
   rails c --environment d
   ```
-  Also it works with short names of __S__erver, __C__onsole or __T__est, f.eg.
+  Also it works with short names of <S>erver, <C>onsole or <T>est, f.eg.
   ```bash
   rails s --environment p
   ```
