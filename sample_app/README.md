@@ -769,7 +769,7 @@ Model - Viewer - Controller
   rails c --environment t
   rails c --environment d
   ```
-  Also it works with short names of <S>erver, <C>onsole or <T>est, f.eg.
+  Also it works with short names of <S> erver, <C> onsole or <T> est, f.eg.
   ```bash
   rails s --environment p
   ```
