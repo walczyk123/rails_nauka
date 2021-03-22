@@ -894,3 +894,14 @@ D --> C
 * ex1 - Learn Enough HTML to Be Dangerous, in which all HTML is written by hand, doesn’t cover the form tag. Why not?  
   __form tag is rails method not an HTML method?__
   
+### Unsuccessful signups 
+
+* ex1 - 
+  ```html-- !ruby/object:ActionController::Parameters
+  parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  admin: '1'
+  controller: users
+  action: new
+  permitted: false
+   ```
+  
