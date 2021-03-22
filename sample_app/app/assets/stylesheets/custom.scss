@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* colors */
+$col_light_red: #ff0000;
+$col_red: #cc0000;
+$col_strong_red: #B00100;
+$col_light_gray: #BBBBBB;
+$col_gray: #999999;
+$col_strong_gray: #454545;
+
+
 aside {
   section.user_info {
     margin-top: 20px;
@@ -68,14 +77,21 @@ textarea {
     margin-bottom: 10px;
   }
 }
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #B00100;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing
+}
+
+input {
+  height: auto !important;
+}
 
 /* typo */
-$col_light_red: #ff0000;
-$col_red: #cc0000;
-$col_strong_red: #B00100;
-$col_light_gray: #BBBBBB;
-$col_gray: #999999;
-$col_strong_gray: #454545;
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
