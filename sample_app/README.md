@@ -3,16 +3,15 @@
 ## Sample application 
 
 Model - Viewer - Controller  
-
-  ```mermaid
-  graph LR;
-  M(Model) -- users --> V[Viever];
-  V -- HTML --> M;
-  V -- user.all --> C{Controller};
-  C -->V;
-  C --> D((Database));
-  D --> C;
-  ```      
+```mermaid
+graph LR
+M(Model) -- users --> V[Viever]
+V -- HTML --> M
+V -- user.all --> C{Controller}
+C -->V
+C --> D((Database))
+D --> C
+```      
 # Chapter 3  
 
 ### common commands  
@@ -825,4 +824,15 @@ Model - Viewer - Controller
   => nil
   #basically its the same 
   ```
-  
+
+### Users resource 
+
+* ex1 - Using embedded Ruby, add the created_at and updated_at “magic column” attributes to the user show page
+  ```html
+  <%= @user.name %>, <%= @user.email %>, <%= @user.created_at %>, <%= @user.updated_at %>
+  ```
+* ex2 - Using embedded Ruby, addTime.now to the user show page. What happens when you refresh the browser?
+  ```html
+  <%= @user.name %>, <%= @user.email %>, <%= @user.created_at %>, <%= @user.updated_at %>, <%= Time.now %>
+  ```
+  Time on user page changes, nothing fancy, very predictable, 2/10
