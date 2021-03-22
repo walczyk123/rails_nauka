@@ -876,3 +876,18 @@ D --> C
   Its just nil, maybe because we haven't assigned any attributes to this user yet?
 
 ### Gravatar img and sidebar
+
+* ex1 - MD5 hash associated with image
+  ```bash
+  >> Digest::MD5::hexdigest(u.email.downcase)
+  => "b147e88b86bb5a1a9f0923a392e07eab"
+  ```
+  
+* ex2 -  Verify that the code in Listing 7.12 allows the gravatar_for helper defined inSection 7.1.4to take an optional size parameter,  
+  __IDK, for now it just not working__
+    
+* ex3 - The options hash used in the previous exercise is still commonly used, but as of Ruby 2.0 we can use keyword arguments instead.  
+  __Done__
+  
+### Signup form
+
