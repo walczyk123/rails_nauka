@@ -836,3 +836,43 @@ D --> C
   <%= @user.name %>, <%= @user.email %>, <%= @user.created_at %>, <%= @user.updated_at %>, <%= Time.now %>
   ```
   Time on user page changes, nothing fancy, very predictable, 2/10
+
+### Debugger
+
+* ex1 - Use puts to display the value of the YAML form of the params hash.
+  ```bash
+  (byebug) puts @user.attributes.to_yaml
+  ---
+  id: 1
+  name: Rad Big
+  email: wlcz.kml@gmail.end
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-19 17:23:50.609684000 Z
+  zone: &1 !ruby/object:ActiveSupport::TimeZone
+  name: Etc/UTC
+  time: 2021-03-19 17:23:50.609684000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-03-19 17:52:24.588885000 Z
+  zone: *1
+  time: 2021-03-19 17:52:24.588885000 Z
+  password_digest: "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"
+  nil
+  (byebug) puts params.to_yaml
+  --- !ruby/object:ActionController::Parameters
+  parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  controller: users
+  action: show
+  id: '1'
+  permitted: false
+  nil
+  (byebug) 
+  ```
+
+* ex2 - Put the debugger in the User new action and hit /users/new. What is the value of@user?
+  ```bash
+  (byebug) puts @user
+  nil
+  ```
+  Its just nil, maybe because we haven't assigned any attributes to this user yet?
+
+### Gravatar img and sidebar

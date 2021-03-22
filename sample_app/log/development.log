@@ -5124,3 +5124,77 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.3ms | Allocations: 14912)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2021-03-22 09:44:34 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 36493)
+Started GET "/users/1" for 127.0.0.1 at 2021-03-22 09:46:12 +0100
+  Rendered layouts/_shim.html.erb (Duration: 3.4ms | Allocations: 7413)
+  Rendered layouts/_head.html.erb (Duration: 686.0ms | Allocations: 3122303)
+  Rendered layouts/_header.html.erb (Duration: 12.1ms | Allocations: 51062)
+  Rendered layouts/_footer.html.erb (Duration: 6.2ms | Allocations: 42496)
+  Rendered layout layouts/application.html.erb (Duration: 763.1ms | Allocations: 3482805)
+Completed 200 OK in 98665ms (Views: 786.3ms | ActiveRecord: 2.2ms | Allocations: 3667159)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 64)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.4ms | Allocations: 13492)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 76)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 14063)
+Completed 200 OK in 18092ms (Views: 31.0ms | ActiveRecord: 70.3ms | Allocations: 1752450)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-03-22 09:47:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 21)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.2ms | Allocations: 13479)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 76)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 14048)
+Completed 200 OK in 254643ms (Views: 34.1ms | ActiveRecord: 3.5ms | Allocations: 46482)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-03-22 09:51:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 63)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 27.1ms | Allocations: 13520)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 76)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 14082)
+Completed 200 OK in 52ms (Views: 32.5ms | ActiveRecord: 2.4ms | Allocations: 19134)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-03-22 09:52:06 +0100
+Processing by UsersController#new as HTML
