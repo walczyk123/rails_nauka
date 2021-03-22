@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
 
     else
-      render.new
+      render 'new'
     end
   end
 
