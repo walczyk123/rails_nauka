@@ -891,3 +891,6 @@ D --> C
   
 ### Signup form
 
+* ex1 - Learn Enough HTML to Be Dangerous, in which all HTML is written by hand, doesn’t cover the form tag. Why not?  
+  __form tag is rails method not an HTML method?__
+  
