@@ -954,3 +954,15 @@ D --> C
 * ex2 - How does the previous exercise relate to the flash iteration shown listing?  
   __In listing we put all keys and values corresponding to them (there is only 2), and in ERB we do basically the same__
   
+### The first signup
+
+* ex1
+  ```bash
+  >> User.find_by(email: "example@railstutorial.com")
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  ```
+  
+* ex2 - Create a new user with your primary email address. Verify that the Gravatar correctly appears.
+  __Yes, there is a good gravatar__
+  
+### A test for valid submission
