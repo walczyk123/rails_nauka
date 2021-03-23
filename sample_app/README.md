@@ -932,4 +932,25 @@ D --> C
 
 ### Successful signups
 
+* ex1 - Using Rails console, verify that a user is in fact created when submitting valid information  
+  __Yup, there is another user in DB__
+  ```bash
+  User.count
+  #or
+  User.last
+  ```
 
+* ex2 - Confirm by updating and submitting a valid user that `redirect_to user_url(@user)` has the same effect as `redirect_to @user`  
+  __Yes__
+  
+### The flash
+
+* ex1 - Value of "#{:success}"
+  ```bash
+  >> "#{:success}"
+  => "success"
+  ```
+  
+* ex2 - How does the previous exercise relate to the flash iteration shown listing?  
+  __In listing we put all keys and values corresponding to them (there is only 2), and in ERB we do basically the same__
+  
