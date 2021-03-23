@@ -8879,3 +8879,36 @@ Completed 204 No Content in 327ms (ActiveRecord: 66.8ms | Allocations: 3815)
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (6.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2021-03-23 14:16:52 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"S2wd5IV/4rCkqALyxgg3AbPD3Z4AJVMX6MqRDYU6/iNKtPIw8VQTSMJHT6jl0NN36F732TlQauZ1ASTyJOoWCg==", "user"=>{"name"=>"213", "email"=>"123@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (15.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (38.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "213"], ["email", "123@gmail.com"], ["created_at", "2021-03-23 13:16:53.678987"], ["updated_at", "2021-03-23 13:16:53.678987"], ["password_digest", "$2a$12$kUt5hOpMxJTV5vsVAitNRu7b0UAgCloHVSx2D8ILZ3TohKXdkYRWG"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (81.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 444ms (ActiveRecord: 136.4ms | Allocations: 9561)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2021-03-23 14:16:53 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 26.7ms | Allocations: 391)
+  Rendered layouts/_shim.html.erb (Duration: 13.3ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 3336.7ms | Allocations: 1513765)
+  Rendered layouts/_header.html.erb (Duration: 11.2ms | Allocations: 236)
+  Rendered layouts/_footer.html.erb (Duration: 13.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 3408.7ms | Allocations: 1515529)
+Completed 200 OK in 3436ms (Views: 3421.4ms | ActiveRecord: 0.8ms | Allocations: 1517882)
+
+
