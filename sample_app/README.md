@@ -905,3 +905,30 @@ D --> C
   permitted: false
    ```
   
+### Test for invalid submision
+ 
+* Important to remember:  
+  ```CSS
+  HTML    -->  CSS
+  id=x    -->  #x
+  class=x -->  .x
+  ```
+  [Rest of CSS selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+
+* ex1 - Write a test for the error messages implemented inListing 7.20.
+  ```ruby
+  require "test_helper"
+
+  class UsersSignupTest < ActionDispatch::IntegrationTest
+    test "invalid signup information" do
+    #
+    #
+    #
+    assert_select 'div#error_explanation'
+    assert_select 'div.alert'
+    end
+  end
+  ```
+
+### Successful signups
+

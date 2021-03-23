@@ -8620,3 +8620,262 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 62ms (Views: 52.2ms | ActiveRecord: 0.7ms | Allocations: 25194)
 
 
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:08 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"AFSXfrQAdrsVfMxGmGHCDuTSN3NI/KySpGBCdAR2LwsBjHiqwCuHQ3OTgRy7uSZ4v08dNHGJlWM5q/eLpabHIg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.5ms | Allocations: 1948)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5653)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 25.8ms | Allocations: 13471)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 19670)
+Completed 200 OK in 57ms (Views: 44.1ms | ActiveRecord: 1.5ms | Allocations: 22925)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:13 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"nxIRX5cdGDN6xTObhOnlj4h6HiNSnSqOljCnb54Ef0yeyv6L4zbpyxwqfsGnMQH50+c0ZGvoE38L+xKQP9SXZQ==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 5.1ms | Allocations: 1948)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 5648)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 25.8ms | Allocations: 13467)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 19661)
+Completed 200 OK in 57ms (Views: 45.4ms | ActiveRecord: 0.7ms | Allocations: 22428)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"wpeVYtKlI/AXV7zufxLr0ppKSprTsWAcOiScic9qH33DT3q2po7SCHG48bRcyg+kwddg3erEWe2n7yl2brr3VA==", "user"=>{"name"=>"", "email"=>"123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 4.4ms | Allocations: 1564)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 4720)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 26.0ms | Allocations: 13467)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 18735)
+Completed 200 OK in 55ms (Views: 43.5ms | ActiveRecord: 1.0ms | Allocations: 21486)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:17 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"4/qtNOqcgE5Hh62fqm9SdKjpTlO2I+c55Z+lEk3jwwfiIkLgnrdxtiFo4MWJt7YC83RkFI9W3sh4VBDt7DMrLg==", "user"=>{"name"=>"", "email"=>"123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 3.2ms | Allocations: 1274)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3926)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 28.1ms | Allocations: 13467)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 17943)
+Completed 200 OK in 296ms (Views: 42.4ms | ActiveRecord: 0.6ms | Allocations: 20803)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:19 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ot8GlTBbUcp0jyz5VhVQ3r9lPVf+/b/6WNy7OQ9T886jB+lBRHCgMhJgYaN1zbSo5PgXEMeIhgvFFw7GroMb5w==", "user"=>{"name"=>"213", "email"=>"123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 831)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2939)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 25.0ms | Allocations: 13467)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 16958)
+Completed 200 OK in 298ms (Views: 36.9ms | ActiveRecord: 0.6ms | Allocations: 19809)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:28 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"S2wd5IV/4rCkqALyxgg3AbPD3Z4AJVMX6MqRDYU6/iNKtPIw8VQTSMJHT6jl0NN36F732TlQauZ1ASTyJOoWCg==", "user"=>{"name"=>"213", "email"=>"123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 406)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1940)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 26.3ms | Allocations: 13467)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 15959)
+Completed 200 OK in 289ms (Views: 36.2ms | ActiveRecord: 0.6ms | Allocations: 18730)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:08:37 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"+ZfJhBUo0J0qbJwsDUk1SkmAfbMCtHrYZ3RedC97jpP4TyZQYQMhZUyD0XYukdE8Eh1X9DvBQyn6v+uLjqtmug==", "user"=>{"name"=>"213", "email"=>"123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "213"], ["email", "123"], ["created_at", "2021-03-22 14:08:37.599475"], ["updated_at", "2021-03-22 14:08:37.599475"], ["password_digest", "$2a$12$cLTSxnMNFD6a2fEZgRulJeQSm.VtJVI5MjkJfYL1XbUHjM6t2R/86"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (64.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 333ms (ActiveRecord: 65.9ms | Allocations: 5126)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-03-22 15:09:03 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController
+Did you mean?  new
+               create
+               hello
+               show):
+  
+actionpack (6.1.0) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.0) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.0) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.0) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.0) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.0) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.0) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.0) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.0) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.0) lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.0) lib/rails/engine.rb:539:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2021-03-22 15:09:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"S2wd5IV/4rCkqALyxgg3AbPD3Z4AJVMX6MqRDYU6/iNKtPIw8VQTSMJHT6jl0NN36F732TlQauZ1ASTyJOoWCg==", "user"=>{"name"=>"213", "email"=>"123elo123melo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123elo123melo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "213"], ["email", "123elo123melo@gmail.com"], ["created_at", "2021-03-22 14:09:16.140837"], ["updated_at", "2021-03-22 14:09:16.140837"], ["password_digest", "$2a$12$MMLDPYdAkRxhSx5jBrpj.eaIC.VuuF9.6SjxG0UhGa7kCOq1wb8Ca"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (65.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 327ms (ActiveRecord: 66.8ms | Allocations: 3815)
+
+
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
