@@ -966,3 +966,42 @@ D --> C
   __Yes, there is a good gravatar__
   
 ### A test for valid submission
+
+* ex1 - Write a test for the flash implemented in Section 7.4.2. How detailed you want to make your tests is up to you; 
+  ```ruby
+  test "valid signup information" do
+    #
+    #
+    assert_not flash.empty?
+  end
+  ```
+
+* ex2 - As noted above, the flash HTML inListing 7.29 is ugly. Verify by running the test suite that the cleaner code
+  ```html
+      <div class="alert alert-<%#= message_type %> "><%#=message %></div>
+      <!-- or -->
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  ```
+  __Both codes works the same way, the second one is beautiful because is like ruby.__
+
+* ex3 - Verify that the test fails if you comment out the redirect line in Listing 7.26.
+  ```ruby
+  #
+  if @user.save
+      flash[:success] = "Welcome to my inn"
+      #redirect_to user_url(@user)
+  else
+  #
+  ```
+  __Yes, if you comment redirection, the test will fail.__
+
+* ex4 - Suppose we changed @user.save to false in Listing 7.26. How does this change verify that the assert_difference block is testing the right thing?  
+  __If Im right we can check that there is no error message instead of checking that there is any message, sth like:__
+  ```ruby
+  assert_predicate flash[:error], :nil?
+  ```
+  Radek need to verify this
+
+## Professional grade development
+
+### SSL
