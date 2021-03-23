@@ -1005,3 +1005,9 @@ D --> C
 ## Professional grade development
 
 ### SSL
+
+* ex1 - Confirm on your browser that the SSL lock and https appear.  
+  __Currently i cannot do that because im on local server__  
+  
+* ex2 - Create a user on the production site using your primary email address.Does your Gravatar appear correctly?  
+  __Currently i cannot do that because im on local server__  
