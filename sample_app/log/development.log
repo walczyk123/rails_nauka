@@ -10140,3 +10140,34 @@ Processing by SessionsController#create as HTML
 Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 15665)
 
 
+Started POST "/login" for 127.0.0.1 at 2021-03-24 12:25:34 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"8OXz4u9olur15Au6yuG0UvAy3kn3frovdR6vaTWuRzrxPRw2m0NnEpMLRuDpOVAkq6/0Ds4Lg97o1RqWlH6vEw==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in in my super site"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 355)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 134.3ms | Allocations: 14355)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 76)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 139.5ms | Allocations: 15273)
+Completed 200 OK in 168ms (Views: 141.6ms | ActiveRecord: 1.4ms | Allocations: 17777)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-24 12:25:36 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 688)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 27.5ms | Allocations: 14208)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 15405)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 15934)
+
+

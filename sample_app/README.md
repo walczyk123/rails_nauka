@@ -1058,3 +1058,10 @@ D --> C
   email: elemelo@elo.melo
   password: '12345678'
   ```
+
+### Rendering with a flash message
+  Running only one test:  
+  `rails test test/integration/users_login_test.rb`
+  
+* ex1 - Verify in your browser that the sequence fromSection 8.1.4 works correctly, i.e., that the flash message disappears when you click on a second page.  
+  __Works fine__
