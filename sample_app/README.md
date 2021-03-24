@@ -1111,3 +1111,6 @@ D --> C
   >> @current_user
   => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
   ```
+  
+### Changing the layout links
+  
