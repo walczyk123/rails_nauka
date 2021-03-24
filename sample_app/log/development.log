@@ -10034,3 +10034,16 @@ ArgumentError: wrong number of arguments (given 2, expected 3)
 	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
 	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
 	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2021-03-24 11:20:31 +0100
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 589)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 30.2ms | Allocations: 14745)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 222)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 16754)
+Completed 200 OK in 46ms (Views: 44.0ms | Allocations: 17881)
+
+

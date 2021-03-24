@@ -1022,17 +1022,22 @@ D --> C
 * ex2 - By piping the results of rails routes to grep, list all the routes associated with the Users resource
   ```bash
   >>rails routes | grep users#
-  users_new   GET     /users/new(.:format)                                                                              users#new
-  signup      GET     /signup(.:format)                                                                                 users#new
-  users       GET     /users(.:format)                                                                                  users#index
-              POST    /users(.:format)                                                                                  users#create
-  new_user    GET     /users/new(.:format)                                                                              users#new
-  edit_user   GET     /users/:id/edit(.:format)                                                                         users#edit
-  user        GET     /users/:id(.:format)                                                                              users#show
-              PATCH   /users/:id(.:format)                                                                              users#update
-              PUT     /users/:id(.:format)                                                                              users#update
-              DELETE  /users/:id(.:format)                                                                              users#destroy
+  users_new   GET     /users/new(.:format)           users#new
+  signup      GET     /signup(.:format)              users#new
+  users       GET     /users(.:format)               users#index
+              POST    /users(.:format)               users#create
+  new_user    GET     /users/new(.:format)           users#new
+  edit_user   GET     /users/:id/edit(.:format)      sers#edit
+  user        GET     /users/:id(.:format)           users#show
+              PATCH   /users/:id(.:format)           users#update
+              PUT     /users/:id(.:format)           users#update
+              DELETE  /users/:id(.:format)           users#destroy
   ```
   
 ### Login Form
 
+* ex1 -  Submissions from the form defined in Listing 8.4 will be routed to the Session controller’s create action. How does Rails know to do this?  
+  __We know, that form method is post : `<form accept-charset="UTF-8" action="/login" method="post">`.
+  Route that corresponds to action login and method post is create : ` post '/login', to: 'sessions#create'`,
+  I believe this is enough for Ruby to do the rest (not REST {wink, wink}).__
+  
