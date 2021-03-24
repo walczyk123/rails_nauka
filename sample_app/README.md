@@ -1065,3 +1065,22 @@ D --> C
   
 * ex1 - Verify in your browser that the sequence fromSection 8.1.4 works correctly, i.e., that the flash message disappears when you click on a second page.  
   __Works fine__
+  
+## Logging in
+  Session cookie - temporary, expires after closing browser (also encrypted),  
+  Cookie (cookies method) - cookies that dont expire.  
+
+* ex1 - Log in with a valid user and inspect your browser’s cookies. What is the value of the session content?
+  ```html
+  _sample_app_session:"Q1FA2D%2BXO0sS%2B93P%2BOz8mrZhmA8zEZTGQ1o8ReF7e%2F6ishNCwB9VKmkUKdyw3sAUAM%2BzpJjbPvOSgFO0pn
+  4f7RX8xjVVd%2FoI5Q0FIWnXwJDoYBCf5PvHQ5VkCMXAHdQZ1sRmDFQF8%2FSTKwcyQE220NvTWAGCXsffLzK8uxH7NbLgj8Evph8BT5%2Fgb%2
+  BC3oN%2FzmGLjgEA4Ar8Djb6xgvgsi5NqXdOsIcoBrX0w%2BG0W0U8udGictHdR4FUvgPKbdyjo1j9Tl5D%2BKZHWH947ASxhYjVBri%2FuWolsgrxh
+  --VE2o7himP%2BN4UYv1--psIu2XKfWvtiwPBgHmP0Jg%3D%3D"
+  Domain:"localhost"
+  Wygasa / Max-Age:"Sesja"
+  ```
+
+* ex2 - What is the value of the Expires attribute from the previous exercise?
+  ```html
+  Wygasa / Max-Age:"Sesja"
+  ```
