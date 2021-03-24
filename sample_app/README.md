@@ -12,6 +12,7 @@ C -->V
 C --> D((Database))
 D --> C
 ```      
+[Link Chapter 7](#chapter-7)
 # Chapter 3  
 
 ### common commands  
@@ -23,13 +24,13 @@ D --> C
 * rails server  
 
 
-## Controller excercises  
+## Controller exercises  
 
 * rails generate controller Foo bar baz  
 
 * rails destroy controller Foo bar baz  
 
-## New dynamic page excercise  
+## New dynamic page exercise  
 
 * Added Contact page successfully
 
@@ -49,7 +50,7 @@ D --> C
 
 * "" suports interpolation in strings, when '' dont  
 
-## String excercises  
+## String exercises  
 
 * ex1
   ``` ruby
@@ -73,7 +74,7 @@ D --> C
   ``` bash
   ->  "\#{city}, \#{state}"
   ```
-## Objects and message passing excercises  
+## Objects and message passing exercises  
 
 * ex1
   ``` ruby
@@ -105,7 +106,7 @@ D --> C
   ``` bash  
   -> "kinda diffrent tho"  
   ```  
-## Method definitions excercises  
+## Method definitions exercises  
 
 * ex1  
   palindrome testing
@@ -1014,6 +1015,9 @@ D --> C
   
 # Chapter 8
 
+[Bootstrap buttons](https://getbootstrap.com/docs/4.0/components/buttons/)  
+[Bootstrap form layouts](https://getbootstrap.com/docs/5.0/forms/layout/)
+
 ### Basic login
 
 * ex1 - What is the difference between GET login_path and POST login_path?  
@@ -1040,4 +1044,17 @@ D --> C
   __We know, that form method is post : `<form accept-charset="UTF-8" action="/login" method="post">`.
   Route that corresponds to action login and method post is create : ` post '/login', to: 'sessions#create'`,
   I believe this is enough for Ruby to do the rest (not REST {wink, wink}).__
+  (Rectify me Radek if I'm wrong)
   
+### Finding and authenticating a user
+  Methods from:  
+  `x.find_by` from `Active Record`  
+  `authenticate` from `has_secure_password`  
+
+
+  Debug after login:
+  ```html
+  session: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  email: elemelo@elo.melo
+  password: '12345678'
+  ```
