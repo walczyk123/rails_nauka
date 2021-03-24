@@ -1011,3 +1011,28 @@ D --> C
   
 * ex2 - Create a user on the production site using your primary email address.Does your Gravatar appear correctly?  
   __Currently i cannot do that because im on local server__  
+  
+# Chapter 8
+
+### Basic login
+
+* ex1 - What is the difference between GET login_path and POST login_path?  
+  __GET login_path corresponds to new session, when POST login_path to create a new session__
+  
+* ex2 - By piping the results of rails routes to grep, list all the routes associated with the Users resource
+  ```bash
+  >>rails routes | grep users#
+  users_new   GET     /users/new(.:format)                                                                              users#new
+  signup      GET     /signup(.:format)                                                                                 users#new
+  users       GET     /users(.:format)                                                                                  users#index
+              POST    /users(.:format)                                                                                  users#create
+  new_user    GET     /users/new(.:format)                                                                              users#new
+  edit_user   GET     /users/:id/edit(.:format)                                                                         users#edit
+  user        GET     /users/:id(.:format)                                                                              users#show
+              PATCH   /users/:id(.:format)                                                                              users#update
+              PUT     /users/:id(.:format)                                                                              users#update
+              DELETE  /users/:id(.:format)                                                                              users#destroy
+  ```
+  
+### Login Form
+
