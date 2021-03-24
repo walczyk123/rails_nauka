@@ -1084,3 +1084,30 @@ D --> C
   ```html
   Wygasa / Max-Age:"Sesja"
   ```
+  
+### Current user
+
+* ex1 - Confirm at the console that User.find_by(id: ...) returns nil when the corresponding user doesn’t exist
+  ```bash
+  >> User.find_by(id: 1)
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  >> User.find_by(id: 1000)
+  => nil
+  ```
+  
+* ex2 - In a Rails console, create a session hash with key :user_id. By following the steps in Listing 8.17, confirm that the ||= operator works as required.
+  ```bash
+  >> session={}
+  >> session[:user_id]=nil
+  >> @current_user ||= User.find_by(id: session[:user_id])
+  >> @current_user
+  => nil
+  >> session[:user_id] = User.first.id
+  User Load (0.3ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  >> @current_user ||= User.find_by(id: session[:user_id]) 
+  >> @current_user
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  >> @current_user ||= User.find_by(id: session[:user_id])
+  >> @current_user
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  ```
