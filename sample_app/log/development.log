@@ -11814,3 +11814,543 @@ TypeError: webpack.ProwidePlugin is not a constructor
 Completed 200 OK in 7971ms (Views: 7965.4ms | ActiveRecord: 0.6ms | Allocations: 19012)
 
 
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:02:12 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 49.8ms | Allocations: 681)
+[Webpacker] Compiling…
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:02:14 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 680)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 7845.5ms | Allocations: 31286)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.9ms | Allocations: 601)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 7909.3ms | Allocations: 32996)
+Completed 200 OK in 7912ms (Views: 7910.3ms | ActiveRecord: 0.4ms | Allocations: 33412)
+
+
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 8291.7ms | Allocations: 16593)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 608)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 8302.3ms | Allocations: 18312)
+Completed 200 OK in 8304ms (Views: 8302.9ms | ActiveRecord: 0.4ms | Allocations: 18731)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:03:32 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 680)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6502.9ms | Allocations: 14581)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6510.6ms | Allocations: 16284)
+Completed 200 OK in 6513ms (Views: 6511.5ms | ActiveRecord: 0.2ms | Allocations: 16706)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:03:40 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 679)
+[Webpacker] Compiling…
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:03:42 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 680)
+[Webpacker] Compiling…
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:03:45 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 680)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 7274.4ms | Allocations: 48012)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 18.1ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 7306.5ms | Allocations: 49722)
+Completed 200 OK in 7316ms (Views: 7313.7ms | ActiveRecord: 0.5ms | Allocations: 50128)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:03:48 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 681)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 8572.2ms | Allocations: 49997)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 8590.3ms | Allocations: 51700)
+Completed 200 OK in 8593ms (Views: 8591.4ms | ActiveRecord: 0.4ms | Allocations: 52105)
+
+
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 8750.9ms | Allocations: 35245)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.4ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 8766.0ms | Allocations: 36948)
+Completed 200 OK in 8769ms (Views: 8767.5ms | ActiveRecord: 0.5ms | Allocations: 37354)
+
+
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 8637.3ms | Allocations: 18567)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.4ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 8658.3ms | Allocations: 20271)
+Completed 200 OK in 8671ms (Views: 8668.4ms | ActiveRecord: 0.4ms | Allocations: 20676)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:06:31 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 680)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 10360.8ms | Allocations: 1347899)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 10376.9ms | Allocations: 1349612)
+Completed 200 OK in 10381ms (Views: 10378.4ms | ActiveRecord: 0.4ms | Allocations: 1350038)
+
+
+Started GET "/help" for 127.0.0.1 at 2021-03-25 20:06:44 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 13.8ms | Allocations: 121)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6098.7ms | Allocations: 14784)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.4ms | Allocations: 615)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6123.0ms | Allocations: 15958)
+Completed 200 OK in 6127ms (Views: 6124.3ms | ActiveRecord: 0.4ms | Allocations: 16510)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 20:07:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 681)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3
+const webpack = require('webpack')
+      ^
+
+SyntaxError: Identifier 'webpack' has already been declared
+    at new Script (vm.js:83:7)
+    at NativeCompileCache._moduleCompile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:240:18)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:184:36)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5875.1ms | Allocations: 14590)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 5889.4ms | Allocations: 16294)
+Completed 200 OK in 5893ms (Views: 5890.6ms | ActiveRecord: 0.4ms | Allocations: 16713)
+
+
