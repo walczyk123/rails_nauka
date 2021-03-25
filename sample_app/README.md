@@ -1018,6 +1018,11 @@ D --> C
 [Bootstrap buttons](https://getbootstrap.com/docs/4.0/components/buttons/)  
 [Bootstrap form layouts](https://getbootstrap.com/docs/5.0/forms/layout/)
 
+* Important to remember
+  To activate the dropdown menu, include Boot-strap’s custom JavaScript library which is not included
+  automatically as part of the bootstrap-sass gem.  
+  `yarn add jquery@3.4.1 bootstrap@3.4.1`  
+  
 ### Basic login
 
 * ex1 - What is the difference between GET login_path and POST login_path?  
@@ -1113,4 +1118,4 @@ D --> C
   ```
   
 ### Changing the layout links
-  
+
