@@ -10307,3 +10307,1240 @@ Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.2ms | Allocations: 157
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:38:13 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5972.4ms | Allocations: 2842374)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/kamil/enviromnent/sample_app/public/packs
+[Webpacker] Hash: f86639f4459f31b34f60
+Version: webpack 4.46.0
+Time: 3894ms
+Built at: 25.03.2021 19:38:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-07e792d2b65403c647a1.js    124 KiB  application  [emitted] [immutable]  application
+js/application-07e792d2b65403c647a1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-07e792d2b65403c647a1.js js/application-07e792d2b65403c647a1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layouts/_shim.html.erb (Duration: 14.7ms | Allocations: 77)
+  Rendered layouts/_head.html.erb (Duration: 11952.1ms | Allocations: 21668)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 53.6ms | Allocations: 5514)
+  Rendered layouts/_footer.html.erb (Duration: 22.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 18020.1ms | Allocations: 2870802)
+Completed 200 OK in 18041ms (Views: 18023.8ms | ActiveRecord: 1.7ms | Allocations: 2873489)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:38:46 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 681)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.9ms | Allocations: 14282)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 614)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 16008)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms | Allocations: 16446)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:38:51 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 680)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.0ms | Allocations: 14224)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 608)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 15943)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.4ms | Allocations: 16372)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:38:53 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 680)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 27.6ms | Allocations: 14247)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 595)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 15950)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.2ms | Allocations: 16377)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-25 19:38:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 201.6ms | Allocations: 2173)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.6ms | Allocations: 14330)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 614)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 232.9ms | Allocations: 17550)
+Completed 200 OK in 238ms (Views: 235.5ms | ActiveRecord: 0.2ms | Allocations: 18491)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-25 19:38:59 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EUO6rdxokcpfnNePPO0yuNIbE8FwU3Y3a4tq0srdnULoWeY6SHK1838Fd6dNVkOR/krehiyUZBA3mVUhgTVJxQ==", "session"=>{"email"=>"elemelo@elo.melo", "password"=>"[FILTERED]"}, "commit"=>"Log in in my super site"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "elemelo@elo.melo"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 346)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.1ms | Allocations: 14368)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 589)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 15782)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.8ms | Allocations: 16781)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-25 19:39:02 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3gPgEbq423AaaHln648Mt5QWkVPlksjo0Kop21xxeCcONW6G2poYw3cZdZU3qPWLMtd1taqOUWRJf/Afbst0vg==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}, "commit"=>"Log in in my super site"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 249ms (ActiveRecord: 0.2ms | Allocations: 842)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:39:03 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 18.9ms | Allocations: 276)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 27.1ms | Allocations: 14370)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 614)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 15697)
+Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 0.6ms | Allocations: 17128)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:39:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.7ms | Allocations: 14366)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 15490)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.5ms | Allocations: 16322)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:39:05 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.5ms | Allocations: 14366)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 15490)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.5ms | Allocations: 16334)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:39:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 30.1ms | Allocations: 14389)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 15513)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.6ms | Allocations: 16359)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:39:07 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.5ms | Allocations: 14366)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 15490)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.6ms | Allocations: 16327)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:39:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.1ms | Allocations: 14366)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 15490)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.4ms | Allocations: 16337)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:42:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3366.0ms | Allocations: 1344694)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3376.5ms | Allocations: 1345826)
+Completed 200 OK in 3386ms (Views: 3378.0ms | ActiveRecord: 0.8ms | Allocations: 1346661)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:42:58 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.3ms | Allocations: 14421)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 15545)
+Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 1.0ms | Allocations: 16394)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:46:05 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5546.6ms | Allocations: 14766)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 5555.9ms | Allocations: 15890)
+Completed 200 OK in 5562ms (Views: 5556.7ms | ActiveRecord: 1.6ms | Allocations: 16726)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:46:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6249.7ms | Allocations: 14693)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.7ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6259.9ms | Allocations: 15821)
+Completed 200 OK in 6264ms (Views: 6260.8ms | ActiveRecord: 0.6ms | Allocations: 16667)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:46:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 88)
+[Webpacker] Compiling…
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:46:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6897.7ms | Allocations: 31898)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.9ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6910.5ms | Allocations: 33022)
+Completed 200 OK in 6916ms (Views: 6911.7ms | ActiveRecord: 0.7ms | Allocations: 33856)
+
+
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 7129.7ms | Allocations: 16735)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 7136.2ms | Allocations: 17859)
+Completed 200 OK in 7161ms (Views: 7137.9ms | ActiveRecord: 2.1ms | Allocations: 19166)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:46:31 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6062.0ms | Allocations: 14759)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6072.8ms | Allocations: 15883)
+Completed 200 OK in 6079ms (Views: 6074.7ms | ActiveRecord: 0.7ms | Allocations: 16724)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:48:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6191.4ms | Allocations: 14708)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6204.2ms | Allocations: 15832)
+Completed 200 OK in 6212ms (Views: 6205.4ms | ActiveRecord: 0.7ms | Allocations: 16674)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:48:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5979.4ms | Allocations: 14685)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 5990.6ms | Allocations: 15809)
+Completed 200 OK in 6005ms (Views: 5991.2ms | ActiveRecord: 0.5ms | Allocations: 16658)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:49:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 686)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5893.7ms | Allocations: 14547)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.6ms | Allocations: 602)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 5912.1ms | Allocations: 16265)
+Completed 200 OK in 5916ms (Views: 5913.0ms | ActiveRecord: 0.4ms | Allocations: 16687)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-25 19:49:11 +0100
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 358)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5865.6ms | Allocations: 14776)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 602)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 5875.9ms | Allocations: 16166)
+Completed 200 OK in 5878ms (Views: 5876.8ms | ActiveRecord: 0.4ms | Allocations: 16592)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-25 19:49:20 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7JKJOOiskQwnX1aMOhqa1s+ky4Y/498jvjyViMjoJDwViNWvfLa1NQfG9qRLoev/4/UGwWMkzQTiLqp7gwDwuw==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}, "commit"=>"Log in in my super site"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 252ms (ActiveRecord: 0.5ms | Allocations: 804)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:49:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5393.2ms | Allocations: 14701)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 5404.0ms | Allocations: 15833)
+Completed 200 OK in 5409ms (Views: 5404.9ms | ActiveRecord: 0.7ms | Allocations: 16660)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:49:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 5629.9ms | Allocations: 14685)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 5636.1ms | Allocations: 15809)
+Completed 200 OK in 5640ms (Views: 5636.9ms | ActiveRecord: 0.5ms | Allocations: 16642)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:50:33 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 400)
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:50:35 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Compiling…
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3715.7ms | Allocations: 1492406)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 1.1ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 10733.2ms | Allocations: 2795976)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.7ms | Allocations: 1057)
+  Rendered layouts/_footer.html.erb (Duration: 1.8ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 10757.0ms | Allocations: 2798676)
+Completed 200 OK in 10788ms (Views: 10761.1ms | ActiveRecord: 1.9ms | Allocations: 2806344)
+
+
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 7387.3ms | Allocations: 19392)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 618)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 11110.5ms | Allocations: 1512849)
+Completed 200 OK in 11117ms (Views: 11114.3ms | ActiveRecord: 0.3ms | Allocations: 1514052)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-25 19:50:57 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 682)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6521.1ms | Allocations: 14561)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 77)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6527.5ms | Allocations: 15748)
+Completed 200 OK in 6530ms (Views: 6529.1ms | ActiveRecord: 0.0ms | Allocations: 16072)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-25 19:51:06 +0100
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2173)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6106.7ms | Allocations: 14688)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 81)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6118.8ms | Allocations: 17379)
+Completed 200 OK in 6123ms (Views: 6121.5ms | ActiveRecord: 0.0ms | Allocations: 18312)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-25 19:51:15 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eSN5fSx4XXiBr9ft0bYJUGK90E8wbLp6ZCKmomIf6lW/SLHwgTkHLY9biwSHqO5GuapL1InY9Pojd5t5i6Bffw==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}, "commit"=>"Log in in my super site"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 517ms (ActiveRecord: 0.4ms | Allocations: 993)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:51:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 89)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6040.6ms | Allocations: 14692)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 614)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 6052.0ms | Allocations: 15832)
+Completed 200 OK in 6060ms (Views: 6053.7ms | ActiveRecord: 0.8ms | Allocations: 16665)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-25 19:51:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+TypeError: webpack.ProwidePlugin is not a constructor
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/environment.js:3:40)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/config/webpack/development.js:3:21)
+    at Module._compile (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (/home/kamil/enviromnent/sample_app/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at yargs.parse (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:71:45)
+    at Object.parse (/home/kamil/enviromnent/sample_app/node_modules/yargs/yargs.js:576:18)
+    at /home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/kamil/enviromnent/sample_app/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+
+[Webpacker] 
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 6085.4ms | Allocations: 14768)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 603)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 6095.1ms | Allocations: 15892)
+Completed 200 OK in 6100ms (Views: 6096.2ms | ActiveRecord: 0.7ms | Allocations: 16722)
+
+
