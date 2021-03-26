@@ -2,17 +2,17 @@
 
 ## Sample application 
 
-Model - Viewer - Controller  
-```mermaid
-graph LR
-M(Model) -- users --> V[Viever]
-V -- HTML --> M
-V -- user.all --> C{Controller}
-C -->V
-C --> D((Database))
-D --> C
-```      
-[Link Chapter 7](#chapter-7)
+* Notebook  
+  * ActiveSupport::HashWithIndifferentAccess - implements hash where key can be symbol or string, and still they are the same. For eg. `:name = "name"`  
+  * ActiveModel::SecurePassword - 
+  
+      
+Links doesn't work in RM, but github reads them correctly.  
+[Link to Chapter 4](#chapter-4)  
+[Link to Chapter 5](#chapter-5)  
+[Link to Chapter 6](#chapter-6)  
+[Link to Chapter 7](#chapter-7)  
+[Link to Chapter 8](#chapter-8)  
 # Chapter 3  
 
 ### common commands  
@@ -445,7 +445,7 @@ D --> C
   after changing about_path to contact_path in _footer partial, integration test has catched this   problem.  
   
 * ex2  
-  ASK RADEK! or check it when rested.  (page 282)
+  ASK RAD! or check it when rested.  (page 282)
   edit: understood.
   
 
@@ -649,7 +649,7 @@ D --> C
 * Important to remember  
   rails db:migrate:reset -> db:drop db:create db:migrate  
   
-* ASK RADEK  
+* ASK RAD 
   bang! -> email.downcase!  
   normal -> self.email = email.downcase (optional self.email.downcase)  
   
@@ -1001,7 +1001,6 @@ D --> C
   ```ruby
   assert_predicate flash[:error], :nil?
   ```
-  Radek need to verify this
 
 ## Professional grade development
 
@@ -1049,7 +1048,6 @@ D --> C
   __We know, that form method is post : `<form accept-charset="UTF-8" action="/login" method="post">`.
   Route that corresponds to action login and method post is create : ` post '/login', to: 'sessions#create'`,
   I believe this is enough for Ruby to do the rest (not REST {wink, wink}).__
-  (Rectify me Radek if I'm wrong)
   
 ### Finding and authenticating a user
   Methods from:  
@@ -1118,4 +1116,26 @@ D --> C
   ```
   
 ### Changing the layout links
+
+* ex1  
+  __Done__
+  
+* ex2  
+  __Done__
+  
+### Testing layout changes
+
+* ASK RADEK  
+  ```ruby
+  cost=ActiveModel::SecurePassword.min_cost ?BCrypt::Engine::MIN_COST:BCrypt::Engine.cost
+  ```
+  `cost = warunek ? tak : nie`
+  Czy to o to chodzi?  
+  
+
+  
+
+  
+  
+  
 
