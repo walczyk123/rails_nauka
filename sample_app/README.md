@@ -1132,7 +1132,14 @@ Links doesn't work in RM, but github reads them correctly.
   `cost = warunek ? tak : nie`
   Czy to o to chodzi?  
   
-
+* ex1 - Confirm by commenting out everything after `if user`,  the tests still pass even if we don’t authenticate the 
+  user by email and password  
+  __After commenting out `&& user.authenticate(params[:session][:password]` the test will pass green, but if we have this 
+  snippet of code in session controller the validation wont pass with wrong email__  
+  
+* ex2 - Use the “safe navigation” operator &.to simplify the boolean test.  
+  __Done__  
+  `if user&.authenticate(params[:session][:password])`
   
 
   
