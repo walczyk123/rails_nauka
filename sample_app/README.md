@@ -1141,7 +1141,17 @@ Links doesn't work in RM, but github reads them correctly.
   __Done__  
   `if user&.authenticate(params[:session][:password])`
   
+### Login after signup
 
+* Important to remember  
+  * Session helper methods are not available in test   
+  * Test helper methods can be handled in tests
+  
+* ex1 - Is the test suite red or green if you comment out the log_in line? 
+  __After commenting out an `log_in @user`, in user controller, test will fail (RED).__ 
+  
+* ex2 - By using your text editor’s ability to comment out code, toggle back and forth between commenting out code. 
+  __After toggling back code, tests are GREEN__
   
   
   
