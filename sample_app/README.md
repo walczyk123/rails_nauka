@@ -472,9 +472,10 @@ Links doesn't work in RM, but github reads them correctly.
 * ex2  
   ```ruby
   class ApplicationRecord < ActiveRecord::Base
-  .
-  .
-  .
+    #...
+    #...
+    #...
+  end
   ```
 
 ### User object  
@@ -647,7 +648,7 @@ Links doesn't work in RM, but github reads them correctly.
 * ex2 
   ```ruby
   #VER -> VALID_EMAIL_REGEX
-  VER=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   ```
 
 * ex3 - Done in Rubular 
@@ -1163,7 +1164,7 @@ Links doesn't work in RM, but github reads them correctly.
   
 ### Logout
 
-* ex1 - Confirm in a browser that the “Log out” link causes the correct changes in the site layout. What is the correspondence between these changes and the final three steps?
+* ex1 - Confirm in a browser that the “Log out” link causes the correct changes in the site layout. What is the correspondence between these changes and the final three steps?  
   __Yup, everything is changing correctly. After log out there is:__ 
   * <ins>login button</ins> which corresponds to `assert_select "a[href=?]", login_path`  
   * <ins>no logout button</ins> which corresponds to `aassert_select "a[href=?]", logout_path, count: 0`  
@@ -1175,3 +1176,10 @@ Links doesn't work in RM, but github reads them correctly.
 
 # Chapter 9 
 ## Advanced login
+
+* Important to remember:  
+  * Adding attribute to model:  
+    `rails generate migration add_(new_atr)_to_(model) (new_atr)_(data_type)`  
+    example:  
+    `rails generate migration add_remember_digest_to_users remember_digest:string`  
+    
