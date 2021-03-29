@@ -1153,6 +1153,15 @@ Links doesn't work in RM, but github reads them correctly.
 * ex2 - By using your text editor’s ability to comment out code, toggle back and forth between commenting out code. 
   __After toggling back code, tests are GREEN__
   
-  
-  
+### Logout
+
+* ex1 - Confirm in a browser that the “Log out” link causes the correct changes in the site layout. What is the correspondence between these changes and the final three steps?
+  __Yup, everything is changing correctly. After log out there is:__ 
+  * <ins>login button</ins> which corresponds to `assert_select "a[href=?]", login_path`  
+  * <ins>no logout button</ins> which corresponds to `aassert_select "a[href=?]", logout_path, count: 0`  
+  * <ins>no user button</ins> which corresponds to `assert_select "a[href=?]", user_path(@user),count: 0 `   
+ 
+
+* ex2 - By checking the site cookies, confirm that the session is correctly removed after logging out.  
+  __Yup, cookies were deleted__
 

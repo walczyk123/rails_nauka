@@ -9,8 +9,14 @@
 
     </a>
   </h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  <%= link_to "Log in!", login_path, class: "btn btn-lg btn-primary" %>
+  <% if logged_in? %>
+  <p> You are logged in </p>
+<!--  <p><%#= @user.name %><p>-->
+    <%#= render 'users/show_user' %>
+  <% else %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Log in!", login_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
 <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
 
