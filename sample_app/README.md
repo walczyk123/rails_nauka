@@ -647,7 +647,6 @@ Links doesn't work in RM, but github reads them correctly.
   
 * ex2 
   ```ruby
-  #VER -> VALID_EMAIL_REGEX
   VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   ```
 
@@ -918,10 +917,10 @@ Links doesn't work in RM, but github reads them correctly.
 ### Test for invalid submision
  
 * Important to remember:  
-  ```CSS
-  HTML    -->  CSS
-  id=x    -->  #x
-  class=x -->  .x
+  ```HTML
+  HTML    ->  CSS
+  id=x    ->  #x
+  class=x ->  .x
   ```
   [Rest of CSS selectors](https://www.w3schools.com/cssref/css_selectors.asp)
 
@@ -998,9 +997,11 @@ Links doesn't work in RM, but github reads them correctly.
   ```ruby
   #
   if @user.save
-      flash[:success] = "Welcome to my inn"
-      #redirect_to user_url(@user)
+    flash[:success] = "Welcome to my inn"
+    #redirect_to user_url(@user)
   else
+    #...
+  end
   #
   ```
   __Yes, if you comment redirection, the test will fail.__
@@ -1136,7 +1137,7 @@ Links doesn't work in RM, but github reads them correctly.
 
 * ASK RADEK  
   ```ruby
-  cost=ActiveModel::SecurePassword.min_cost ?BCrypt::Engine::MIN_COST:BCrypt::Engine.cost
+  cost=ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST:BCrypt::Engine.cost
   ```
   `cost = warunek ? tak : nie`
   Czy to o to chodzi?  
@@ -1183,3 +1184,30 @@ Links doesn't work in RM, but github reads them correctly.
     example:  
     `rails generate migration add_remember_digest_to_users remember_digest:string`  
     
+  * Long random string:  
+    `SecureRandom` -> module in standard Ruby library,  
+    `urlsafe_base64` -> method in this module,  
+    ```bash
+    >> SecureRandom.urlsafe_base64
+    => "brl_446-8bqHv87AQzUj_Q"
+    ```
+### Remember me
+
+* ex1 - In the console, assign user to the first user in the database, and verify by calling it directly that the remember 
+  method works. How do remember_token and remember_digest compare?  
+  ```bash
+  user=User.first
+  user.remember
+  >> user.remember_digest
+  => "$2a$12$2fL0AfzlKiqzmgDaTk9p3uihhMXGORQR44DYP5LKcvVQ3K/aWKcf6"
+  >> user.remember_token
+  => "p_vckLzZVmh81TbAHimWNA"
+  >> user.remember_token==user.remember_digest
+  => false
+
+  ```
+  
+* ex2 - By running the test suite, verify that the implementations in Listing 9.4 (slightly confusing) and Listing 9.5 (extremely confusing) are correct.  
+  __Yes, they are correct__  
+  
+### Login with remembering  
