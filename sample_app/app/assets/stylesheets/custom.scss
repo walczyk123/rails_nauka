@@ -229,3 +229,23 @@ footer ul {
   }
 }
 
+// my own
+//header ul {
+//  li {
+//    padding-left: 5px;
+//    padding-right: 5px;
+//    font-size: 1.1em;
+//  }
+//}
+.date-header {
+  padding: 14px 5px;
+  font-size: 1.1em;
+  font-style: revert;
+  font-weight: bold;
+  color: $col_light_gray;
+  background-color: $col_strong_red;
+  border-radius: 15px;
+  border-color: #BBBBBB;
+  border-width: 2px;
+  border-style: outset;
+}
