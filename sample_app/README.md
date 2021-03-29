@@ -8,11 +8,19 @@
   
       
 Links doesn't work in RM, but github reads them correctly.  
-[Link to Chapter 4](#chapter-4)  
-[Link to Chapter 5](#chapter-5)  
-[Link to Chapter 6](#chapter-6)  
-[Link to Chapter 7](#chapter-7)  
-[Link to Chapter 8](#chapter-8)  
+* [Link to Chapter 4 - Rails flavored Ruby](#chapter-4)  
+  * [Arrays](#Arrays)
+  * [Blocks](#Blocks)
+  * [Hashes and symbols](#Hashes-and-symbols)
+* [Link to Chapter 5 - Filling in layout](#chapter-5)  
+* [Link to Chapter 6 - Modeling users](#chapter-6)  
+* [Link to Chapter 7 - Sign up](#chapter-7)  
+* [Link to Chapter 8 - Basic Login](#chapter-8)
+  * [Login Form](#Login-Form)
+  * [Finding and authenticating a user](#Finding-and-authenticating-a-user)
+  * [Logging in](#Logging-in)
+  * [Logout](#Logout)
+* [Link to Chapter 9 - Advanced login](#chapter-9)
 # Chapter 3  
 
 ### common commands  
@@ -1165,3 +1173,5 @@ Links doesn't work in RM, but github reads them correctly.
 * ex2 - By checking the site cookies, confirm that the session is correctly removed after logging out.  
   __Yup, cookies were deleted__
 
+# Chapter 9 
+## Advanced login
