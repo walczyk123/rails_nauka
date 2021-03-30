@@ -10,6 +10,11 @@
       <%= iter.label :password %>
       <%= iter.password_field :password, class: 'form-control' %>
 
+      <%= iter.label :remember_me, class: 'checkbox inline' do %>
+        <%= iter.check_box :remember_me %>
+        <span class="remember-text">Remember me on this device</span>
+      <% end %>
+
       <%= iter.submit "Log in in my super site", class: "btn btn-success" %>
     <% end %>
     <p>

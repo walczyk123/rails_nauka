@@ -25,6 +25,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Login with remembering](#login-with-remembering)
   * [Forgetting users](#forgetting-users)
   * [Two subtle bugs](#two-subtle-bugs)
+  * [Remember Me Checkbox](#remember-me-checkbox)
 # Chapter 3  
 
 ### common commands  
@@ -1256,3 +1257,17 @@ Links doesn't work in RM, but github reads them correctly.
   26 tests, 81 assertions, 0 failures, 0 errors, 0 skips
   ```
   
+## Remember Me Checkbox
+
+* ex1 - By inspecting your browser’s cookies directly, verify that the “remember me” checkbox is having its intended effect.  
+  __Yes, after checking 'Remember me', cookies 'remember_token' and 'user_id' appears in browser.__
+  
+* ex2 - At the console, invent examples showing both possible behaviors of the ternary operator.
+  ```bash
+  >> User.name == 'tester' ? 'yes' : 'no'
+  => "no"
+  >> User.name != 'tester' ? 'yes' : 'no'
+  => "yes"
+  ```
+  
+## Remember Me Tests

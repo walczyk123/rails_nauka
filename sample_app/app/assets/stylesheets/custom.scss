@@ -228,6 +228,28 @@ footer ul {
     float: left;
   }
 }
+/* remember me checkbox */
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span{
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+.remember-text {
+  margin-top: -10px;
+  margin-left: 20px;
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+#session_remember_me{
+  width: auto;
+  margin-left: 0px;
+}
+
 
 // my own
 //header ul {

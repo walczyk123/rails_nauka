@@ -16114,3 +16114,444 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 15866)
 
 
+Started GET "/" for 127.0.0.1 at 2021-03-30 12:14:54 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.9ms | Allocations: 935)
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:14:55 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 117.7ms | Allocations: 22344)
+  Rendered layouts/_shim.html.erb (Duration: 1.0ms | Allocations: 82)
+  Rendered layouts/_head.html.erb (Duration: 9233.9ms | Allocations: 2687987)
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 422)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 9255.3ms | Allocations: 2690558)
+Completed 200 OK in 9265ms (Views: 9261.4ms | Allocations: 2691685)
+
+
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 7963.0ms | Allocations: 2417304)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 8087.7ms | Allocations: 2440224)
+Completed 200 OK in 8092ms (Views: 8090.3ms | Allocations: 2441135)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:15:12 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 434)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.9ms | Allocations: 14423)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 15365)
+Completed 200 OK in 33ms (Views: 31.8ms | Allocations: 15780)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:16:47 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 728)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 80)
+  Rendered layouts/_head.html.erb (Duration: 3286.5ms | Allocations: 1354393)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 422)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 3295.5ms | Allocations: 1356738)
+Completed 200 OK in 3300ms (Views: 3298.4ms | Allocations: 1357857)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:16:57 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 435)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3899.5ms | Allocations: 1352558)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 84)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3905.2ms | Allocations: 1353515)
+Completed 200 OK in 3907ms (Views: 3906.4ms | Allocations: 1353929)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:17:56 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3594.6ms | Allocations: 1353239)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3603.7ms | Allocations: 1354188)
+Completed 200 OK in 3608ms (Views: 3605.6ms | Allocations: 1354597)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:18:02 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 23.5ms | Allocations: 14421)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 15360)
+Completed 200 OK in 29ms (Views: 27.8ms | Allocations: 15777)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:18:09 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 33.5ms | Allocations: 14362)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 15301)
+Completed 200 OK in 39ms (Views: 38.4ms | Allocations: 15714)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:18:31 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 735)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 26.9ms | Allocations: 14740)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 422)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 17084)
+Completed 200 OK in 42ms (Views: 40.0ms | Allocations: 18205)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:18:46 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 727)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 26.2ms | Allocations: 14739)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 422)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 17072)
+Completed 200 OK in 39ms (Views: 37.3ms | Allocations: 18190)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:19:29 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 435)
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:19:32 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3401.6ms | Allocations: 1427852)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 84)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3411.6ms | Allocations: 1428878)
+Completed 200 OK in 3418ms (Views: 3416.6ms | Allocations: 1429985)
+
+
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3903.2ms | Allocations: 1403078)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3915.5ms | Allocations: 1407574)
+Completed 200 OK in 3919ms (Views: 3917.3ms | Allocations: 1408045)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:19:55 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 431)
+  Rendered layouts/_head.html.erb (Duration: 192.5ms | Allocations: 27183)
+  Rendered layout layouts/application.html.erb (Duration: 194.9ms | Allocations: 27741)
+Completed 500 Internal Server Error in 197ms (Allocations: 28120)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  padding-top": expected ";", was ": 10px;"):
+    4:   <meta name="viewport" content="="width="device-width, initial-scale=1">
+    5:   <%= csrf_meta_tags %>
+    6:   <%= csp_meta_tag %>
+    7:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   <%= render 'layouts/shim' %>
+   10: </head>
+  
+app/assets/stylesheets/custom.scss:244
+app/views/layouts/_head.html.erb:7
+app/views/layouts/application.html.erb:3
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:20:04 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3640.4ms | Allocations: 1352971)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3646.5ms | Allocations: 1353920)
+Completed 200 OK in 3650ms (Views: 3648.1ms | Allocations: 1354323)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:20:16 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.5ms | Allocations: 14421)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 15360)
+Completed 200 OK in 31ms (Views: 29.8ms | Allocations: 15765)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:20:40 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3753.8ms | Allocations: 1352965)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3757.6ms | Allocations: 1353912)
+Completed 200 OK in 3760ms (Views: 3758.6ms | Allocations: 1354323)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:20:55 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3624.2ms | Allocations: 1352952)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3630.5ms | Allocations: 1353899)
+Completed 200 OK in 3634ms (Views: 3632.0ms | Allocations: 1354326)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:21:17 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 3590.6ms | Allocations: 1352915)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 3596.7ms | Allocations: 1353862)
+Completed 200 OK in 3600ms (Views: 3598.2ms | Allocations: 1354263)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:21:23 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 62.0ms | Allocations: 14421)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 68.0ms | Allocations: 15360)
+Completed 200 OK in 70ms (Views: 69.2ms | Allocations: 15767)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:21:30 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.6ms | Allocations: 14362)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 15301)
+Completed 200 OK in 32ms (Views: 31.2ms | Allocations: 15712)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:23:17 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 2855.4ms | Allocations: 1352959)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 2859.3ms | Allocations: 1353906)
+Completed 200 OK in 2861ms (Views: 2860.2ms | Allocations: 1354315)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:23:21 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.2ms | Allocations: 14421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 15360)
+Completed 200 OK in 29ms (Views: 28.5ms | Allocations: 15773)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:26:12 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 440)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.6ms | Allocations: 14343)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 15298)
+Completed 200 OK in 34ms (Views: 32.9ms | Allocations: 15832)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-30 12:26:45 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"T45p/kImo9jrDXAufao5aE2gTCyjWbbOM06LUZWlo7L1fSeKD5jMkEahZdHVGQveAC+p05XbiwRvuEIsA/L2nw==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in in my super site"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 268ms (ActiveRecord: 0.9ms | Allocations: 7316)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-30 12:26:45 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 268)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 70.2ms | Allocations: 14366)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.4ms | Allocations: 718)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 15787)
+Completed 200 OK in 99ms (Views: 89.6ms | ActiveRecord: 1.2ms | Allocations: 17230)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-03-30 12:27:00 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dSSBmSI5kSZ6BRViD7gnVzAAez4Y8M8Ly5SwlYzMx+vP18/tb4f+btepAJ2nCxXhfY+ewS5y8sGXYnnoGpuSxg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 852)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-30 12:27:00 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 926)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.1ms | Allocations: 14224)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 15662)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 16570)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-03-30 12:27:02 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 439)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.0ms | Allocations: 14364)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 15318)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 15737)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-03-30 12:27:07 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"M7od7ySy1dD/udIuMLG99utdRXkm5gUdV7++tzSImi69BMQMTPq3sUR1NUHqgecYR3qy09UXDS+8HoMIp85snQ==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in in my super site"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:25:in `remember'
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-03-30 10:27:07.785987"], ["remember_digest", "$2a$12$EU0o8/I2ZYN9CPCRJ5fVpex/5x5sQqhS18erriPp2yPI9so12FqHG"], ["id", 4]]
+  ↳ app/models/user.rb:25:in `remember'
+  [1m[36mTRANSACTION (69.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:25:in `remember'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 595ms (ActiveRecord: 71.9ms | Allocations: 3611)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-03-30 12:27:07 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 89)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 54.2ms | Allocations: 14366)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 628)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 15518)
+Completed 200 OK in 68ms (Views: 61.9ms | ActiveRecord: 0.6ms | Allocations: 16380)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
