@@ -74,6 +74,8 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", user_path(@user),count: 0 #no logout path and logged user after logout
   end
 
+
+
 end
 
 # rails test test/integration/users_login_test.rb
