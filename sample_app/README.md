@@ -1240,3 +1240,19 @@ Links doesn't work in RM, but github reads them correctly.
   __Yes, they disappears__
   
 ### Two subtle bugs
+
+* ex1 - Comment out the fix in Listing 9.16 and then verify that the first subtle bug is present by opening two
+  logged in tabs, logging out in one, and then clicking “Log out” link in the other.  
+  __Yes, after logging out in one tab, then refresh the second one, user is logged out.__  
+  
+* ex2 - Comment out the fix in Listing 9.19 and verify that the second subtle bug is present by logging out in one 
+  browser and closing and opening the second browser.
+  __When user log out in one browser, session persist in second one.__
+  
+* ex3 - Uncomment the fixes and confirm that the test suite goes from red to green.
+  ```bash
+  rails t
+  Finished in 8.16301s
+  26 tests, 81 assertions, 0 failures, 0 errors, 0 skips
+  ```
+  
