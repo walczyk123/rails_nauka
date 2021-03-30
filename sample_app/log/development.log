@@ -15755,3 +15755,72 @@ Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.4ms | Allocations: 164
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-03-30 08:35:50.724569"], ["remember_digest", "$2a$12$xt4yWt.FR9TaSaHCUTvHk.UOJSGfbPhToNNb4ZtDbQqFvLYlcUena"], ["id", 1]]
   [1m[36mTRANSACTION (99.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-03-30 10:42:16 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 43.2ms | Allocations: 5313)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.5ms | Allocations: 14220)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 214)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 20177)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 1.8ms | Allocations: 20749)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-03-30 10:42:21 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YEQcH4KXHGGIlCUr6aKq0i8l4qwvBjF7A56nKbCWn6zat1JrzylzKSU4MNRBEZhkYqoHUxmEDLFfaG5UJsHKgQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-30 10:42:21 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:10:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 480.2ms | Allocations: 1165)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.9ms | Allocations: 14222)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 156)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 511.3ms | Allocations: 15971)
+Completed 200 OK in 516ms (Views: 513.3ms | ActiveRecord: 0.4ms | Allocations: 16414)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2021-03-30 11:02:44 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YyWzhgvV2RONkGkiIL54Y3hnPDxof+cdNuFAq6bt887Z1v3yRmu2WyA8fN2IDUrVNejZw1792tdqF4nWMLqm4w=="}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:34:in `forget'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-03-30 09:02:44.833423"], ["remember_digest", nil], ["id", 4]]
+  ↳ app/models/user.rb:34:in `forget'
+  [1m[36mTRANSACTION (88.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:34:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 117ms (ActiveRecord: 89.8ms | Allocations: 7598)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-30 11:02:44 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 699)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 64.5ms | Allocations: 14265)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 15486)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.0ms | Allocations: 16015)
+
+

@@ -21,6 +21,10 @@ Links doesn't work in RM, but github reads them correctly.
   * [Logging in](#Logging-in)
   * [Logout](#Logout)
 * [Link to Chapter 9 - Advanced login](#chapter-9)
+  * [Remember me](#remember-me)
+  * [Login with remembering](#login-with-remembering)
+  * [Forgetting users](#forgetting-users)
+  * [Two subtle bugs](#two-subtle-bugs)
 # Chapter 3  
 
 ### common commands  
@@ -1229,3 +1233,10 @@ Links doesn't work in RM, but github reads them correctly.
   => true
   ```
   
+
+### Forgetting users
+ 
+* ex1 - After logging out, verify that the corresponding cookies have been removed from your browser.
+  __Yes, they disappears__
+  
+### Two subtle bugs
