@@ -1211,3 +1211,21 @@ Links doesn't work in RM, but github reads them correctly.
   __Yes, they are correct__  
   
 ### Login with remembering  
+
+* ex1 - By finding the cookie in your local browser, verify that a remember token and encrypted user id are present after logging in
+  ```bash
+  remember_token: "24_fsjRNTmof3liPlf_ZDg"
+  user_id: "S7PD2Dg8XfS9rwaJ1KvPaSw1xqBbjyRtn7Nk3%2FMf0ARAtKseLmlMExSBEED9vzyedU7ce6Q7Xc4Szua9snPs--TffgDp4lw8ZRVpmK--4NMfX0%2BuwEg9J9lW5K%2B07g%3D%3D"
+  ```
+  
+* ex2 - At the console, verify directly that the authenticated? method defined in Listing 9.6 works correctly.  
+  ```bash
+  >> u = User.first
+  >> u.authenticated?('no token')
+  => false
+  >> u.remember
+  => true
+  >> u.authenticated?(u.remember_token)
+  => true
+  ```
+  
