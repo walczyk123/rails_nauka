@@ -1271,3 +1271,15 @@ Links doesn't work in RM, but github reads them correctly.
   ```
   
 ## Remember Me Tests
+
+* ex1 - As mentioned above, the application currently doesn’t have any way to access the virtual remember_token attribute 
+  in the integration test in Listing 9.25. It is possible, though, using a special test method called assigns. Inside a test, 
+  you can access instance variables defined in the controller by using assigns with the corresponding symbol. For example, 
+  if the create action defines an @user variable, we can access it in the test using assigns(:user). Right now, the Sessions 
+  controller create action defines a normal (non-instance) variable called user, but if we change it to an instance variable we 
+  can test that cookies correctly contains the user’s remember token. By filling in the missing elements in Listing 9.27 and 
+  Listing 9.28 (indicated with question marks ? and FILL_IN), complete this improved test of the “remember me” checkbox.  
+  __Done, added instance variable `@user` instead of `user` in session_helper, then changed `#assert_not_empty cookies[:remember_token]` to
+  `assert_equal cookies["remember_token"], assigns(:user).remember_token`__  
+  
+### Testing the remember branch

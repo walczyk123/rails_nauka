@@ -8,7 +8,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "login with invalid info first flash" do
     get login_path
     assert_template 'sessions/new'
-    post login_path, params: {session: { email: "", password: ""}}
+    post login_path, params: { session: { email: "", password: "" } }
     assert_template 'sessions/new'
     assert_not flash.empty?
   end
@@ -16,7 +16,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "login with invalid info no second flash" do
     get login_path
     assert_template 'sessions/new'
-    post login_path, params: {session: { email: "", password: ""}}
+    post login_path, params: { session: { email: "", password: "" } }
     assert_template 'sessions/new'
     get root_path
     #after changing page there shouldn't be any flash
@@ -25,23 +25,23 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with valid information" do
     get login_path
-    post login_path, params: {session: { email: @user.email, password: "password"}}
+    post login_path, params: { session: { email: @user.email, password: "password" } }
     assert_redirected_to @user
     follow_redirect!
     assert_template "users/show"
-    assert_select "a[href=?]", login_path, count:0 #login path disappears after login and redirect?
+    assert_select "a[href=?]", login_path, count: 0 #login path disappears after login and redirect?
     assert_select "a[href=?]", logout_path # logout and user path appears after login?
     assert_select "a[href=?]", user_path(@user)
   end
 
   test "login with valid information then logout" do
     get login_path
-    post login_path, params: {session: { email: @user.email, password: "password"}}
+    post login_path, params: { session: { email: @user.email, password: "password" } }
     assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
     assert_template "users/show"
-    assert_select "a[href=?]", login_path, count:0 #login path disappears after login and redirect?
+    assert_select "a[href=?]", login_path, count: 0 #login path disappears after login and redirect?
     assert_select "a[href=?]", logout_path # logout and user path appears after login?
     assert_select "a[href=?]", user_path(@user)
     delete logout_path
@@ -50,17 +50,17 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", logout_path, count: 0
-    assert_select "a[href=?]", user_path(@user),count: 0 #no logout path and logged user after logout
+    assert_select "a[href=?]", user_path(@user), count: 0 #no logout path and logged user after logout
   end
 
   test "login with valid information then logout in one of few tabs" do
     get login_path
-    post login_path, params: {session: { email: @user.email, password: "password"}}
+    post login_path, params: { session: { email: @user.email, password: "password" } }
     assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
     assert_template "users/show"
-    assert_select "a[href=?]", login_path, count:0 #login path disappears after login and redirect?
+    assert_select "a[href=?]", login_path, count: 0 #login path disappears after login and redirect?
     assert_select "a[href=?]", logout_path # logout and user path appears after login?
     assert_select "a[href=?]", user_path(@user)
     delete logout_path
@@ -71,12 +71,13 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", logout_path, count: 0
-    assert_select "a[href=?]", user_path(@user),count: 0 #no logout path and logged user after logout
+    assert_select "a[href=?]", user_path(@user), count: 0 #no logout path and logged user after logout
   end
 
   test "login with remembering" do
     log_in_as(@user, remember_me: "1")
-    assert_not_empty cookies[:remember_token]
+    #assert_not_empty cookies[:remember_token]
+    assert_equal cookies["remember_token"], assigns(:user).remember_token
   end
 
   test "login without remembering" do
