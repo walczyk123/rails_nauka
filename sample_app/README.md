@@ -1283,3 +1283,25 @@ Links doesn't work in RM, but github reads them correctly.
   `assert_equal cookies["remember_token"], assigns(:user).remember_token`__  
   
 ### Testing the remember branch
+
+* ex1 - Verify by removing the authenticated? expression inListing 9.33 that the second test inListing 9.31fails, thereby 
+  confirming that it tests the right thing.  
+  ```rb
+   def current_user
+    #...
+      if user #&& user.authenticated?(cookies[:remember_token])
+        log_in user
+        @current_user = user
+      end
+    #...
+  end
+  ```
+  ```bash
+  >> rails t
+  FAIL["test_current_user_returns_nil_when_remember_digest_is_wrong", #<Minitest::Reporters::Suite:0x00005621696fc558 
+  # @name="SessionsHelperTest">, 0.5390161879995503]  test_current_user_returns_nil_when_remember_digest_is_wrong#SessionsHelperTest 
+  # (0.54s)  Expected #<User id: 225555153, name: "testertestow", email: "tester@tester.omg", created_at: "2021-04-01 
+  # 16:09:26.292578000 +0000", updated_at: "2021-04-01 16:09:26.539040000 +0000", password_digest: [FILTERED], remember_digest: 
+  # "$2a$04$QkmefsMtwDM/PTgURQchQ.QKWSrJoKJSADP6Boo3BAs..."> to be nil.
+  ```
+  __The second test testing right thing.__  
