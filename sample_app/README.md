@@ -1334,3 +1334,9 @@ Links doesn't work in RM, but github reads them correctly.
   __Done__
   
 ### Unsuccessful Edits
+
+* ex1 - Confirm by submitting various invalid combinations of username, email, and password that the edit form won’t accept invalid submissions.  
+  __Yes, they doesnt allow to change data to invalid__
+  
+### Testing unsuccessful edits
+

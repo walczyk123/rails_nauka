@@ -17679,3 +17679,121 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.5ms | Allocations: 17391)
 
 
+Started PATCH "/users/4" for 127.0.0.1 at 2021-04-02 18:12:56 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"cqLJWRLE/u/m16oTHnqVaMosKnvYaw+RhUDK9QYM3TbsajXhdDa0K/VFv0mHD9vmzHfgBpnw0+q66K03HT8Bew==", "user"=>{"name"=>"tester", "email"=>"test@t", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@t"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 672)
+  Rendered users/_form.html.erb (Duration: 7.6ms | Allocations: 2633)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2982)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 74)
+  Rendered layouts/_head.html.erb (Duration: 25.0ms | Allocations: 14667)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.0ms | Allocations: 1051)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 19963)
+Completed 200 OK in 314ms (Views: 46.5ms | ActiveRecord: 1.7ms | Allocations: 28879)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2021-04-02 18:13:23 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"IDIAogusc3+q9cC3BjpvUm3JEg4Gyh1xSCDc7rwTU56aGFpnRZuAfuFScMbHD7tcaCbuu6/lMVk6HmOHHjE0Lg==", "user"=>{"name"=>"tester_edit", "email"=>"test@test.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.org"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["name", "tester_edit"], ["updated_at", "2021-04-02 16:13:23.490126"], ["password_digest", "$2a$12$/uqFpAeMjh7rYArAPX4gUeu8xG9HfnF9ctcyVxLgS6HKGLdXcBXSO"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (74.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 341ms (ActiveRecord: 76.1ms | Allocations: 5693)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-04-02 18:13:49 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 268)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 25.4ms | Allocations: 14366)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 643)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 15712)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 0.5ms | Allocations: 16690)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2021-04-02 18:13:57 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 998)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1085)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 25.8ms | Allocations: 14361)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 622)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 16501)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.5ms | Allocations: 17368)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2021-04-02 18:14:08 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"f0sXmUq3Vwf/xmQ9VR/lThillyMn3cX/xIafga7fPjvhg+shLEUdw+xUcWfMaqvAHv5dXmZGGYT7LvhDtezidg==", "user"=>{"name"=>"tester", "email"=>"test@test.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.org"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["name", "tester"], ["updated_at", "2021-04-02 16:14:09.014637"], ["password_digest", "$2a$12$4LY5/aRV7/oGsmHqoOSj9u7qKBF2udkLTiz4tLBzGer08JcBrkYkC"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (79.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 343ms (ActiveRecord: 81.0ms | Allocations: 4410)
+
+
+Started GET "/users/4/" for 127.0.0.1 at 2021-04-02 18:14:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 24.3ms | Allocations: 14362)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 631)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 15514)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.4ms | Allocations: 16367)
+
+
