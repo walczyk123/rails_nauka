@@ -27,6 +27,8 @@ Links doesn't work in RM, but github reads them correctly.
   * [Two subtle bugs](#two-subtle-bugs)
   * [Remember Me Checkbox](#remember-me-checkbox)
 * [Link to Chapter 10 - Updating, showing and deleting users](#chapter-10)
+  * [Updating Users](#updating-users)
+  * [Unsuccessful Edits](#unsuccessful-edits)
 
 
 
@@ -1313,6 +1315,22 @@ Links doesn't work in RM, but github reads them correctly.
 
 # Chapter 10
 ## Updating, showing, and deleting users
-
+* Google it:   
+  rel="noopener"
 
 ### Updating users
+
+* ex1 - As noted above, there’s a minor security issue associated with using target="_blank"to open URLs,
+  which is that the target site gains control of what’s known as the “window object” associated with the HTML 
+  document. The result is that the target site could potentially introduce malicious content, 
+  such as a phishing page. This is extremely unlikely to happen when linking to a reputable site like Gravatar,
+  but it turns out that we can eliminate the risk entirely by setting the rel attribute (“relationship”) to"noopener"in the 
+  origin link. Add this attribute to the Gravatar edit link in Listing 10.2.  
+  __`<a href="https://gravatar.com/emails" targer="_blank" class="change_gravatar" rel="noopener">Change</a>`__
+  
+* ex2 - Remove the duplicated form code by refactoring the new.html.erb and edit.html.erb views to use the 
+  partial in Listing 10.5, as shown in Listing 10.6 and Listing 10.7. Note the use of the provide method,
+  10.1. UPDATING USERS549 which we used before in Section 3.4.3 to eliminate duplication in the layout.  
+  __Done__
+  
+### Unsuccessful Edits

@@ -67,9 +67,6 @@ aside {
   margin-right: 10px;
 }
 
-.gravatar_edit {
-  margin-top: 15px;
-}
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -250,6 +247,22 @@ footer ul {
   margin-left: 0px;
 }
 
+.gravatar_edit{
+  width: auto;
+  margin: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+}
+
+.change_gravatar{
+  font-weight: bold;
+  font-size: 20px;
+  color: #B00100;
+  margin-top: 20px;
+  padding-top: 30px;
+}
+
 
 // my own
 //header ul {
@@ -271,3 +284,4 @@ footer ul {
   border-width: 2px;
   border-style: outset;
 }
+
