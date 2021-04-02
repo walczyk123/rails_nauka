@@ -1340,3 +1340,31 @@ Links doesn't work in RM, but github reads them correctly.
   
 ### Testing unsuccessful edits
 
+* ex1 - Add a line in Listing 10.9 to test for the correct number of error message.  
+  ```ruby
+  test "unsuccessful edit" do
+    get edit_user_path(@user)
+    assert_template "users/edit"
+    patch user_path(@user), params: {user: {name: "", email: "foo@inc", password: "foo", password_confirmation: "bar"}}
+    print("return to edit page after unsuccessful edit: ")
+    (assert_template "users/edit") ? print("OK\n") : print("ERR\n")
+    print("empty flash message: . . . . . . . . . . . . ")
+    (assert flash.empty?) ? print("OK\n") : print("ERR\n")
+    print("error explanation: . . . . . . . . . . . . . ")
+    (assert_select 'div#error_explanation') && (assert_select 'div.alert') ? print("OK\n") : print("ERR\n")
+    print("good number of error explanation messages: . ")
+    error_explanation_diff ? print("OK\n") : print("ERR\n")
+  end
+  
+  def error_explanation_diff
+    assert_no_difference 'User.count' do
+      post users_path, params: { user: { name: "", email: "invalid@invalid", password: "elo", password_confirmation: "melo"}}
+    end
+  end
+  ```
+  ```bash
+  return to edit page after unsuccessful edit: OK
+  empty flash message: . . . . . . . . . . . . OK
+  error explanation: . . . . . . . . . . . . . OK
+  good number of error explanation messages: . OK 
+  ```
