@@ -26,6 +26,10 @@ Links doesn't work in RM, but github reads them correctly.
   * [Forgetting users](#forgetting-users)
   * [Two subtle bugs](#two-subtle-bugs)
   * [Remember Me Checkbox](#remember-me-checkbox)
+* [Link to Chapter 10 - Updating, showing and deleting users](#chapter-10)
+
+
+
 # Chapter 3  
 
 ### common commands  
@@ -1305,3 +1309,10 @@ Links doesn't work in RM, but github reads them correctly.
   # "$2a$04$QkmefsMtwDM/PTgURQchQ.QKWSrJoKJSADP6Boo3BAs..."> to be nil.
   ```
   __The second test testing right thing.__  
+
+
+# Chapter 10
+## Updating, showing, and deleting users
+
+
+### Updating users
