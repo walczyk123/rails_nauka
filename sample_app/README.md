@@ -1400,6 +1400,14 @@ Links doesn't work in RM, but github reads them correctly.
 
 ### Requiring the right user
 
+* ex1 - Why is it important to protect both the edit and update actions?  
+  __Because we dont want situation where somebody can change other user data.__  
+  
+* ex2 - Which action could you more easily test in browser?  
+  __I think, edit action is easier to test.__  
+  
+### Friendly Forwarding
+
 
 
 
