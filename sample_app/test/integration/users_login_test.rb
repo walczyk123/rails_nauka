@@ -5,27 +5,20 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     @user = users(:testowy)
   end
 
-  test "login with invalid info first flash" do
+  test "login with invalid info" do
     get login_path
     assert_template 'sessions/new'
-    post login_path, params: { session: { email: "", password: "" } }
+    post login_path, { params: { session: { email: "", password: "" } } }
     assert_template 'sessions/new'
-    assert_not flash.empty?
-  end
-
-  test "login with invalid info no second flash" do
-    get login_path
-    assert_template 'sessions/new'
-    post login_path, params: { session: { email: "", password: "" } }
-    assert_template 'sessions/new'
+    (assert_not flash.empty?) ? @flash = "OK" : @flash = "ERR"
     get root_path
-    #after changing page there shouldn't be any flash
-    assert flash.empty?
+    (assert flash.empty?) ? @flash2 = "OK" : @flash2 = "ERR" #after changing page there shouldn't be any flash
+    invalid_login_test_results
   end
 
   test "login with valid information" do
     get login_path
-    post login_path, params: { session: { email: @user.email, password: "password" } }
+    post login_path, { params: { session: { email: @user.email, password: "password" } } }
     assert_redirected_to @user
     follow_redirect!
     assert_template "users/show"
@@ -36,7 +29,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with valid information then logout" do
     get login_path
-    post login_path, params: { session: { email: @user.email, password: "password" } }
+    post login_path, { params: { session: { email: @user.email, password: "password" } } }
     assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
@@ -55,7 +48,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with valid information then logout in one of few tabs" do
     get login_path
-    post login_path, params: { session: { email: @user.email, password: "password" } }
+    post login_path, { params: { session: { email: @user.email, password: "password" } } }
     assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
@@ -83,9 +76,17 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "login without remembering" do
     #log and set cookie
     log_in_as(@user, remember_me: "1")
-    # log agin, cookie is deleted?
+    # log again, iscookie deleted?
     log_in_as(@user, remember_me: "0")
     assert_empty cookies[:remember_token]
+  end
+
+  private
+
+  def invalid_login_test_results
+    puts("=== User login tests ===")
+    print("flash message: . . . . . . . . . . . . . . . #{@flash}\n")
+    print("second flash message:. . . . . . . . . . . . #{@flash2}\n")
   end
 
 end

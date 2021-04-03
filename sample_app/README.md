@@ -1346,7 +1346,7 @@ Links doesn't work in RM, but github reads them correctly.
     get edit_user_path(@user)
     assert_template "users/edit"
     patch user_path(@user), params: {user: {name: "", email: "foo@inc", password: "foo", password_confirmation: "bar"}}
-    print("return to edit page after unsuccessful edit: ")
+    print("back to edit page after unsuccessful edit: . ")
     (assert_template "users/edit") ? print("OK\n") : print("ERR\n")
     print("empty flash message: . . . . . . . . . . . . ")
     (assert flash.empty?) ? print("OK\n") : print("ERR\n")
@@ -1363,8 +1363,13 @@ Links doesn't work in RM, but github reads them correctly.
   end
   ```
   ```bash
-  return to edit page after unsuccessful edit: OK
+  back to edit page after unsuccessful edit: . OK
   empty flash message: . . . . . . . . . . . . OK
   error explanation: . . . . . . . . . . . . . OK
   good number of error explanation messages: . OK 
   ```
+  
+### Successful edits (TDD)
+
+TDD -    
+
