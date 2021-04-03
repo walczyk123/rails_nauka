@@ -6,6 +6,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "unsuccessful edit" do
+    log_in_as(@user)
     get edit_user_path(@user)
     assert_template "users/edit"
     patch user_path(@user), { params: { user: { name: "", email: "foo@inc", password: "foo", password_confirmation: "bar" } } }
@@ -18,6 +19,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 
   # my tests : successful edit, flash message
   test "successful edit" do
+    log_in_as(@user)
     get edit_user_path(@user)
     name = "testowy_ed"
     email = "foo@inc.com"

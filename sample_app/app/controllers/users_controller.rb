@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:edit, :update]
+
   def new
     #debugger
     @user = User.new
@@ -40,6 +42,13 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name,:email,:password,:password_confirmation)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "Put down your weapon, go away, you shouldn't be here"
+      redirect_to login_url
+    end
   end
 
 end

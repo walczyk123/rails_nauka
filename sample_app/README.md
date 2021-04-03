@@ -29,6 +29,7 @@ Links doesn't work in RM, but github reads them correctly.
 * [Link to Chapter 10 - Updating, showing and deleting users](#chapter-10)
   * [Updating Users](#updating-users)
   * [Unsuccessful Edits](#unsuccessful-edits)
+  * [Authorization](#authorization)
 
 
 
@@ -1381,6 +1382,24 @@ Links doesn't work in RM, but github reads them correctly.
 * ex2 - What happens when you change the email address to one without an associated Gravatar?  
   __The gravatar has been changed, to the default gravatar logo.__
   
+
+  [Page top](#README)
 ## Authorization
+
+### Requiring logged-in users
+
+* ex1 - As noted above, by default before filters apply to every action in a controller, which in our cases is an error.  
+  ```ruby
+  before_action :logged_in_user, #only: [:edit, :update]
+  ```
+  __Yes, test suite catches this error.__  
+  ```bash
+  Finished in 9.38933s
+  33 tests, 95 assertions, 3 failures, 0 errors, 0 skips
+  ```
+
+### Requiring the right user
+
+
 
 
