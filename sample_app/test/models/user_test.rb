@@ -64,7 +64,6 @@ class UserTest < ActiveSupport::TestCase
 
   test "password should be present" do
     @user.password = @user.password_confirmation = " " * 6
-    #maybe self  ?
     assert_not @user.valid?
   end
 

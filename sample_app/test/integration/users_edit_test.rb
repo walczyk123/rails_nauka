@@ -19,11 +19,15 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   # my tests : successful edit, flash message
   test "successful edit" do
     get edit_user_path(@user)
+    name = "testowy_ed"
+    email = "foo@inc.com"
     assert_template "users/edit"
-    patch user_path(@user), { params: { user: { name: "testowy_ed", email: "foo@inc.com", password: "foobar123", password_confirmation: "foobar123" } } }
+    patch user_path(@user), { params: { user: { name: name, email: email, password: "foobar123", password_confirmation: "foobar123" } } }
     follow_redirect!
     (assert_template "users/show") ? @go_to_users = "OK" : @go_to_users = "ERR"
     (assert_not flash.empty?) ? @flash2 = "OK" : @flash2 = "ERR"
+    @user.reload
+    (assert_equal name, @user.name) && (assert_equal email, @user.email) ? @user_data = "OK" : @user_data = "ERR"
     successful_edit_test_results
   end
 
@@ -47,6 +51,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     puts("=== successful user edit test ===")
     print("go to to user page after successful edit:. . #{@go_to_users}\n")
     print("flash message: . . . . . . . . . . . . . . . #{@flash2}\n")
+    print("correctly updated user data: . . . . . . . . #{@user_data}\n")
   end
 end
 

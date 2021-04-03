@@ -1371,5 +1371,16 @@ Links doesn't work in RM, but github reads them correctly.
   
 ### Successful edits (TDD)
 
-TDD -    
+* __Important to remember:__  
+  * TDD - test driven development.  
+  * `assert_equal` `expected_val` `current_val`  
+
+* ex1 - Double-check that you can now make edits by making a few changes on the development version of the application.  
+  __Yes, edit feature is working..__  
+  
+* ex2 - What happens when you change the email address to one without an associated Gravatar?  
+  __The gravatar has been changed, to the default gravatar logo.__
+  
+## Authorization
+
 
