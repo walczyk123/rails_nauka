@@ -31,6 +31,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Unsuccessful Edits](#unsuccessful-edits)
   * [Authorization](#authorization)
   * [Showing all users](#showing-all-users)
+  * [Sample users](#sample-users)
 
 
 
@@ -1491,3 +1492,9 @@ Links doesn't work in RM, but github reads them correctly.
     assert_select "title", full_title("All users")
   end
   ```
+
+[Page top](#README)
+  
+## Sample users
+
+
