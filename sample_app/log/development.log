@@ -18561,3 +18561,20 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 94ms (Views: 86.1ms | ActiveRecord: 0.8ms | Allocations: 16754)
 
 
+Started GET "/contact" for 127.0.0.1 at 2021-04-06 13:16:12 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.6ms | Allocations: 97)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 37.3ms | Allocations: 14386)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.1ms | Allocations: 1183)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 16101)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 1.0ms | Allocations: 16679)
+
+
