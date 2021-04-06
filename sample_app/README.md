@@ -1392,7 +1392,7 @@ Links doesn't work in RM, but github reads them correctly.
 
 * ex1 - As noted above, by default before filters apply to every action in a controller, which in our cases is an error.  
   ```ruby
-  before_action :logged_in_user, #only: [:edit, :update]
+  before_action :logged_in_user#, only: [:edit, :update]
   ```
   __Yes, test suite catches this error.__  
   ```bash
@@ -1496,5 +1496,30 @@ Links doesn't work in RM, but github reads them correctly.
 [Page top](#README)
   
 ## Sample users
+
+* ex1 - Verify that trying to visit the edit page of another user results in a redirect as required bySection 10.2.2.  
+  __Yes, redirected straight into home page.__
+  
+## Pagination
+
+* ex1 - Confirm at the console that setting the page to nil pulls out the first page of users.  
+  ```bash
+  >> @us = User.paginate(page: nil)
+  >> @us.count
+  (0.3ms)  SELECT COUNT(*) FROM "users"
+  => 101
+  ```
+  __So it pulls all of them for some reason, not first 30 records.__  
+
+* ex2 - What is the Ruby class of the pagination object? How does it compare to the class of User.all?
+  ```bash
+  >> User.paginate(page: nil).class
+  => User::ActiveRecord_Relation
+  >> User.all.class
+  => User::ActiveRecord_Relation
+  >> User.all.class == User.paginate(page: nil).class
+  => true
+  ```
+  `paginate and all have the same class`
 
 
