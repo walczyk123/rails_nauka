@@ -7,3 +7,22 @@ badboy:
   name: "bad boy"
   email: "bad@boy.org"
   password_digest: <%= User.digest("password") %>
+
+smollboy:
+  name: "kinda small"
+  email: "small@boy.com"
+  password_digest: <%= User.digest("password") %>
+
+bigboy:
+  name: "kinda big"
+  email: "big@boy.com"
+  password_digest: <%= User.digest("password") %>
+
+
+# Important in YML file: indent line 3,4,5, line 1,2,6 no indent.
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

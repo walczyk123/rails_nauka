@@ -10,9 +10,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", help_path
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
-    #contact page
-    get contact_path
-    assert_select "title", full_title("Contact")
     #log in
     @user = users(:testowy)
     log_in_as(@user, remember_me: "0")
@@ -26,10 +23,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", logout_path
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
-    assert_select "a[href=?]", signup_path
-    get signup_path
-    assert_select "title", full_title("Sign up")
-    get users_path
-    assert_select "title", full_title("All users")
+    assert_select "a[href=?]", signup_path, count: 0
   end
 end

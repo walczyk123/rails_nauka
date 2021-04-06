@@ -32,6 +32,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Authorization](#authorization)
   * [Showing all users](#showing-all-users)
   * [Sample users](#sample-users)
+  * [Partial refactoring](#partial-refactoring)
 
 
 
@@ -1521,5 +1522,78 @@ Links doesn't work in RM, but github reads them correctly.
   => true
   ```
   `paginate and all have the same class`
+
+[Page top](#README)
+
+### User index test
+
+* ex1 - By commenting out the pagination links in Listing 10.45, confirm that the test in Listing 10.48 goes red.  
+  ```html
+  <% provide(:title, "All users") %>
+  <h1> All Users </h1>
+  
+  <%#= will_paginate%>
+  
+  <ul class="users">
+    <% @users.each do |user| %>
+      <li>
+        <%= gravatar_for user, size:50 %>
+        <%= link_to user.name, user %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <%#= will_paginate%>
+  ```
+  ```sh
+  Finished in 11.47392s
+  37 tests, 119 assertions, 1 failures, 0 errors, 0 skips
+  ```
+  
+* ex2 - Confirm that commenting out only one of the calls to will_paginate leaves the tests green. 
+  How would you test for the presence of both sets of will_paginate links? Hint: Use a count fromTable 5.2.  
+  ```html
+    <% provide(:title, "All users") %>
+  <h1> All Users </h1>
+  
+  <%#= will_paginate%>
+  
+  <ul class="users">
+    <% @users.each do |user| %>
+      <li>
+        <%= gravatar_for user, size:50 %>
+        <%= link_to user.name, user %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <%= will_paginate%>
+  ```
+  ```sh 
+  Finished in 14.25234s
+  37 tests, 119 assertions, 0 failures, 0 errors, 0 skips
+  ```
+  users_index_test.rb  
+  ```ruby 
+  test "index including pagination" do
+    log_in_as(@user)
+    get users_path
+    assert_template'users/index'
+    assert_select'div.pagination', count: 2
+    User.paginate(page:1).each do |user|
+      assert_select'a[href=?]', user_path(user),text: user.name
+    end
+  end
+  ```
+  ```sh 
+  Finished in 12.01476s
+  37 tests, 119 assertions, 1 failures, 0 errors, 0 skips
+  ```
+  __Now test suite catches if there is different amount of pagination divs on page than 2.__  
+
+[Page top](#README)
+
+### Partial refactoring 
+
 
 
