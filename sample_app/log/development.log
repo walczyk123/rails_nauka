@@ -18219,3 +18219,55 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 34ms (Views: 33.0ms | Allocations: 16039)
 
 
+Started GET "/login" for 127.0.0.1 at 2021-04-06 11:42:48 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 42.5ms | Allocations: 2646)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 2837.3ms | Allocations: 1531714)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 444)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 2890.4ms | Allocations: 1536043)
+Completed 200 OK in 2906ms (Views: 2894.8ms | ActiveRecord: 0.0ms | Allocations: 1538731)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-04-06 11:42:54 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 14.5ms | Allocations: 283)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 45.5ms | Allocations: 14388)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 15211)
+Completed 200 OK in 87ms (Views: 66.2ms | ActiveRecord: 1.4ms | Allocations: 21703)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-06 11:42:59 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-04-06 11:42:59 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 439)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.4ms | Allocations: 14370)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 15339)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 15774)
+
+

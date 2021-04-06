@@ -18,19 +18,18 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   # my tests : successful edit, flash message
-  test "successful edit" do
-    log_in_as(@user)
+  test"successful edit with friendly forwarding" do
     get edit_user_path(@user)
-    name = "testowy_ed"
-    email = "foo@inc.com"
-    assert_template "users/edit"
-    patch user_path(@user), { params: { user: { name: name, email: email, password: "foobar123", password_confirmation: "foobar123" } } }
-    follow_redirect!
-    (assert_template "users/show") ? @go_to_users = "OK" : @go_to_users = "ERR"
-    (assert_not flash.empty?) ? @flash2 = "OK" : @flash2 = "ERR"
+    log_in_as(@user)
+    assert_redirected_to edit_user_url(@user)
+    name="Foo Bar"
+    email="foo@bar.com"
+    patch user_path(@user),{params: {user: {name:name, email: email,password:"",password_confirmation:""} }}
+    assert_not flash.empty?
+    assert_redirected_to @user
     @user.reload
-    (assert_equal name, @user.name) && (assert_equal email, @user.email) ? @user_data = "OK" : @user_data = "ERR"
-    successful_edit_test_results
+    assert_equal name,@user.name
+    assert_equal email,@user.email
   end
 
   private
@@ -49,12 +48,12 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     print("good number of error explanation messages: . #{@err_count}\n")
   end
 
-  def successful_edit_test_results
-    puts("=== successful user edit test ===")
-    print("go to to user page after successful edit:. . #{@go_to_users}\n")
-    print("flash message: . . . . . . . . . . . . . . . #{@flash2}\n")
-    print("correctly updated user data: . . . . . . . . #{@user_data}\n")
-  end
+  # def successful_edit_test_results
+  #   puts("=== successful user edit test ===")
+  #   # print("go to to user page after successful edit:. . #{@go_to_users}\n")
+  #   print("flash message: . . . . . . . . . . . . . . . #{@flash2}\n")
+  #   print("correctly updated user data: . . . . . . . . #{@user_data}\n")
+  # end
 end
 
 # rails test test/integration/users_edit_test.rb

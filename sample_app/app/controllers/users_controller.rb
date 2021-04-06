@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to my inn"
-      redirect_to user_url(@user)
+      redirect_to @user
     else
       render 'new'
     end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     #@user = User.find(params[:id])
     if @user.update(user_params)
       flash[:success] = "Your new data seams okay, move along"
-      redirect_to user_url(@user)
+      redirect_to @user
     else
       render "edit"
     end
@@ -47,6 +47,7 @@ class UsersController < ApplicationController
 
   def logged_in_user
     unless logged_in?
+      store_location
       flash[:danger] = "Easy easy, may I check your ID?"
       redirect_to login_url
     end
