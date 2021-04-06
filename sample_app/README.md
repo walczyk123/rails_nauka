@@ -1408,6 +1408,45 @@ Links doesn't work in RM, but github reads them correctly.
   
 ### Friendly Forwarding
 
-
-
+* ex1 - Write a test to make sure that friendly forwarding only forwards to the given URL the first time. On subsequent 
+  login attempts, the forwarding URL should revert to the default (i.e., the profile page). Hint: Add to the test in Listing 10.29 
+  by checking for the right value of session [:forwarding_url].  
+  
+  ```ruby
+  test"successful edit with friendly forwarding" do
+    get edit_user_path(@user)
+    log_in_as(@user)
+    assert_redirected_to edit_user_url(@user)
+    name="Foo Bar"
+    email="foo@bar.com"
+    patch user_path(@user),{params: {user: {name:name, email: email,password:"",password_confirmation:""} }}
+    assert_not flash.empty?
+    assert_redirected_to @user
+    @user.reload
+    assert_equal name,@user.name
+    assert_equal email,@user.email
+    #ex1 p. 576
+    log_in_as(@user)
+    assert_redirected_to user_url(@user)
+  end
+  ```
+  
+* ex2 - Put a debugger (Section 7.1.3) in the Sessions controller’s new action, then log out and try to visit /users/1/edit.
+  Confirm in the debugger that the value of session[:forwarding_url] is correct. What is the value of request.get? for the 
+  new action? (Sometimes the terminal can freeze up or act strangely when you’re using the debugger; use your technical 
+  sophistication (Box 1.1) to resolve any issues.)
+  ```bash
+      1: class SessionsController < ApplicationController
+      2:   def new
+      3:     debugger
+  =>  4:   end
+      5:
+      6:   def create
+      7:       user = User.find_by(email: params[:session][:email].downcase)
+      8:       if user && user.authenticate(params[:session][:password])
+      9:         log_in user
+      10:         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+  ```
+  `session[:forwarding_url]` => "http://localhost:3000/users/1/edit"  
+  `request.get?` => true  
 
