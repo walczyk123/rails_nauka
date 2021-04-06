@@ -33,7 +33,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Showing all users](#showing-all-users)
   * [Sample users](#sample-users)
   * [Partial refactoring](#partial-refactoring)
-
+  * [Deleting users](#deleting-users)
 
 
 # Chapter 3  
@@ -1595,5 +1595,24 @@ Links doesn't work in RM, but github reads them correctly.
 
 ### Partial refactoring 
 
+* ex1 - Comment out the render line in Listing 10.52 and confirm that the resulting tests are red.  
+  ```html
+  <% provide(:title, "All users") %>
+  <h1> All Users </h1>
+  
+  <%= will_paginate%>
+  
+  <ul class="users">
+    <%#= render @users %>>
+  </ul>
+  
+  <%= will_paginate%>
+  ```
+  ```sh
+  Finished in 13.11335s
+  37 tests, 120 assertions, 1 failures, 0 errors, 0 skips
+  ```
+
+## Deleting users
 
 
