@@ -30,6 +30,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Updating Users](#updating-users)
   * [Unsuccessful Edits](#unsuccessful-edits)
   * [Authorization](#authorization)
+  * [Showing all users](#showing-all-users)
 
 
 
@@ -1449,4 +1450,13 @@ Links doesn't work in RM, but github reads them correctly.
   ```
   `session[:forwarding_url]` => "http://localhost:3000/users/1/edit"  
   `request.get?` => true  
+
+[Page top](#README)
+  
+## Showing all users
+
+* ex1 - We’ve now filled in all the links in the site layout. Write an integration test for all the layout links, 
+  including the proper behavior for logged-in and non-logged-in users. Hint: Use the log_in_as helper and add 
+  to the steps shown in Listing 5.32.  
+  `rails generate integration_test site_layout`
 
