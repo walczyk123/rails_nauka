@@ -1707,3 +1707,37 @@ To do:
 * ex2 - Why does Table 11.2 list the_url form of the named route instead of the_path form?Hint: We’re going to use it in an email.  
   __I think thats because we use an app resources: `resources :account_activations, only: [:edit]`.__
   
+### Account activation data model
+
+* ex1 - Verify that the test suite is still green after the changes made in this section.
+  ```sh
+  Finished in 13.93875s
+  40 tests, 185 assertions, 0 failures, 0 errors, 0 skips
+  ```
+
+* ex2 - By instantiating a User object in the console, confirm that calling the create_activation_digest method raises
+  a NoMethodError due to its being a private method. What is the value of the user’s activation digest?  
+  ```bash
+  >> u=User.first
+  >> u.create_activation_digest
+  Traceback (most recent call last):
+  1: from (irb):2
+  NoMethodError (private method `create_activation_digest' called for #<User:0x00007f0ef4cfd7f8>)
+  Did you mean?  restore_activation_digest!
+  >> u.activation_digest
+  => "$2a$12$AEkQbwOh2NRVjLPPAxm24uBr.9o7uoOTV4rOc5pGDlnZkROy82B2W"
+  ```
+
+* ex3 - In Listing 6.35, we saw that email downcasing can be written more simply as email.downcase!(without any assignment). 
+  Make this change to the downcase_email method in Listing 11.3 and verify by running the test suite that it works.  
+  ```ruby
+  def downcase_email
+    email.downcase!
+  end
+  ```
+  ```shell
+  Finished in 13.63906s
+  40 tests, 185 assertions, 0 failures, 0 errors, 0 skips
+  ```
+  
+# Account activation emails
