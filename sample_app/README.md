@@ -1696,3 +1696,14 @@ To do:
 
 
 # Account activation
+
+## Account activations resource
+
+### Account activations controller
+
+* ex1 - Verify that the test suite is still green.  
+  __YES__  
+  
+* ex2 - Why does Table 11.2 list the_url form of the named route instead of the_path form?Hint: We’re going to use it in an email.  
+  __I think thats because we use an app resources: `resources :account_activations, only: [:edit]`.__
+  
