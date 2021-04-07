@@ -1640,3 +1640,26 @@ To do:
   Its important to reload @other_user information 
 
 ### The destroy action
+
+* ex1 - As the admin user, destroy a few sample users through the web interface. What are the corresponding entries in the server log?
+  
+  ```sql 
+  Started GET "/users" for 127.0.0.1 at 2021-04-07 11:46:29 +0200
+  Processing by UsersController#index as HTML
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  (0.3ms)  SELECT COUNT(*) FROM "users"
+  ↳ app/views/users/index.html.erb:4
+  User Load (0.4ms)  SELECT "users".* FROM "users" LIMIT ? OFFSET ?  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:7
+  Rendered collection of users/_user.html.erb [30 times] (Duration: 7.4ms | Allocations: 3210)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 5945)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 35.8ms | Allocations: 14364)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 170)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 20917)
+  Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 0.9ms | Allocations: 21852)
+  ```

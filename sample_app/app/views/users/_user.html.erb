@@ -5,4 +5,9 @@
   <% if user.admin %>
     <p> Admin rank</p>
   <% end %>
+<!--  administrative delete link-->
+  <% if current_user.admin? && !current_user?(user) %>
+    <div><%= link_to "Delete", user, method: :delete, data: { confirm: "Are You sure?"} %></div>
+  <% end %>
+
 </li>
