@@ -12,6 +12,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Arrays](#Arrays)
   * [Blocks](#Blocks)
   * [Hashes and symbols](#Hashes-and-symbols)
+  
 * [Link to Chapter 5 - Filling in layout](#chapter-5)  
 * [Link to Chapter 6 - Modeling users](#chapter-6)  
 * [Link to Chapter 7 - Sign up](#chapter-7)  
@@ -20,12 +21,14 @@ Links doesn't work in RM, but github reads them correctly.
   * [Finding and authenticating a user](#Finding-and-authenticating-a-user)
   * [Logging in](#Logging-in)
   * [Logout](#Logout)
+  
 * [Link to Chapter 9 - Advanced login](#chapter-9)
   * [Remember me](#remember-me)
   * [Login with remembering](#login-with-remembering)
   * [Forgetting users](#forgetting-users)
   * [Two subtle bugs](#two-subtle-bugs)
   * [Remember Me Checkbox](#remember-me-checkbox)
+  
 * [Link to Chapter 10 - Updating, showing and deleting users](#chapter-10)
   * [Updating Users](#updating-users)
   * [Unsuccessful Edits](#unsuccessful-edits)
@@ -34,6 +37,8 @@ Links doesn't work in RM, but github reads them correctly.
   * [Sample users](#sample-users)
   * [Partial refactoring](#partial-refactoring)
   * [Deleting users](#deleting-users)
+    
+*[Link to Chapter 11 - Account activation](#account-activation)  
 
 
 # Chapter 3  
@@ -1663,3 +1668,31 @@ To do:
   Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 20917)
   Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 0.9ms | Allocations: 21852)
   ```
+  
+### User destroy test 
+
+* ex1 - By commenting out the admin user before filter in Listing 10.59, confirm that the tests go red.  
+  ```rb 
+  class UsersController < ApplicationController
+    before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+    before_action :correct_user, only: [:edit, :update]
+    # before_action :admin_user, only: [:destroy]
+    
+    #...
+    #...
+  end
+  ```
+  ```sh
+  #....
+  "User.count" didn't change by 0.
+        Expected: 34
+          Actual: 33
+  #....
+  Finished in 9.13808s
+  40 tests, 184 assertions, 1 failures, 0 errors, 0 skips
+  ```
+  
+  [Page top](#README)
+
+
+# Account activation
