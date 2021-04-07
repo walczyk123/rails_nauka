@@ -1615,4 +1615,28 @@ Links doesn't work in RM, but github reads them correctly.
 
 ## Deleting users
 
+To do:  
+- create administrative user class - admin,  
+- add link to delete user,  
+- define destroy action.  
 
+### Administrative user
+
+`rails generate migration add_admin_to_users admin:boolean`
+
+* ex1 - By issuing a PATCH request directly to the user path as shown inList-ing 10.56, verify that the admin attribute 
+  isn’t editable through the web.To be sure your test is covering the right thing, your first step should be to add admin 
+  to the list of permitted parameters in user_params so that the initial test is red. For the final line,  make sure to 
+  load the updated user information from the database (Section 6.1.5).  
+  ```rb 
+  test "should not allow the admin attribute to be edited via the web" do
+    log_in_as(@other_user)
+    assert_not @other_user.admin?
+    patch user_path(@user), {params: {user: { name: @user.name, email: @user.email, password: "password",
+                                              password_confirmation: "password", admin: true}}}
+    assert_not @other_user.reload.admin?
+  end
+  ```
+  Its important to reload @other_user information 
+
+### The destroy action
