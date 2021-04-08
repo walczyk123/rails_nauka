@@ -1756,3 +1756,7 @@ To do:
   
 ### Email previews
   
+* ex1 - Preview the email templates in your browser. What do the Date fields read for your previews?  
+  __IDK for now, ask RADEK__  
+  
+### Email tests  
