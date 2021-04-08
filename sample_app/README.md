@@ -39,6 +39,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Deleting users](#deleting-users)
     
 *[Link to Chapter 11 - Account activation](#account-activation)  
+  *[Account activation emails](#account-activation-emails)
 
 
 # Chapter 3  
@@ -1740,4 +1741,18 @@ To do:
   40 tests, 185 assertions, 0 failures, 0 errors, 0 skips
   ```
   
-# Account activation emails
+## Account activation emails
+
+### Mailer templates
+
+`rails generate mailer UserMailer account_activation password_reset`
+
+* ex1 - At the console, verify that the escape method in the CGI module escapes out the email address as shown in 
+  Listing 11.15. What is the escaped value of the string "Don't panic!"?  
+  ```bash 
+  >> CGI.escape("Don't panic!")
+  => "Don%27t+panic%21"
+  ```
+  
+### Email previews
+  
