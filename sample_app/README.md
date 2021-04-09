@@ -1760,3 +1760,32 @@ To do:
   __IDK for now, ask RADEK__  
   
 ### Email tests  
+`CGI::escape` is coming from the CGI spec, which describes how data should be encoded/decode between web server and application.  
+
+* ex1 - Verify that the full test suite is still green.  
+  ```sh
+  Finished in 0.76076s
+  1 tests, 9 assertions, 0 failures, 0 errors, 0 skips
+  ```
+  
+* ex2 - Confirm that the test goes red if you remove the call to CGI.escape in Listing 11.20.  
+  ```sh
+  FAIL["test_account_activation", #<Minitest::Reporters::Suite:0x00007faf380081d0 @name="UserMailerTest">, 1.0357141370000136]
+  test_account_activation#UserMailerTest (1.04s)
+  Expected /Hi/ to match # encoding: US-ASCII
+  "\r\n----==_mimepart_60707ca68fc8c_eea17ac83665\r\nContent-Type: text/plain;\r\n charset=UTF-8\r\nContent-Transfer-Encoding: 
+  7bit\r\n\r\nHello testertestow\r\n\r\nWelcome to my site, click on link to activate your account:\r\n\r\nhttp://example.com/
+  account_activations/fiXg1CIn4IXIUub4H8KJ2g/edit?email=tester%40tester.omg\r\n\r\n\r\n----==_mimepart_60707ca68fc8c_eea17ac83665\
+  r\nContent-Type: text/html;\r\n charset=UTF-8\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n  
+  <head>\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\r\n    <style>\r\n     
+   /* Email styles need to be inline */\r\n    </style>\r\n  </head>\r\n\r\n  <body>\r\n    <h1>Sample app</h1>\r\nHello 
+  testertestow\r\n\r\n<p>\r\n  Welcome to my app, click to activate:\r\n</p>\r\n\r\n<a href=\"http://example.com/
+  account_activations/fiXg1CIn4IXIUub4H8KJ2g/edit?email=tester%40tester.omg\">Activate</a>\r\n\r\n  </body>\r\n</html>
+  \r\n\r\n----==_mimepart_60707ca68fc8c_eea17ac83665--\r\n".
+  test/mailers/user_mailer_test.rb:13:in `block in <class:UserMailerTest>' 
+  1/1: [========================================================================] 100% Time: 00:00:01, Time: 00:00:01 
+  Finished in 1.10785s
+  1 tests, 9 assertions, 1 failures, 0 errors, 0 skips
+  ```
+  
+### Updating the users create action
