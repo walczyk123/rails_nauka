@@ -40,6 +40,7 @@ Links doesn't work in RM, but github reads them correctly.
     
 *[Link to Chapter 11 - Account activation](#account-activation)  
   *[Account activation emails](#account-activation-emails)
+  *[Activating the account](#activating-the-account)
 
 
 # Chapter 3  
@@ -1789,3 +1790,67 @@ To do:
   ```
   
 ### Updating the users create action
+
+* ex1 - Sign up as a new user and verify that you’re properly redirected. What is the content of the generated email in 
+  the server log? What is the value of the activation token?  
+  
+  * __Flash info: "check email and activate account" displays properly.__  
+  * __Redirected to root properly.__
+  * __Activation token: FJQD4yXYzCd1e8MDbdBGaw (I belive it's this token).__  
+  * __Email delivered to new user (from console):__
+  ```html
+    Delivered mail 60749cf14487_11db50dc98433@kamil-GA-MA770-UD3.mail (14.8ms)
+    Date: Mon, 12 Apr 2021 21:18:09 +0200
+    From: noreply@example.com
+    To: kamil@tester.com
+    Message-ID: <60749cf14487_11db50dc98433@kamil-GA-MA770-UD3.mail>
+  
+    Hello kamil tester
+    
+    Welcome to my site, click on link to activate your account:
+    
+    https://localhost:3000/account_activations/FJQD4yXYzCd1e8MDbdBGaw/edit?email=kamil%40tester.com
+    
+    
+    ----==_mimepart_60749cf0f4234_11db50dc9831b
+    Content-Type: text/html;
+    charset=UTF-8
+    Content-Transfer-Encoding: 7bit
+    
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+          /* Email styles need to be inline */
+        </style>
+      </head>
+    
+      <body>
+        <h1>Sample app</h1>
+        Hello kamil tester
+        
+        <p>
+          Welcome to my app, click to activate:
+        </p>
+        
+        <a href="https://localhost:3000/account_activations/FJQD4yXYzCd1e8MDbdBGaw/edit?email=kamil%40tester.com">Activate</a>
+    
+      </body>
+    </html>
+  ```
+
+* ex2 - Verify at the console that the new user has been created but that it is not yet activated.  
+  ```shell
+  >> u=User.find_by(email: "kamil@tester.com")
+  User Load (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  >> u
+  => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000",
+  # updated_at: "2021-04-12 19:18:08.245024000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+  # activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: nil, activated_at: nil>
+  ```
+  __Basicaly `activated: nil, activated_at: nil` says that new account is not activated yet.__
+
+[Page top](#README)
+
+## Activating the account
