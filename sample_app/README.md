@@ -1796,7 +1796,7 @@ To do:
   
   * __Flash info: "check email and activate account" displays properly.__  
   * __Redirected to root properly.__
-  * __Activation token: FJQD4yXYzCd1e8MDbdBGaw (I belive it's this token).__  
+  * __Activation token: FJQD4yXYzCd1e8MDbdBGaw (I belive it's this token). Or its an user id (u.id = 102)__  
   * __Email delivered to new user (from console):__
   ```html
     Delivered mail 60749cf14487_11db50dc98433@kamil-GA-MA770-UD3.mail (14.8ms)
@@ -1841,6 +1841,7 @@ To do:
   ```
 
 * ex2 - Verify at the console that the new user has been created but that it is not yet activated.  
+  
   ```shell
   >> u=User.find_by(email: "kamil@tester.com")
   User Load (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "kamil@tester.com"], ["LIMIT", 1]]
@@ -1854,3 +1855,50 @@ To do:
 [Page top](#README)
 
 ## Activating the account
+Need to write an edit action in acc activations controller that activates user
+
+### Generalizing the authenticated? method
+  
+  ```sh
+  >>user=User.first
+  >>user.activation_digest
+  =>"$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKRM6N9Ae"
+  >>user.send(:activation_digest)
+  =>"$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKRM6N9Ae"
+  >>user.send("activation_digest")
+  => "$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKRM6N9Ae"
+  >>attribute=:activation
+  >>user.send("#{attribute}_digest")
+  => "$2a$10$4e6TFzEJAVNyjLv8Q5u22ensMt28qEkx0roaZvtRcp6UZKRM6N9Ae"
+  ```
+
+* ex1 - Create and remember new user at the console. What are the user’s remember and activation tokens? What 
+  are the corresponding digests?  
+  
+  ```bash
+  >> user = User.new(name: "newuser", email: "newuser@gmail.com", password: "12345678", password_confirmation: "12345678")
+  >> user.valid?
+  User Exists? (0.6ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "newuser@gmail.com"], ["LIMIT", 1]]
+  => true
+  >> user.save
+  TRANSACTION (0.1ms)  begin transaction
+  User Exists? (0.3ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "newuser@gmail.com"], ["LIMIT", 1]]
+  User Create (1.6ms)  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", 
+  "activation_digest") VALUES (?, ?, ?, ?, ?, ?)  [["name", "newuser"], ["email", "newuser@gmail.com"], ["created_at", 
+  "2021-04-13 09:01:37.143518"], ["updated_at", "2021-04-13 09:01:37.143518"], ["password_digest", 
+  "$2a$12$f5SSTpZiyPJJGCP.nuE3I.y0oJAkzKZch3RfAcOXtz9bmsqN5mXWq"], ["activation_digest", "$2a$12$VxJgI/md6oDPXOKO9htXyO2fSSWcac2JJC0q.r9IK/LSR65PUiJ/6"]]
+  TRANSACTION (91.0ms)  commit transaction
+  => true
+  ```
+  * __password_digest: $2a$12$f5SSTpZiyPJJGCP.nuE3I.y0oJAkzKZch3RfAcOXtz9bmsqN5mXWq__  
+  * __activation_digest: $2a$12$VxJgI/md6oDPXOKO9htXyO2fSSWcac2JJC0q.r9IK/LSR65PUiJ/6__  
+
+
+* ex2 - sing the generalized authenticated? method from Listing 11.26, verify that the user is authenticated according to both the remember token and the activation token.
+
+  ```bash 
+  >> user.authenticated?(:activation, user.activation_token)
+  => false
+  >> user.authenticated?(:remember, user.remember_token)
+  => false
+  ```
