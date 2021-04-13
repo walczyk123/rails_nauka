@@ -1758,7 +1758,20 @@ To do:
 ### Email previews
   
 * ex1 - Preview the email templates in your browser. What do the Date fields read for your previews?  
-  __IDK for now, ask RADEK__  
+  __Date field: `Date: Mon, 12 Apr 2021 21:18:09 +0200`__  
+  ```html
+    Delivered mail 60749cf14487_11db50dc98433@kamil-GA-MA770-UD3.mail (14.8ms)
+    Date: Mon, 12 Apr 2021 21:18:09 +0200
+    From: noreply@example.com
+    To: kamil@tester.com
+    Message-ID: <60749cf14487_11db50dc98433@kamil-GA-MA770-UD3.mail>
+  
+    Hello kamil tester
+    
+    Welcome to my site, click on link to activate your account:
+    
+    https://localhost:3000/account_activations/FJQD4yXYzCd1e8MDbdBGaw/edit?email=kamil%40tester.com
+  ```
   
 ### Email tests  
 `CGI::escape` is coming from the CGI spec, which describes how data should be encoded/decode between web server and application.  
