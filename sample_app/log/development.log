@@ -22304,3 +22304,106 @@ Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 166
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@testowy.com"], ["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@test.com"], ["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+Started GET "/account_activations/FJQD4yXYzCd1e8MDbdBGaw/edit?email=kamil%40tester.com" for 127.0.0.1 at 2021-04-13 12:55:34 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"kamil@tester.com", "id"=>"FJQD4yXYzCd1e8MDbdBGaw"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/account_activations_controller.rb:3:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:5:in `edit'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-13 10:55:35.159057"], ["activated", 1], ["id", 102]]
+  ↳ app/controllers/account_activations_controller.rb:5:in `edit'
+  [1m[36mTRANSACTION (78.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:5:in `edit'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:6:in `edit'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-13 10:55:35.252944"], ["activated_at", "2021-04-13 10:55:35.251997"], ["id", 102]]
+  ↳ app/controllers/account_activations_controller.rb:6:in `edit'
+  [1m[36mTRANSACTION (84.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:6:in `edit'
+Redirected to http://localhost:3000/users/102
+Completed 302 Found in 604ms (ActiveRecord: 167.1ms | Allocations: 14339)
+
+
+Started GET "/users/102" for 127.0.0.1 at 2021-04-13 12:55:35 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 390)
+  Rendered layouts/_shim.html.erb (Duration: 1.2ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 2699.7ms | Allocations: 1532923)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.9ms | Allocations: 1103)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 2715.1ms | Allocations: 1535667)
+Completed 200 OK in 2732ms (Views: 2720.5ms | ActiveRecord: 0.7ms | Allocations: 1538114)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+Started DELETE "/logout" for 127.0.0.1 at 2021-04-13 13:00:03 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7FX51QtPCZ2NnL0N76T1j3xuEFxGS6FJN5yZSuiPS3KRqWs+R7q6Ts7KyBtoHqI0D3gM1q/a1Ybvgu0Z/WfejA=="}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 3.0ms | Allocations: 7368)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-13 13:00:03 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 940)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 26.0ms | Allocations: 15025)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 16479)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 17388)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-04-13 13:00:04 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 506.9ms | Allocations: 177844)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 68.5ms | Allocations: 15225)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 579.1ms | Allocations: 193601)
+Completed 200 OK in 585ms (Views: 581.5ms | ActiveRecord: 0.0ms | Allocations: 194528)
+
+
+Started POST "/login" for 127.0.0.1 at 2021-04-13 13:00:18 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Cbea47Po526peMNtC7PremLDlE+eCUTGDfCvL0vWK8hN/Vd6pYlQrli15EMzh5gixoLm95VT2uJzhGqbvpwRyw==", "session"=>{"email"=>"newuser@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in in my super site"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "newuser@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 249ms (ActiveRecord: 0.6ms | Allocations: 929)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-13 13:00:18 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 698)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 28.4ms | Allocations: 15024)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 16246)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 16667)
+
+

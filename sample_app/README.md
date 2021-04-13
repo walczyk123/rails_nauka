@@ -1915,3 +1915,42 @@ Need to write an edit action in acc activations controller that activates user
   >> user.authenticated?(:remember, user.remember_token)
   => false
   ```
+  
+### Activation edit action
+
+  * before activation:  
+  ```sh
+  => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000", 
+  # updated_at: "2021-04-12 19:18:08.245024000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+  # activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: nil, activated_at: nil>
+  ```
+  * activation link  
+  `localhost:3000/account_activations/FJQD4yXYzCd1e8MDbdBGaw/edit?email=kamil%40tester.com`  
+    
+  * after activation:  
+    * flash: _Account activated!_  
+    * ```sh
+      >> u.reload
+      User Load (0.7ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 102], ["LIMIT", 1]]
+      => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000", 
+      # updated_at: "2021-04-13 10:55:35.252944000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+      # activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: true, activated_at: 
+      # "2021-04-13 10:55:35.251997000 +0000">
+      ```
+      
+* ex1 - Paste in the URL from the email generated in Section 11.2.4. What is the activation token?  
+  __Activation token: _JQD4yXYzCd1e8MDbdBGaw_.__
+  
+* ex2 - Verify at the console that the User is authenticated according to the activation token in the URL from the previous 
+  exercise. Is the user now activated?
+  ```sh
+      >> u.reload
+      User Load (0.7ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 102], ["LIMIT", 1]]
+      => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000", 
+      # updated_at: "2021-04-13 10:55:35.252944000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+      # activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: true, activated_at: 
+      # "2021-04-13 10:55:35.251997000 +0000">
+  ```  
+  __Yes, user is now active.__
+
+### Activation test and refactoring
