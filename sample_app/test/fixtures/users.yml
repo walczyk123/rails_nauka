@@ -27,6 +27,11 @@ bigboy:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+inactiveboy:
+  name: "kinda big"
+  email: "inactiv@boy.com"
+  password_digest: <%= User.digest("password") %>
+
 
 # Important in YML file: indent line 3,4,5, line 1,2,6 no indent.
 <% 30.times do |n| %>

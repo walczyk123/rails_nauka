@@ -1954,3 +1954,84 @@ Need to write an edit action in acc activations controller that activates user
   __Yes, user is now active.__
 
 ### Activation test and refactoring
+
+
+* ex1 - In Listing 11.35, the activate method makes two calls to the update_attribute, each of which requires a separate
+  database transaction. By filling in the template shown in Listing 11.39, replace the two update_attribute calls with 
+  a single call to update_columns, which hits the database only once. After making the changes, verify that the test 
+  suite is still green.   
+  ```ruby
+  def activate
+    update_columns(activated: true, activated_at: Time.zone.now)
+  end
+  ```
+  __Yes, everything is all right after this little code refactor.__
+
+* ex2 - Right now all users are displayed on the user index page at /users and are visible via the URL /users/:id, but 
+  it makes sense to show users only if they are activated. Arrange for this behavior by filling in the template shown in 
+  Listing 11.40.9 (This uses the Active Record where method, which we’ll learn more about in Section 13.3.3.)  
+  `users_controller.rb`  
+  ```ruby
+    def index
+      @users = User.where(activated: !nil).paginate(page: params[:page])
+    end
+  ```
+  __After this unactivated users will not show in users index page, but still are achievable via link with correct id.__
+  ```ruby
+  def show
+    @user = User.find(params[:id])
+    redirect_to root_url and return unless @user.activated
+  end
+  ```
+  __After adding this to users_controller.rb, if you enter to inactive user profile page via id, you get instant redirect to root_url.__  
+
+* ex3 - To test the code in the previous exercise, write integration tests for both /users and /users/:id.
+  
+  `test/fixtures/users.yml` added inactive user
+  ```yml
+  inactiveboy:
+    name: "kinda big"
+    email: "inactiv@boy.com"
+    password_digest: <%= User.digest("password") %>
+  ```
+  
+  `test/users_index_text.rb`
+  ```ruby
+  class UsersIndexTest < ActionDispatch::IntegrationTest
+    def setup
+      @admin = users(:testowy)
+      @non_admin = users(:bigboy)
+      @unactivated_user = users(:inactiveboy)
+    end
+  
+    test"index including pagination shows only active users" do
+      log_in_as(@admin)
+      get users_path
+      assert_template'users/index'
+      assert_select'div.pagination', count: 2
+      # this shows shows only users that were activated
+      first_page_of_users = User.where(activated: true).paginate(page: 1)
+      first_page_of_users.each do |user|
+        assert_select'a[href=?]', user_path(user),text: user.name
+        unless user == @admin
+        assert_select 'a[href=?]', user_path(user),text:'Delete'
+        end
+      end
+      assert_difference "User.count", -1 do
+        delete user_path(@non_admin)
+      end
+    end
+    
+    test "should redirect to root_url when user not activated" do
+      log_in_as(@unactivated_user)
+      assert_redirected_to root_url
+    end
+    
+    test "should not redirect root_url when user is activated" do
+      log_in_as(@non_admin)
+      assert_redirected_to @non_admin
+    end
+  
+  end
+  ```
+  
