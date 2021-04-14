@@ -38,9 +38,12 @@ Links doesn't work in RM, but github reads them correctly.
   * [Partial refactoring](#partial-refactoring)
   * [Deleting users](#deleting-users)
     
-*[Link to Chapter 11 - Account activation](#account-activation)  
-  *[Account activation emails](#account-activation-emails)
-  *[Activating the account](#activating-the-account)
+*[Link to Chapter 11 - Account activation](#account-activation)
+  * [Account activation emails](#account-activation-emails)
+  * [Activating the account](#activating-the-account)
+  * [Email in production](#email-in-production)
+
+*[Link to Chapter 12 - Password reset](#chapter-12)
 
 
 # Chapter 3  
@@ -2034,4 +2037,15 @@ Need to write an edit action in acc activations controller that activates user
   
   end
   ```
+[Page top](#README)
+
+## Email in production 
+
+__Cant do this right now. p. 659.__
+
+[Page top](#README)
+
+# Chapter 12
+
+## Password reset
   
