@@ -44,6 +44,7 @@ Links doesn't work in RM, but github reads them correctly.
   * [Email in production](#email-in-production)
 
 *[Link to Chapter 12 - Password reset](#chapter-12)
+  *[Password resets resource](#password-resets-resource)
 
 
 # Chapter 3  
@@ -2048,4 +2049,36 @@ __Cant do this right now. p. 659.__
 # Chapter 12
 
 ## Password reset
+
+To do:
+* Add forgot password link,
+* forgot password page with form to send an email,
+* reset password page and form.
+
+## Password resets resource
+
+### Password resets controller 
+`rails generate controller PasswordResets new edit --no-test-framework`
+
+  Routes:
+  ```bash
+  password_resets       POST   /password_resets(.:format)          | password_resets#create
+  new_password_reset    GET    /password_resets/new(.:format)      | password_resets#new
+  edit_password_reset   GET    /password_resets/:id/edit(.:format) | password_resets#edit
+  password_reset        PATCH  /password_resets/:id(.:format)      | password_resets#update
+                        PUT    /password_resets/:id(.:format)      | password_resets#update
+  ```
+
+* ex1 - Verify that the test suite is still green.  
+  __Yes, all tests are green.__  
+  
+
+* ex2 - Why does Table 12.1 list the _url form of the edit named route instead of the _path form? Hint: The answer is
+  the same as for the similar account activations exercise (Section 11.1.1.1).  
+  __Because it uses resource outside of application domain.__  
+  
+### New password resets
+  
+
+
   
