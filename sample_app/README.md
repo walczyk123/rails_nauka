@@ -2080,12 +2080,24 @@ To do:
 ### New password resets
 
 database migration:
-`rails generate migration add_reset_to_users reset_digest:string reset_sent_at:datetime`
-  
+`rails generate migration add_reset_to_users reset_digest:string reset_sent_at:datetime
+
 * ex1 - Why does the form_for in Listing 12.4 use :password_reset instead of @password_reset?  
   __Because we dont use a reference to db but to user model.__ Ask RAD
   
 ### Password reset create action
+
+  > To do:
+  >* find user by email,  
+  >* update reset_digest and reset_sent_at,  
+  >* redirect to root and show flash message,
+  >* if email was incorrect, re-render form again with flash info what is wrong.  
+
+* ex 1 - Submit a valid email address to the form shown in Figure 12.6. What error message do you get?  
+  __NoMethodError (undefined method `create_reset_digest' for #<User:0x00007f0586968b50>
+  Did you mean?  create_reset_password):
+  .__
+
 
 
   
