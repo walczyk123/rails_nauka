@@ -2078,7 +2078,14 @@ To do:
   __Because it uses resource outside of application domain.__  
   
 ### New password resets
+
+database migration:
+`rails generate migration add_reset_to_users reset_digest:string reset_sent_at:datetime`
   
+* ex1 - Why does the form_for in Listing 12.4 use :password_reset instead of @password_reset?  
+  __Because we dont use a reference to db but to user model.__ Ask RAD
+  
+### Password reset create action
 
 
   

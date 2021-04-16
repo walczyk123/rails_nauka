@@ -22925,3 +22925,107 @@ Processing by PasswordResetsController#new as HTML
 Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 0.0ms | Allocations: 17510)
 
 
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddResetToUsers (20210416103534)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_digest" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_sent_at" datetime[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210416103534"]]
+  [1m[36mTRANSACTION (125.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:41:35 +0200
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 4450.1ms | Allocations: 519541)
+  Rendered layouts/_shim.html.erb (Duration: 10.0ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 3929.3ms | Allocations: 1533804)
+  Rendered layouts/_header.html.erb (Duration: 14.9ms | Allocations: 446)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 8412.3ms | Allocations: 2055045)
+Completed 200 OK in 8498ms (Views: 8435.3ms | ActiveRecord: 0.0ms | Allocations: 2058875)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:42:24 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 427)
+  Rendered layouts/_shim.html.erb (Duration: 1.0ms | Allocations: 78)
+  Rendered layouts/_head.html.erb (Duration: 118.6ms | Allocations: 16366)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 418)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 142.3ms | Allocations: 18408)
+Completed 200 OK in 154ms (Views: 149.6ms | ActiveRecord: 0.0ms | Allocations: 19541)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:42:38 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 428)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 39.1ms | Allocations: 16351)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 418)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 18385)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.0ms | Allocations: 19506)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:42:46 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 427)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 29.3ms | Allocations: 16349)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 418)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 18384)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 19505)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:43:14 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 427)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 30.4ms | Allocations: 16345)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 418)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 18377)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 19501)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:43:16 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 246)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 31.1ms | Allocations: 15971)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 16733)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 17147)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-16 12:43:21 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 426)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 75)
+  Rendered layouts/_head.html.erb (Duration: 88.6ms | Allocations: 16345)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 418)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 111.9ms | Allocations: 18376)
+Completed 200 OK in 140ms (Views: 133.0ms | ActiveRecord: 0.0ms | Allocations: 19502)
+
+
