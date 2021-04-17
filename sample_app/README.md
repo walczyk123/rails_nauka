@@ -2093,11 +2093,21 @@ database migration:
   >* redirect to root and show flash message,
   >* if email was incorrect, re-render form again with flash info what is wrong.  
 
-* ex 1 - Submit a valid email address to the form shown in Figure 12.6. What error message do you get?  
+* ex1 - Submit a valid email address to the form shown in Figure 12.6. What error message do you get?  
   __NoMethodError (undefined method `create_reset_digest' for #<User:0x00007f0586968b50>
-  Did you mean?  create_reset_password):
-  .__
-
-
+  Did you mean?  create_reset_password):.__  
+  
+  
+* ex2 - Confirm at the console that the user in the previous exercise has valid reset_digest and reset_sent_atattributes,
+  despite the error. What are the attribute values?  
+  ```sql
+  >> u = User.find_by(email: "kamil@tester.com")
+  User Load (0.4ms)  SELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  >> u
+  => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000",
+  updated_at: "2021-04-13 10:55:35.252944000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+  activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: true, activated_at: 
+  "2021-04-13 10:55:35.251997000 +0000", reset_digest: nil, reset_sent_at: nil>
+  ```
 
   
