@@ -2094,20 +2094,24 @@ database migration:
   >* if email was incorrect, re-render form again with flash info what is wrong.  
 
 * ex1 - Submit a valid email address to the form shown in Figure 12.6. What error message do you get?  
-  __NoMethodError (undefined method `create_reset_digest' for #<User:0x00007f0586968b50>
-  Did you mean?  create_reset_password):.__  
+  __NoMethodError (undefined method `send_password_reset_email' for #<User:0x00007efd90269000>
+  Did you mean?  sent_password_reset_email).__  
   
   
 * ex2 - Confirm at the console that the user in the previous exercise has valid reset_digest and reset_sent_atattributes,
   despite the error. What are the attribute values?  
-  ```sql
+  ```sh
   >> u = User.find_by(email: "kamil@tester.com")
   User Load (0.4ms)  SELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "kamil@tester.com"], ["LIMIT", 1]]
   >> u
-  => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000",
-  updated_at: "2021-04-13 10:55:35.252944000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
-  activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: true, activated_at: 
-  "2021-04-13 10:55:35.251997000 +0000", reset_digest: nil, reset_sent_at: nil>
+  >> u
+  => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000", 
+  # updated_at: "2021-04-17 09:11:59.535170000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+  # activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: true, activated_at: 
+  # "2021-04-13 10:55:35.251997000 +0000", reset_digest: "$2a$12$SHSnEvF9g.XEVPQMxkSrnumIUZTDGIbl8hGV28I/afv...",
+  # reset_sent_at: "2021-04-17 09:11:59.534674000 +0000">
   ```
 
   
+## Password reset emails
+
