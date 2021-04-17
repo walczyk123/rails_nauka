@@ -2115,3 +2115,57 @@ database migration:
   
 ## Password reset emails
 
+* ex1 - Preview the email templates in your browser. What do the Date fields read for your previews?
+
+  ```sh
+  Delivered mail 607aba0b5b509_155c52081766@kamil-GA-MA770-UD3.mail (87.3ms)
+  Date: Sat, 17 Apr 2021 12:35:55 +0200
+  From: noreply@example.com
+  To: kamil@tester.com
+  Message-ID: <607aba0b5b509_155c52081766@kamil-GA-MA770-UD3.mail>
+  Subject: Password reset
+  Mime-Version: 1.0
+  Content-Type: multipart/alternative;
+   boundary="--==_mimepart_607aba0b52d0a_155c520816c8";
+   charset=UTF-8
+  Content-Transfer-Encoding: 7bit
+  
+  
+  ----==_mimepart_607aba0b52d0a_155c520816c8
+  Content-Type: text/plain;
+   charset=UTF-8
+  Content-Transfer-Encoding: 7bit
+  
+  If you want to reset your password, click the link bellow:
+  
+  https://localhost:3000/password_resets/F-qTUi-7lGb1C3ReEyZEbA/edit?email=kamil%40tester.com
+  
+  This link will expire in 2h.
+  If you didn't request your password reset, ignore this message.
+  ```
+  __Date field show the date and time when mail was send__
+
+
+* ex2 - Submit a valid email address to the new password reset form. What is the content of the generated email in the server log?  
+  __Same content as in exercise above.__
+  
+
+* ex3 - At the console, find the user object corresponding to the email address from the previous exercise and verify 
+  that it has valid reset_digest and reset_sent_atattributes.  
+  ```sh
+  >> u = User.find_by(email: "kamil@tester.com")
+  User Load (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  >> u
+  => #<User id: 102, name: "kamil tester", email: "kamil@tester.com", created_at: "2021-04-12 19:18:08.245024000 +0000", 
+  # updated_at: "2021-04-17 10:35:54.782950000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+  # activation_digest: "$2a$12$HKGX4kk2V9zHbwZaizeLNuLgv3zeN7nwQUAGnU4ocKy...", activated: true, activated_at: 
+  # "2021-04-13 10:55:35.251997000 +0000", reset_digest: "$2a$12$ZEqA4fsU4uRObk4m9T0s2Ox06CeUiHI3kAbcFaX8HRC...", 
+  # reset_sent_at: "2021-04-17 10:35:54.782083000 +0000">
+  ```
+  __Database : reset_sent_at: "2021-04-17 10:35:54.782083000 +0000"__  
+  __Email : Date: Sat, 17 Apr 2021 12:35:55 +0200__  
+  
+
+  __Date and time matches, but database is using +0 GMT and the email uses +2 GMT.__
+  
+### Email tests 
