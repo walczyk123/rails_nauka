@@ -2169,3 +2169,14 @@ database migration:
   __Date and time matches, but database is using +0 GMT and the email uses +2 GMT.__
   
 ### Email tests 
+
+* ex1 - Run just the mailer tests. Are they green?  
+  `rails t test/mailers/user_mailer_test.rb`   
+  __Test is green.__
+  
+
+* ex2 - Confirm that the test goes red if you remove the second call toCGI.escape in Listing 12.12.  
+  __Yes, test is red.__
+  
+
+## Resetting the password
