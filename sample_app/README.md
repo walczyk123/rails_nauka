@@ -2175,8 +2175,24 @@ database migration:
   __Test is green.__
   
 
-* ex2 - Confirm that the test goes red if you remove the second call toCGI.escape in Listing 12.12.  
+* ex2 - Confirm that the test goes red if you remove the second call to CGI.escape in Listing 12.12.  
   __Yes, test is red.__
   
 
 ## Resetting the password
+  >To do:  
+  >* Write an edit method in password_reset_controller.
+  >* Integration test.
+  
+### Reset edit action
+
+* ex1 - Follow the link in the email from the server log in Section 12.2.1. Does it properly render the form as 
+  shown in Figure 12.11?  
+  `http://localhost:3000/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com`  
+  __Yes, page is displayed in a correct way.__  
+  
+  
+* ex2 - What happens if you submit the form from the previous exercise?  
+  `The action 'update' could not be found for PasswordResetsController`
+  
+### Updating the reset 

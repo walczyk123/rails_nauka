@@ -1,8 +1,6 @@
 class PasswordResetsController < ApplicationController
-  # def initialize
-  #   @email_sent_msg = "An email has been sent with a link to reset the password"
-  #   @wrong_email_msg = "Email not found in database"
-  # end
+  before_action :get_user, only: [:edit,:update]
+  before_action :valid_user, only: [:edit,:update]
 
   def new
   end
@@ -22,6 +20,18 @@ class PasswordResetsController < ApplicationController
     else
       flash.now[:danger] = wrong_email_msg
       render "new"
+    end
+  end
+
+  #================== private ===================
+  private
+  def get_user
+    @user = User.find_by(email: params[:email])
+  end
+
+  def valid_user
+    unless @user && @user.activated? && @user.authenticated?(:reset, params[:id])
+      redirect_to root_url
     end
   end
 end

@@ -24052,3 +24052,476 @@ Completed 200 OK in 220ms (Views: 218.2ms | ActiveRecord: 0.0ms | Allocations: 1
 
 
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2021-04-19 16:32:42 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 473.8ms | Allocations: 178144)
+  Rendered layouts/_shim.html.erb (Duration: 1.0ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 3726.5ms | Allocations: 1533806)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 442)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 4211.9ms | Allocations: 1713638)
+Completed 200 OK in 4228ms (Views: 4216.7ms | ActiveRecord: 0.0ms | Allocations: 1716279)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-19 16:32:49 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 436)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 35.2ms | Allocations: 15974)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 16932)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms | Allocations: 17850)
+
+
+Started GET "/password_resets/edit" for 127.0.0.1 at 2021-04-19 16:32:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/password_resets/edit"):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/password_resets" for 127.0.0.1 at 2021-04-19 16:47:37 +0200
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"authenticity_token"=>"uC9xiopS0IionddAfZ/dx9LENo8NuEstVl2pobY2UOsMSswdIdgUO/mjp+5zOhBLgvR62q8wAHp0D54bDDgMbQ==", "password_reset"=>"[FILTERED]", "commit"=>"Send me a password changing link"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/password_resets_controller.rb:14:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:52:in `create_reset_digest'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-19 14:47:37.735124"], ["reset_digest", "$2a$12$.p71moi4gZoj77Uku4PBauL9Yj7O3t293frjo6MAfA1FQYblTPyGm"], ["id", 102]]
+  ↳ app/models/user.rb:52:in `create_reset_digest'
+  [1m[36mTRANSACTION (103.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:52:in `create_reset_digest'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:53:in `create_reset_digest'
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-19 14:47:37.853682"], ["reset_sent_at", "2021-04-19 14:47:37.852743"], ["id", 102]]
+  ↳ app/models/user.rb:53:in `create_reset_digest'
+  [1m[36mTRANSACTION (100.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:53:in `create_reset_digest'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (Duration: 1.1ms | Allocations: 180)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.9ms | Allocations: 352)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (Duration: 0.8ms | Allocations: 156)
+  Rendered layout layouts/mailer.text.erb (Duration: 1.7ms | Allocations: 307)
+UserMailer#password_reset: processed outbound mail in 13.3ms
+Delivered mail 607d980a1380b_1996409c346c0@kamil-GA-MA770-UD3.mail (7.5ms)
+Date: Mon, 19 Apr 2021 16:47:38 +0200
+From: noreply@example.com
+To: kamil@tester.com
+Message-ID: <607d980a1380b_1996409c346c0@kamil-GA-MA770-UD3.mail>
+Subject: Password reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_607d980a1200f_1996409c3455c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_607d980a1200f_1996409c3455c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+If you want to reset your password, click the link bellow:
+
+https://localhost:3000/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com
+
+This link will expire in 2h.
+If you didn't request your password reset, ignore this message.
+
+----==_mimepart_607d980a1200f_1996409c3455c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Password reset</h1>
+
+<p> To reset your password, click the link bellow: </p>
+<a href="https://localhost:3000/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com">Reset password</a>
+<hr>
+<p> This link will expire in 2h.</p>
+<p> If you didn't request your password reset, ignore this message. </p>
+
+  </body>
+</html>
+
+----==_mimepart_607d980a1200f_1996409c3455c--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 626ms (ActiveRecord: 208.2ms | Allocations: 33865)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-19 16:47:38 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 944)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 28.2ms | Allocations: 15854)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 17326)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 18268)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-04-19 16:48:17 +0200
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 469)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 29.4ms | Allocations: 15939)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 16926)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 17373)
+
+
+Started GET "/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com" for 127.0.0.1 at 2021-04-19 16:48:19 +0200
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"kamil@tester.com", "id"=>"eZVdss8kGK3iIqt2Cxpotw"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:29:in `get_user'
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1257)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.3ms | Allocations: 2388)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide(:title, 'Reset password') %>
+<h1>Reset password</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user, url: password_reset_path(params[:id]), local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= hidden_field_tag: email, @user.email %>
+
+      <%= f.label: password %>
+      <%= f.password_field: password, class: 'form-control' %>
+
+      <%= f.label: password_confirmation, "Confirmation" %>
+      <%= f.password_field: password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Update password", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+):
+1:    <% provide(:title, 'Reset password') %>
+2:    <h1>Reset password</h1>
+3:    <div class="row">
+4:      <div class="col-md-6 col-md-offset-3">
+5:        <%= form_with(model: @user, url: password_reset_path(params[:id]), local: true) do |f| %>
+6:          <%= render 'shared/error_messages' %>
+7:    
+8:          <%= hidden_field_tag: email, @user.email %>
+9:    
+10:          <%= f.label: password %>
+11:          <%= f.password_field: password, class: 'form-control' %>
+12:    
+13:          <%= f.label: password_confirmation, "Confirmation" %>
+14:          <%= f.password_field: password_confirmation, class: 'form-control' %>
+15:    
+16:          <%= f.submit "Update password", class: "btn btn-primary" %>
+17:        <% end %>
+18:      </div>
+19:    </div>
+  
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com" for 127.0.0.1 at 2021-04-19 16:49:24 +0200
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"kamil@tester.com", "id"=>"eZVdss8kGK3iIqt2Cxpotw"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:29:in `get_user'
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1257)
+Completed 500 Internal Server Error in 424ms (ActiveRecord: 0.3ms | Allocations: 2837)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% provide( title: 'Reset password') %>
+<h1>Reset password</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user, url: password_reset_path(params[:id]), local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= hidden_field_tag: email, @user.email %>
+
+      <%= f.label: password %>
+      <%= f.password_field: password, class: 'form-control' %>
+
+      <%= f.label: password_confirmation, "Confirmation" %>
+      <%= f.password_field: password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Update password", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+):
+1:    <% provide( title: 'Reset password') %>
+2:    <h1>Reset password</h1>
+3:    <div class="row">
+4:      <div class="col-md-6 col-md-offset-3">
+5:        <%= form_with(model: @user, url: password_reset_path(params[:id]), local: true) do |f| %>
+6:          <%= render 'shared/error_messages' %>
+7:    
+8:          <%= hidden_field_tag: email, @user.email %>
+9:    
+10:          <%= f.label: password %>
+11:          <%= f.password_field: password, class: 'form-control' %>
+12:    
+13:          <%= f.label: password_confirmation, "Confirmation" %>
+14:          <%= f.password_field: password_confirmation, class: 'form-control' %>
+15:    
+16:          <%= f.submit "Update password", class: "btn btn-primary" %>
+17:        <% end %>
+18:      </div>
+19:    </div>
+  
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected tLABEL
+app/views/password_resets/edit.html.erb:8: syntax error, unexpected ')', expecting '='
+app/views/password_resets/edit.html.erb:10: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:11: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:13: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/password_resets/edit.html.erb:14: syntax error, unexpected ':'
+app/views/password_resets/edit.html.erb:17: syntax error, unexpected `end', expecting ')'
+app/views/password_resets/edit.html.erb:21: syntax error, unexpected `end', expecting ')'
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-6.1.0/lib/action_view/base.rb:230:in `initialize'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:37:in `call_app'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `block in call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/rack/logger.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activesupport-6.1.0/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-6.1.0/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.1.0/lib/rails/engine.rb:539:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/configuration.rb:227:in `call'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:674:in `handle_request'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:476:in `process_client'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/server.rb:334:in `block in run'
+	from /home/kamil/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/puma-3.12.2/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com" for 127.0.0.1 at 2021-04-19 16:51:05 +0200
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"kamil@tester.com", "id"=>"eZVdss8kGK3iIqt2Cxpotw"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:29:in `get_user'
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 176)
+  Rendered password_resets/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1162)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 74)
+  Rendered layouts/_head.html.erb (Duration: 30.8ms | Allocations: 16359)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 418)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 19143)
+Completed 200 OK in 512ms (Views: 44.6ms | ActiveRecord: 0.3ms | Allocations: 20736)
+
+
