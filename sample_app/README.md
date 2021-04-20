@@ -2196,3 +2196,23 @@ database migration:
   `The action 'update' could not be found for PasswordResetsController`
   
 ### Updating the reset 
+
+* ex1 - Follow the email link from Section 12.2.1 again and submit mismatched passwords to the form. What is the error message?    
+  * __After trying to use 1 day old link, proper flash message is displayed: Password reset has expired.__  
+  * __After generating a new link : `localhost:3000/password_resets/m_PDG51Q9ZsspWIiqRVHqA/edit?email=kamil%40tester.com`,  
+  then typing 2 different passwords, flash error display with info: Password confirmation doesn't match Password__  
+
+
+* ex2 - In the console, find the user belonging to the email link, and retrieve the value of the password_digest attribute.
+  Now submit valid matching passwords to the form shown inFigure 12.12. Did the submission appear to work? How did 
+  it affect the value of password_digest? Hint: Use user.reload to retrieve the new value.  
+  ```sh
+  >> u = User.find_by(email: "kamil@tester.com")
+  >> u.password_digest
+  => "$2a$12$2s8P0GjMHRTmatshKrY0.eXI4IDqvpkOZHKZ79SFWDww1TQb7pjna"
+  ```
+  * password_digest before:  `$2a$12$2s8P0GjMHRTmatshKrY0.eXI4IDqvpkOZHKZ79SFWDww1TQb7pjna`.  
+  * password_digest after: `$2a$12$6YiIUbFYOKgdpEKylTDhcOpvR.jvdPjS03wzkB2RvDrxp9CXbr7Q6`.  
+    
+
+### Password reset test

@@ -24525,3 +24525,204 @@ Processing by PasswordResetsController#edit as HTML
 Completed 200 OK in 512ms (Views: 44.6ms | ActiveRecord: 0.3ms | Allocations: 20736)
 
 
+Started GET "/password_resets/eZVdss8kGK3iIqt2Cxpotw/edit?email=kamil%40tester.com" for 127.0.0.1 at 2021-04-20 13:24:58 +0200
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"kamil@tester.com", "id"=>"eZVdss8kGK3iIqt2Cxpotw"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:43:in `get_user'
+Redirected to http://localhost:3000/password_resets/new
+Filter chain halted as :check_expiration rendered or redirected
+Completed 302 Found in 810ms (ActiveRecord: 4.6ms | Allocations: 9975)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2021-04-20 13:24:59 +0200
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1158.1ms | Allocations: 177774)
+  Rendered layouts/_shim.html.erb (Duration: 10.1ms | Allocations: 84)
+  Rendered layouts/_head.html.erb (Duration: 3352.9ms | Allocations: 1533859)
+  Rendered layouts/_header.html.erb (Duration: 15.7ms | Allocations: 446)
+  Rendered layouts/_footer.html.erb (Duration: 9.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 4558.4ms | Allocations: 1713336)
+Completed 200 OK in 4757ms (Views: 4659.2ms | ActiveRecord: 0.0ms | Allocations: 1715164)
+
+
+Started POST "/password_resets" for 127.0.0.1 at 2021-04-20 13:26:19 +0200
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"authenticity_token"=>"5XxhAVObVY2VEIXI8O5bY0C8PhfZ8QOcNUUNMR3/wsFCxGsQ2ki2iiYWyDYqWMn/NF3ejwf2MpxaXBd5y/h6eg==", "password_reset"=>"[FILTERED]", "commit"=>"Send me a password changing link"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:52:in `create_reset_digest'
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-20 11:26:19.995969"], ["reset_digest", "$2a$12$VrLaeDYZWatDUwJ.NSNXmO4z4MtX0PVMlZ2N4K12dIxM0F7CQSGFC"], ["id", 102]]
+  ↳ app/models/user.rb:52:in `create_reset_digest'
+  [1m[36mTRANSACTION (87.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:52:in `create_reset_digest'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:53:in `create_reset_digest'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-20 11:26:20.111257"], ["reset_sent_at", "2021-04-20 11:26:20.110188"], ["id", 102]]
+  ↳ app/models/user.rb:53:in `create_reset_digest'
+  [1m[36mTRANSACTION (84.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:53:in `create_reset_digest'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (Duration: 23.4ms | Allocations: 177)
+  Rendered layout layouts/mailer.html.erb (Duration: 43.7ms | Allocations: 350)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (Duration: 12.0ms | Allocations: 156)
+  Rendered layout layouts/mailer.text.erb (Duration: 14.1ms | Allocations: 307)
+UserMailer#password_reset: processed outbound mail in 101.2ms
+Delivered mail 607eba5c7d577_420551a47fc@kamil-GA-MA770-UD3.mail (14.7ms)
+Date: Tue, 20 Apr 2021 13:26:20 +0200
+From: noreply@example.com
+To: kamil@tester.com
+Message-ID: <607eba5c7d577_420551a47fc@kamil-GA-MA770-UD3.mail>
+Subject: Password reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_607eba5c7a6f8_420551a4658";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_607eba5c7a6f8_420551a4658
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+If you want to reset your password, click the link bellow:
+
+https://localhost:3000/password_resets/m_PDG51Q9ZsspWIiqRVHqA/edit?email=kamil%40tester.com
+
+This link will expire in 2h.
+If you didn't request your password reset, ignore this message.
+
+----==_mimepart_607eba5c7a6f8_420551a4658
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Password reset</h1>
+
+<p> To reset your password, click the link bellow: </p>
+<a href="https://localhost:3000/password_resets/m_PDG51Q9ZsspWIiqRVHqA/edit?email=kamil%40tester.com">Reset password</a>
+<hr>
+<p> This link will expire in 2h.</p>
+<p> If you didn't request your password reset, ignore this message. </p>
+
+  </body>
+</html>
+
+----==_mimepart_607eba5c7a6f8_420551a4658--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 962ms (ActiveRecord: 174.0ms | Allocations: 25188)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-20 13:26:20 +0200
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 25.5ms | Allocations: 945)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 92.7ms | Allocations: 15834)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 1.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 124.1ms | Allocations: 17304)
+Completed 200 OK in 131ms (Views: 128.2ms | ActiveRecord: 0.0ms | Allocations: 18287)
+
+
+Started GET "/password_resets/m_PDG51Q9ZsspWIiqRVHqA/edit?email=kamil%40tester.com" for 127.0.0.1 at 2021-04-20 13:26:41 +0200
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"kamil@tester.com", "id"=>"m_PDG51Q9ZsspWIiqRVHqA"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:43:in `get_user'
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 11.1ms | Allocations: 176)
+  Rendered password_resets/edit.html.erb within layouts/application (Duration: 56.8ms | Allocations: 1225)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 103.1ms | Allocations: 15973)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 167.2ms | Allocations: 17729)
+Completed 200 OK in 872ms (Views: 168.6ms | ActiveRecord: 0.5ms | Allocations: 18835)
+
+
+Started PATCH "/password_resets/m_PDG51Q9ZsspWIiqRVHqA" for 127.0.0.1 at 2021-04-20 13:26:56 +0200
+Processing by PasswordResetsController#update as HTML
+  Parameters: {"authenticity_token"=>"CeDy/HxH7sZvD6GvRtL/iWwX53ufm5XQ+MU0RiO6jYKuWPjt9ZQNwdwJ7FGcZG0VGPYH40GcpNCX3C4O9b01OQ==", "email"=>"kamil@tester.com", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update password", "id"=>"m_PDG51Q9ZsspWIiqRVHqA"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:43:in `get_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 531)
+  Rendered password_resets/edit.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1590)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_head.html.erb (Duration: 38.7ms | Allocations: 15900)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 18073)
+Completed 200 OK in 734ms (Views: 49.6ms | ActiveRecord: 0.9ms | Allocations: 22103)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+Started PATCH "/password_resets/m_PDG51Q9ZsspWIiqRVHqA" for 127.0.0.1 at 2021-04-20 13:37:20 +0200
+Processing by PasswordResetsController#update as HTML
+  Parameters: {"authenticity_token"=>"UuMHRQLncEuEKLu38SKSefVzyKvNYHC8wzVjnG6GU3P1Ww1UizSTTDcu9kkrlADlgZIoMxNnQbysLHnUuIHryA==", "email"=>"kamil@tester.com", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update password", "id"=>"m_PDG51Q9ZsspWIiqRVHqA"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/password_resets_controller.rb:43:in `get_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:43:in `get_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "kamil@tester.com"], ["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+  [1m[36mUser Update (2.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2021-04-20 11:37:21.357554"], ["password_digest", "$2a$12$6YiIUbFYOKgdpEKylTDhcOpvR.jvdPjS03wzkB2RvDrxp9CXbr7Q6"], ["id", 102]]
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (76.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/password_resets_controller.rb:31:in `update'
+Redirected to http://localhost:3000/users/102
+Completed 302 Found in 955ms (ActiveRecord: 80.9ms | Allocations: 4395)
+
+
+Started GET "/users/102" for 127.0.0.1 at 2021-04-20 13:37:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 15.6ms | Allocations: 271)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_head.html.erb (Duration: 69.8ms | Allocations: 15963)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 749)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 92.0ms | Allocations: 17436)
+Completed 200 OK in 106ms (Views: 96.4ms | ActiveRecord: 1.0ms | Allocations: 19009)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
