@@ -2216,3 +2216,15 @@ database migration:
     
 
 ### Password reset test
+
+New integration test for valid and invalid submission (third case is in exercise):  
+`rails generate integration_test password_resets`  
+
+>For valid:
+> * visit forgot_password
+> * submit invalid address
+> * submit valid address
+> * create reset token
+> * visit link 
+> * submit invalid information
+> * submit valid information
