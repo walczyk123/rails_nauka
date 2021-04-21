@@ -2228,3 +2228,47 @@ New integration test for valid and invalid submission (third case is in exercise
 > * visit link 
 > * submit invalid information
 > * submit valid information
+
+
+* ex1 - In Listing 12.6, the create_reset_digest method makes two calls to update_attribute, each of which requires a separate
+  database operation. By filling in the template shown inListing 12.20, replace the two update_attribute calls with a 
+  single call to update_columns,which hits the database only once. After making the changes, verify that the test suite 
+  is still green. (For convenience, Listing 12.20 includes the results of solving the exercise inListing 11.39.)  
+  ```ruby
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns(reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now)
+  end
+  ```
+  
+* ex2 - Write an integration test for the expired password reset branch inList-ing 12.16by filling in the template shown 
+  inListing 12.21. (This code introduces response.body, which returns the full HTML body of the page.) There are many 
+  ways to test for the result of an expiration, but the method suggested by Listing 12.21 is to (case-insensitively) 
+  check that the response body includes the word “expired”.  
+  ```ruby
+  test"expired token" do
+    get new_password_reset_path
+    post password_resets_path, params: {password_reset: {email:@user.email } }
+    @user = assigns(:user)
+    @user.update_attribute(:reset_sent_at,3.hours.ago)
+    patch password_reset_path(@user.reset_token),
+          params: {email:@user.email,user: {password:"foobar",password_confirmation:"foobar"} }
+    assert_response :redirect
+    follow_redirect!
+    assert_match (/expired/i), response.body
+  end
+  ```
+
+
+
+* ex3 - Expiring password resets after a couple of hours is a nice security precaution, but there is an even more secure 
+  solution for cases where a public computer is used. The reason is that the password reset link remains 
+  active for 2 hours and can be used even if logged out. If a user reset their password from a public machine, 
+  anyone could press the back button and change the password (and get logged in to the site). To fix this, add the code
+  shown in Listing 12.22 to clear the reset digest on successful password update.   
+  __Done__.
+  
+* ex4 - Add a line toListing 12.18to test for the clearing of the reset digest in the previous exercise.Hint: Combine 
+  assert_nil (first seen inListing 9.25) with user.reload (Listing 11.33) to test the reset_digest attribute directly.
+  
+  
