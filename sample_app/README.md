@@ -45,6 +45,9 @@ Links doesn't work in RM, but github reads them correctly.
 
 *[Link to Chapter 12 - Password reset](#chapter-12)
   *[Password resets resource](#password-resets-resource)
+  *[Password reset emails](#password-reset-emails)
+  *[Resetting the password](#resetting-the-password)
+  *[Email in production](#email-in-production-2)
 
 
 # Chapter 3  
@@ -2177,7 +2180,9 @@ database migration:
 
 * ex2 - Confirm that the test goes red if you remove the second call to CGI.escape in Listing 12.12.  
   __Yes, test is red.__
-  
+
+[Page top](#README)
+
 
 ## Resetting the password
   >To do:  
@@ -2213,7 +2218,9 @@ database migration:
   ```
   * password_digest before:  `$2a$12$2s8P0GjMHRTmatshKrY0.eXI4IDqvpkOZHKZ79SFWDww1TQb7pjna`.  
   * password_digest after: `$2a$12$6YiIUbFYOKgdpEKylTDhcOpvR.jvdPjS03wzkB2RvDrxp9CXbr7Q6`.  
-    
+
+[Page top](#README)
+
 
 ### Password reset test
 
@@ -2270,5 +2277,13 @@ New integration test for valid and invalid submission (third case is in exercise
   
 * ex4 - Add a line toListing 12.18to test for the clearing of the reset digest in the previous exercise.Hint: Combine 
   assert_nil (first seen inListing 9.25) with user.reload (Listing 11.33) to test the reset_digest attribute directly.
-  
-  
+
+
+[Page top](#README)
+
+
+## Email in production 2
+
+Temporary working only on local development environment.  
+
+
