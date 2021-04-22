@@ -2307,3 +2307,35 @@ Default: posts auto destruction when deleted associated user.
  
 
 `rails generate model Micropost content:text user:references`
+
+* ex1 - UsingMicropost.new in the console, instantiate a new Micropost object called micropost with content “Lorem ipsum”
+  and user id equal to the id of the first user in the database. What are the values of the magic columns created_at 
+  and updated_at?  
+  ```sh
+  >> m = Micropost.new(user_id: "1", content: "lorem ipsum")
+  >> m.save
+  => true
+  >> m
+  => #<Micropost id: 1, content: "lorem ipsum", user_id: 1, created_at: "2021-04-22 17:34:21.397640000 +0000", 
+  # updated_at: "2021-04-22 17:34:21.397640000 +0000">
+  ```
+  __created_at: "2021-04-22 17:34:21.397640000 +0000"__  
+  __updated_at: "2021-04-22 17:34:21.397640000 +0000"__  
+  
+
+* ex2 - What is micropost.user for the micropost in the previous exercise? What about micropost.user.name?  
+  ```sh
+  >> m.user
+  => #<User id: 1, name: "tester", email: "test@test.org", created_at: "2021-04-07 11:34:10.117202000 +0000", 
+  # updated_at: "2021-04-07 11:34:10.117202000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, 
+  # activation_digest: "$2a$12$AEkQbwOh2NRVjLPPAxm24uBr.9o7uoOTV4rOc5pGDln...", activated: nil, activated_at: nil, 
+  # reset_digest: nil, reset_sent_at: nil>
+  >> m.user.name
+  => "tester"
+  ```
+  
+* ex3 - Save the micropost to the database. What are the values of the magic columns now?  
+  __Before saving a new micropost, magic values are nil, but after save, values are the same as in ex1.__ 
+  
+
+### Microposts validations
