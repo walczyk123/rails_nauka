@@ -49,6 +49,9 @@ Links doesn't work in RM, but github reads them correctly.
   *[Resetting the password](#resetting-the-password)
   *[Email in production](#email-in-production-2)
 
+*[Link to chapter 13 - User microposts](#chapter-13)
+  *[A micropost model](#a-micropost-model)
+
 
 # Chapter 3  
 
@@ -2286,4 +2289,21 @@ New integration test for valid and invalid submission (third case is in exercise
 
 Temporary working only on local development environment.  
 
+# Chapter 13
 
+
+
+## A micropost model
+
+Default: posts auto destruction when deleted associated user.
+
+### Basic model
+
+  > user_id     - integer
+  > content     - text
+  > id          - integer
+  > created_at  - datetime 
+  > updated_at  - datetime
+ 
+
+`rails generate model Micropost content:text user:references`
