@@ -590,7 +590,8 @@ Links doesn't work in RM, but github reads them correctly.
   >> User.first.update_attribute(:created_at, 1.year.ago)
   User Load (0.4ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
   TRANSACTION (0.2ms)  begin transaction
-  User Update (1.0ms)  UPDATE "users" SET "created_at" = ?, "updated_at" = ? WHERE "users"."id"   = ?  [["created_at", "2020-03-12 19:52:34.503747"], ["updated_at", "2021-03-12 19:52:34.504881"], ["id", 1]]
+  User Update (1.0ms)  UPDATE "users" SET "created_at" = ?, "updated_at" = ? WHERE "users"."id"   = ?  [["created_at", 
+  "2020-03-12 19:52:34.503747"], ["updated_at", "2021-03-12 19:52:34.504881"], ["id", 1]]
   TRANSACTION (132.4ms)  commit transaction
   => true
   User.first.created_at
@@ -758,7 +759,8 @@ Links doesn't work in RM, but github reads them correctly.
 * ex1 -  Quit and restart the console, and then find the user created in this section.  
   ```bash
   >> User.find_by(name: "Kamil Wlcz")
-  => #<User id: 1, name: "Kamil Wlcz", email: "wlcz.kml@gmail.end", created_at: "2021-03-19 17:23:50.609684000 +0000", updated_at: "2021-03-19 17:23:50.609684000 +0000", password_digest: [FILTERED]>
+  => #<User id: 1, name: "Kamil Wlcz", email: "wlcz.kml@gmail.end", created_at: "2021-03-19 17:23:50.609684000 +0000", 
+  # updated_at: "2021-03-19 17:23:50.609684000 +0000", password_digest: [FILTERED]>
   ```
   
 * ex2 - Try changing the name by assigning a new name and calling save. Why didn’t it work?  
@@ -779,8 +781,10 @@ Links doesn't work in RM, but github reads them correctly.
   ```bash
   >> u.update(name: "Rad Big", password:"elo123melo")
   TRANSACTION (0.1ms)  begin transaction
-  User Exists? (0.3ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?  [["email", "wlcz.kml@gmail.end"], ["id", 1], ["LIMIT", 1]]
-  User Update (0.5ms)  UPDATE "users" SET "name" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?  [["name", "Rad Big"], ["updated_at", "2021-03-19 17:52:24.588885"], ["password_digest", "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"], ["id", 1]]
+  User Exists? (0.3ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?  
+  [["email", "wlcz.kml@gmail.end"], ["id", 1], ["LIMIT", 1]]
+  User Update (0.5ms)  UPDATE "users" SET "name" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?  
+  [["name", "Rad Big"], ["updated_at", "2021-03-19 17:52:24.588885"], ["password_digest", "$2a$12$yt7H.tBNCy64E3YJ/hWRRe/veQvJyBNhEiXfol3t/y/9k/pZqpMNW"], ["id", 1]]
   TRANSACTION (88.0ms)  commit transaction
   => true
   ```
@@ -828,7 +832,8 @@ Links doesn't work in RM, but github reads them correctly.
   ```bash
   >> user = User.first
   >> user
-  => #<User id: 1, name: "Rad Big", email: "wlcz.kml@gmail.end", created_at: "2021-03-19 17:23:50.609684000 +0000", updated_at: "2021-03-19 17:52:24.588885000 +0000", password_digest: [FILTERED]>
+  => #<User id: 1, name: "Rad Big", email: "wlcz.kml@gmail.end", created_at: "2021-03-19 17:23:50.609684000 +0000", 
+  # updated_at: "2021-03-19 17:52:24.588885000 +0000", password_digest: [FILTERED]>
   # to yaml
   >> puts user.attributes.to_yaml
   ---
@@ -1000,7 +1005,8 @@ Links doesn't work in RM, but github reads them correctly.
 * ex1
   ```bash
   >> User.find_by(email: "example@railstutorial.com")
-  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 
+  # 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
   ```
   
 * ex2 - Create a new user with your primary email address. Verify that the Gravatar correctly appears.
@@ -1135,12 +1141,14 @@ Links doesn't work in RM, but github reads them correctly.
 * ex1 - Confirm at the console that User.find_by(id: ...) returns nil when the corresponding user doesn’t exist
   ```bash
   >> User.find_by(id: 1)
-  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 
+  # 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
   >> User.find_by(id: 1000)
   => nil
   ```
   
-* ex2 - In a Rails console, create a session hash with key :user_id. By following the steps in Listing 8.17, confirm that the ||= operator works as required.
+* ex2 - In a Rails console, create a session hash with key :user_id. By following the steps in Listing 8.17, confirm 
+  that the ||= operator works as required.
   ```bash
   >> session={}
   >> session[:user_id]=nil
@@ -1151,10 +1159,12 @@ Links doesn't work in RM, but github reads them correctly.
   User Load (0.3ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
   >> @current_user ||= User.find_by(id: session[:user_id]) 
   >> @current_user
-  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 1
+  # 3:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
   >> @current_user ||= User.find_by(id: session[:user_id])
   >> @current_user
-  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
+  => #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.com", created_at: "2021-03-23 
+  # 13:42:53.282875000 +0000", updated_at: "2021-03-23 13:42:53.282875000 +0000", password_digest: [FILTERED]>
   ```
   
 ### Changing the layout links
@@ -1197,7 +1207,8 @@ Links doesn't work in RM, but github reads them correctly.
   
 ### Logout
 
-* ex1 - Confirm in a browser that the “Log out” link causes the correct changes in the site layout. What is the correspondence between these changes and the final three steps?  
+* ex1 - Confirm in a browser that the “Log out” link causes the correct changes in the site layout. What is the 
+  correspondence between these changes and the final three steps?  
   __Yup, everything is changing correctly. After log out there is:__ 
   * <ins>login button</ins> which corresponds to `assert_select "a[href=?]", login_path`  
   * <ins>no logout button</ins> which corresponds to `aassert_select "a[href=?]", logout_path, count: 0`  
@@ -2339,3 +2350,27 @@ Default: posts auto destruction when deleted associated user.
   
 
 ### Microposts validations
+
+* ex1 - At the console, instantiate a micropost with no user id and blank content. Is it valid? What are the 
+  full error messages?
+  ```sh
+  >> m = Micropost.new(user_id: " ", content: " ")
+  >> m.save
+  => false
+  >> m.errors.messages
+  => {:user=>["must exist"], :user_id=>["can't be blank"], :content=>["can't be blank"]} 
+  ```
+
+
+* ex2 - At the console, instantiate a second micropost with no user id and content that’s too long. Is it valid? 
+  What are the full error messages?  
+  ```sh
+  >> n = Micropost.new(user_id: " ", content: "a"*141)
+  >> n.save
+  => false
+  >> n.errors.messages
+  => {:user=>["must exist"], :user_id=>["can't be blank"], :content=>["is too long (maximum is 140 characters)"]}
+  ```
+  
+### User/Micropost associations
+
