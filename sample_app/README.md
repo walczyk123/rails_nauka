@@ -2374,3 +2374,44 @@ Default: posts auto destruction when deleted associated user.
   
 ### User/Micropost associations
 
+ Micropost `belongs_to`user,  
+ User `has_many` microposts.  
+ 
+* ex1 - Set user to the first user in the database. What happens when you execute the command `micropost = 
+  user.microposts.create(content: "Lorem ipsum")`?   
+  ```sh
+  >> user = User.find_by(id: "1")
+  >> user
+  => #<User id: 1, name: "tester", email: "test@test.org", created_at: "2021-04-07 11:34:10.117202000 +0000", updated_at: 
+  # "2021-04-07 11:34:10.117202000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, activation_digest: 
+  # "$2a$12$AEkQbwOh2NRVjLPPAxm24uBr.9o7uoOTV4rOc5pGDln...", activated: nil, activated_at: nil, reset_digest: nil, reset_sent_at: nil>
+  >> micropost = user.microposts.create(content: "Lorem ipsum")
+  TRANSACTION (0.1ms)  begin transaction
+  Micropost Create (1.9ms)  INSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  
+  [["content", "Lorem ipsum"], ["user_id", 1], ["created_at", "2021-04-24 14:51:16.235698"], ["updated_at", "2021-04-24 14:51:16.235698"]]
+  TRANSACTION (96.0ms)  commit transaction
+  ```
+  
+* ex2 - The previous exercise should have created a micropost in the database. Confirm this by running 
+  user.microposts.find(micropost.id). What if you write micropost instead of micropost.id?  
+  ```sh
+  >> user.microposts.find(micropost.id)
+  Micropost Load (0.2ms)  SELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."id" = ? 
+  LIMIT ?  [["user_id", 1], ["id", 3], ["LIMIT", 1]]
+  >> user.microposts.find(micropost)
+  Traceback (most recent call last):
+  1: from (irb):4
+  NameError (undefined local variable or method `micropost' for main:Object)
+  ```
+  
+* ex3 - What is the value of `user == micropost.user`? How about `user.microposts.first == micropost`?  
+  ```sh
+  >> user == micropost.user
+  => true
+  >> user.microposts.first == micropost
+  Micropost Load (0.4ms)  SELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."id" ASC LIMIT ?  [["user_id", 1], ["LIMIT", 1]]
+  => false
+  ```
+  
+
+### Micropost refinements 
