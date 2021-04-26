@@ -1,9 +1,19 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+cat:
+  content: "my cat is brown"
+  created_at: <%= 10.minutes.ago %>
+  user: testowy
 
-one:
-  content: MyText
-  user: one
+dog:
+  content: "my dog is green"
+  created_at: <%= 3.years.ago %>
+  user: testowy
 
-two:
-  content: MyText
-  user: two
+car:
+  content: "my car is silver"
+  created_at: <%= 2.hours.ago %>
+  user: testowy
+
+wine:
+  content: "my wine is good"
+  created_at: <%= Time.zone.now %>
+  user: testowy

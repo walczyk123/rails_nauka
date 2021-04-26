@@ -51,6 +51,7 @@ Links doesn't work in RM, but github reads them correctly.
 
 *[Link to chapter 13 - User microposts](#chapter-13)
   *[A micropost model](#a-micropost-model)
+  *[Showing microposts](#showing-microposts)
 
 
 # Chapter 3  
@@ -2415,3 +2416,40 @@ Default: posts auto destruction when deleted associated user.
   
 
 ### Micropost refinements 
+`->` - stabby lambda, lambda or Proc. 
+
+* ex1 - How does the value of Micropost.first.created_at compare to Micropost.last.created_at?
+  ```sh
+  >> user = User.find_by(id: "1")
+  >> Micropost.first.created_at == Micropost.last.created_at
+  Micropost Load (0.4ms)  SELECT "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ?  [["LIMIT", 1]]
+  Micropost Load (0.3ms)  SELECT "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" ASC LIMIT ?  [["LIMIT", 1]]
+  => false
+  ```
+  
+
+
+* ex2 - What are the SQL queries for Micropost.first and Micropost.last?  
+  * First: `Micropost Load (0.4ms)  SELECT "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ?  [["LIMIT", 1]]`   
+  * Last:  `Micropost Load (0.3ms)  SELECT "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" ASC LIMIT ?  [["LIMIT", 1]]`
+
+
+* ex3 - Let user be the first user in the database. What is the id of its first micro-post? Destroy the first user in the 
+  database using the destroy method, then confirm usingMicropost. find that the user’s first micropost was also destroyed.
+  ```sh
+  >> user = User.find_by(id: "1")
+  >> user.microposts.first
+  Micropost Load (0.4ms)  SELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?  [["user_id", 1], ["LIMIT", 1]]
+  => #<Micropost id: 3, content: "Lorem ipsum", user_id: 1, created_at: "2021-04-24 14:56:36.260462000 +0000", updated_at: "2021-04-24 14:56:36.260462000 +0000">
+  >> user.destroy
+  => #<User id: 1, name: "tester", email: "test@test.org", created_at: "2021-04-07 11:34:10.117202000 +0000", updated_at:
+  # "2021-04-07 11:34:10.117202000 +0000", password_digest: [FILTERED], remember_digest: nil, admin: nil, activation_digest: 
+  # "$2a$12$AEkQbwOh2NRVjLPPAxm24uBr.9o7uoOTV4rOc5pGDln...", activated: nil, activated_at: nil, reset_digest: nil, reset_sent_at: nil>
+  >> Micropost.find_by(id: "3")
+  => nil
+  ```
+
+
+[Page top](#README)
+
+## Showing microposts
