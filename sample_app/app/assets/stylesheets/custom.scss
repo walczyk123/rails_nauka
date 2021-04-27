@@ -8,6 +8,53 @@ $col_strong_red: #B00100;
 $col_light_gray: #BBBBBB;
 $col_gray: #999999;
 $col_strong_gray: #454545;
+
+// microposts
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $col_light_red;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img{
+      display: block;
+      padding: 5px 0;
+    }
+    .timestamp {
+      color: #2E2F30;
+      display: block;
+      margin-left: 60px;
+    }
+    .gravatar {
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+  }
+}
+
+aside {
+  textarea{
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.image{
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
 /* responsive view */
 @media (max-width: 800px) {
   footer {

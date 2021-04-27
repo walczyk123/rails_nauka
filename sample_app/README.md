@@ -2482,3 +2482,23 @@ Default: posts auto destruction when deleted associated user.
   
 
 ### Sample microposts
+
+* ex1 - See if you can guess the result of running `(1..10).to_a.take(6)`.Check at the console to see if your guess is right.
+  ```sh
+  >> (1..10).to_a.take(6)
+  => [1, 2, 3, 4, 5, 6]
+  ```
+
+
+* ex2 - Is the to_a method in the previous exercise necessary?  
+  __No, it's not tecessary.__
+  
+
+* ex3 - Faker has a huge number of occasionally amusing applications. By consulting the Faker documentation, learn
+  how to print out a `fake university name`, a `fake phone number`, a `fake Hipster Ipsum sentence`, and a `fake Chuck Norris fact`.  
+  * fake university name - `Faker::University.name`
+  * fake phone number - ` Faker::PhoneNumber.phone_number`  
+  * fake Hipster Ipsum sentence - `Faker::Hipster.word`
+  * fake Chuck Norris fact - `Faker::ChuckNorris.fact`
+  
+### Profile micropost test
