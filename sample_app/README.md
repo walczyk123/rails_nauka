@@ -2502,3 +2502,17 @@ Default: posts auto destruction when deleted associated user.
   * fake Chuck Norris fact - `Faker::ChuckNorris.fact`
   
 ### Profile micropost test
+  
+  `rails generate integration_test users_profile`
+  
+
+* ex1 - Comment out the application code needed to change the two 'h1' lines in Listing 13.28 from green to red.  
+  __Yes, test will not pass green anymore.__
+  
+
+* ex2 - Update Listing 13.28 to test that will_paginate appears only once. Hint: Refer to Table 5.2.    
+  `assert_select 'div.pagination', count: 1`
+  
+
+## Manipulating microposts
+  

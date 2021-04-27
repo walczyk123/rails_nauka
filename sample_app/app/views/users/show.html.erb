@@ -2,16 +2,22 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for @user%>
-        <p><%= @user.name %><p>
-        <p><%= @user.email %><p>
-      </h1>
-      <h6>
-        <p>Created: <%= @user.created_at %></p>
-        <p>Edited:  <%= @user.updated_at %></p>
-        <p>Now: <%= Time.now %></p>
-      </h6>
+      <div class="vertical-space">
+        <h1>
+          <%= gravatar_for @user%>
+          <%= @user.name %>
+        </h1>
+        <h2>
+          <p><%= @user.email %><p>
+        </h2>
+      </div>
+      <div>
+        <h6>
+          <p>Created: <%= @user.created_at %></p>
+          <p>Edited:  <%= @user.updated_at %></p>
+          <p>Now: <%= Time.now %></p>
+        </h6>
+      </div>
     </section>
   </aside>
   <div class="col-md-8">
