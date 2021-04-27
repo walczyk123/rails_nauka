@@ -2453,3 +2453,32 @@ Default: posts auto destruction when deleted associated user.
 [Page top](#README)
 
 ## Showing microposts
+
+### Rendering microposts
+
+* ex1 - As mentioned briefly in Section 7.3.3, helper methods like time_ago_in_words are available in the Rails console 
+  via the helper object. Using helper, apply `time_ago_in_words` to `3.weeks.ago` and `6.months.ago`.
+  ```sh
+  >> helper.time_ago_in_words(3.weeks.ago)
+  => "21 days"
+  >> helper.time_ago_in_words(6.months.ago)
+  => "6 months"
+  ```
+  
+
+* ex2 - What is the result of `helper.time_ago_in_words(1.year.ago)`?
+  ```sh
+  >> helper.time_ago_in_words(1.year.ago)
+  => "about 1 year"
+  ```
+  
+
+* ex3 - What is the Ruby class for a page of microposts? Hint: Use the code in Listing 13.23 as your model, and call 
+  the class method on paginate with the argument page: nil.
+  ```sh
+  >> Micropost.paginate(page: nil).class
+  => Micropost::ActiveRecord_Relation
+  ```
+  
+
+### Sample microposts
