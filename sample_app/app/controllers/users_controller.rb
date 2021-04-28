@@ -62,13 +62,13 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :password_confirmation) #, :admin)
   end
 
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "Easy easy, may I check your ID?"
-      redirect_to login_url
-    end
-  end
+  # def logged_in_user
+  #   unless logged_in?
+  #     store_location
+  #     flash[:danger] = "Easy easy, may I check your ID?"
+  #     redirect_to login_url
+  #   end
+  # end
 
   def correct_user
     @user = User.find(params[:id])

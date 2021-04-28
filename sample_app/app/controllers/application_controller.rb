@@ -11,4 +11,15 @@ class ApplicationController < ActionController::Base
   #   def user_params
   #     params.require(:user).permit(:name,:email,:password,:password_confirmation)
   #   end
+  #
+  private
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Easy easy, may I check your ID?"
+      redirect_to login_url
+    end
+  end
+
 end

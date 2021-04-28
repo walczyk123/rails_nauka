@@ -2515,4 +2515,16 @@ Default: posts auto destruction when deleted associated user.
   
 
 ## Manipulating microposts
+
+### Micropost access control
+
+To create and destroy a micropost user must be logged in.  
+
+* ex1 - Why is it a bad idea to leave a copy of logged_in_user in the Users controller?  
+  __I think this will break the code in case it is changed without taking into account any of the duplicate functions.__ _ASK RADEK_  
+  
+
+### Creating microposts
+
+
   
