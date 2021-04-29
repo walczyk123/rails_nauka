@@ -2526,5 +2526,15 @@ To create and destroy a micropost user must be logged in.
 
 ### Creating microposts
 
+* ex1 - Refactor the Home page to use separate partials for the two branches of the if-else statement. 
+  ```html
+  <% provide(:title, "Home") %>
+  <% if logged_in? %>
+    <%= render "login_true" %>
+  <% else %>
+     <%= render "login_false" %>
+  <% end %>
+  ```
+
 
   
