@@ -38,6 +38,10 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
   #==================== activate  and password reset ========================
   def activate
     update_columns(activated: true, activated_at: Time.zone.now)

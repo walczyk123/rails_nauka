@@ -2537,4 +2537,31 @@ To create and destroy a micropost user must be logged in.
   ```
 
 
+### A proto-feed
   
+
+* ex1 - Use the newly created micropost UI to create the first real micropost. What are the contents of the `INSERT` 
+  command in the server log?  
+  ```sql
+  Micropost Create (0.6ms)  INSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) 
+  [["content", "trzeci post"], ["user_id", 101], ["created_at", "2021-04-30 15:40:06.008981"], 
+  ["updated_at", "2021-04-30 15:40:06.008981"]]
+  ```
+  
+* ex2 - In the console, set user to the first user in the database. Confirm that the values of 
+  Micropost.where("user_id = ?", user.id), user.microposts, and user.feed are all the same. Hint:
+  It’s probably easiest to compare directly using ==.  
+  ```sh
+  >> user = User.first
+  >> m1 = Micropost.where("user_id = ?", user.id)
+  >> m2 = user.feed
+  >> m3 = user.microposts
+  >> m1 == m2
+  => true
+  >> m1 == m3
+  => true
+  ```
+  
+
+
+### Destroying microposts

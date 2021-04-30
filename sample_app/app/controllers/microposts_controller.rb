@@ -7,6 +7,7 @@ class MicropostsController < ApplicationController
     if @micropost.save
       flash[:success] = micropost_success
     else
+      @feed_items = current_user.feed.paginate(page: params[:page])
       render "static_pages/home"
     end
   end
