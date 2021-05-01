@@ -2561,7 +2561,30 @@ To create and destroy a micropost user must be logged in.
   >> m1 == m3
   => true
   ```
+  Using transitive relation `m2=m3`
   
 
 
 ### Destroying microposts
+
+  `request.referrer` -> request.original_url, 
+  
+* ex1 - Create a new micropost and then delete it. What are the contents of the DELETE command in the server log?  
+  ```sh
+  Micropost Destroy (0.6ms)  DELETE FROM "microposts" WHERE "microposts"."id" = ?  [["id", 301]]
+   app/controllers/microposts_controller.rb:17:in `destroy'
+  TRANSACTION (77.3ms)  commit transaction
+   app/controllers/microposts_controller.rb:17:in `destroy'
+  Redirected to http://localhost:3000/
+  ```
+  
+
+* ex2- Confirm directly in the browser that the line redirect_to request.referrer || root_url can be replaced with 
+  the line redirect_back(fallback_location: root_url). (This method was addedi n Rails 5.)
+  ```rb
+  redirect_to request.referrer || root_url
+  ```
+  __Yes, this line does exactly the same thing.__
+
+
+### Micropost test
