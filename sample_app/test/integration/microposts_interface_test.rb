@@ -9,14 +9,31 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get root_path
     assert_select "div.pagination"
-    #invalid submission
+    invalid_submission
+    valid_submission
+    delete_post
+    visit_as_different_user
+  end
+
+  test "micropost sidebar count" do
+    log_in_as(@user)
+    get root_path
+    assert_match "#{@user.microposts.count} microposts", response.body
+    user_without_microposts
+  end
+
+
+  private
+
+  def invalid_submission
     assert_no_difference'Micropost.count' do
       post microposts_path,params: {micropost: {content:""} }
     end
     assert_select "div#error_explanation"
     assert_select "a[href=?]","/?page=2"
+  end
 
-    #valid submission
+  def valid_submission
     content = "This micropost blah blah blah"
     assert_difference "Micropost.count" do
       post microposts_path, params: {micropost: {content: content}}
@@ -24,23 +41,22 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
     follow_redirect!
     assert_match content, response.body
+  end
 
-    #Delete post
+  def delete_post
     assert_select "a", text: "delete"
     first_micropost = @user.microposts.paginate(page: 1).first
     assert_difference "Micropost.count", -1 do
       delete micropost_path(first_micropost)
     end
-    #visit other user - no delete link
+  end
+
+  def visit_as_different_user
     get user_path(users(:bigboy))
     assert_select "a", text: "delete", count: 0
   end
 
-  test "micropost sidebar count" do
-    log_in_as(@user)
-    get root_path
-    assert_match "#{@user.microposts.count} microposts", response.body
-    #user with zero microposts
+  def user_without_microposts
     other_user = users(:bigboy)
     log_in_as(other_user)
     get root_path
@@ -49,7 +65,4 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     get root_path
     assert_match "1 micropost", response.body
   end
-
-
-
 end
