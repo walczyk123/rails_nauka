@@ -2579,8 +2579,8 @@ To create and destroy a micropost user must be logged in.
   ```
   
 
-* ex2- Confirm directly in the browser that the line redirect_to request.referrer || root_url can be replaced with 
-  the line redirect_back(fallback_location: root_url). (This method was addedi n Rails 5.)
+* ex2 - Confirm directly in the browser that the line redirect_to request.referrer || root_url can be replaced with 
+  the line redirect_back(fallback_location: root_url). (This method was added in Rails 5.)
   ```rb
   redirect_to request.referrer || root_url
   ```
@@ -2588,3 +2588,68 @@ To create and destroy a micropost user must be logged in.
 
 
 ### Micropost test
+
+* ex1 - For each of the four scenarios indicated by comments in Listing 13.56 (starting with “Invalid submission”), 
+  comment out application code to get the corresponding test to red, then uncomment to get back to green.  
+  `invalid submission` 
+  ```rb
+  def create
+    micropost_success = "Micropost created successfully"
+    @micropost = current_user.microposts.build(micropost_params)
+    if @micropost.save
+      flash[:success] = micropost_success
+      redirect_to request.referrer || root_url
+    else
+      @feed_items = current_user.feed.paginate(page: params[:page])
+        # render "static_pages/home"
+    end
+  end
+  ```
+  
+  `valid submission`
+  ```rb
+    def create
+      micropost_success = "Micropost created successfully"
+      @micropost = current_user.microposts.build(micropost_params)
+      if @micropost.save
+        flash[:success] = micropost_success
+        # redirect_to request.referrer || root_url
+      else
+        @feed_items = current_user.feed.paginate(page: params[:page])
+        render "static_pages/home"
+      end
+    end
+    ```
+    
+  `Delete post`
+  ```rb
+  def destroy
+    # @micropost.destroy
+    flash[:success] = "Micropost deleted"
+    redirect_back(fallback_location: root_url)
+  end
+  ```
+  
+  `Visit different user`
+  ```rb
+  before_action :logged_in_user, only: [:create, :destroy]
+  # before_action :correct_user, only: [:destroy]
+  ```
+ 
+ 
+* ex2 - Add tests for the sidebar micropost count (including proper pluralization). Listing 13.58 will help get you started.
+  ```rb
+    test "micropost sidebar count" do
+    log_in_as(@user)
+    get root_path
+    assert_match "#{@user.microposts.count} microposts", response.body
+    #user with zero microposts
+    other_user = users(:bigboy)
+    log_in_as(other_user)
+    get root_path
+    assert_match "#{0} microposts",response.body
+    other_user.microposts.create!(content: "micropost text")
+    get root_path
+    assert_match "1 micropost", response.body
+  end
+  ```
