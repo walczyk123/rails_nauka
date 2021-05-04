@@ -52,6 +52,7 @@ Links doesn't work in RM, but github reads them correctly.
 *[Link to chapter 13 - User microposts](#chapter-13)
   *[A micropost model](#a-micropost-model)
   *[Showing microposts](#showing-microposts)
+  *[Micropost images](#micropost-images)
 
 
 # Chapter 3  
@@ -2653,3 +2654,29 @@ To create and destroy a micropost user must be logged in.
     assert_match "1 micropost", response.body
   end
   ```
+
+
+[Page top](#README)
+
+## Micropost images
+
+
+### Basic image upload
+Active Storage - handles uploaded images   
+`rails active_storage:install`
+
+micropost.rb  
+has_one_attached :image for one image per micropost
+has_man_attached :image for few images
+
+* ex1 - Upload a micropost with attached image. Does the result look too big?  
+  __Uploaded .png file, look ok, it has around 50x50px__
+  
+
+* ex2 - Following the template in Listing 13.64, write a test of the image uploader in Section 13.4. As preparation,
+  you should add an image to the fixtures directory usingListing 13.63. The additional assertions in Listing 13.64 
+  check both for a file upload field on the Home page and for a valid image attribute on the micropost resulting from 
+  valid submission. Note the use of the special fixture_file_upload method for uploading files as fixtures inside tests.
+  Hint: To check for a valid image attribute, use the assigns method mentioned in Section 11.3.3 to access the micropost
+  in the create action after valid submission.
+  
