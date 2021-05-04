@@ -9,6 +9,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get root_path
     assert_select "div.pagination"
+    assert_select "input[type=file]"
     invalid_submission
     valid_submission
     delete_post
@@ -22,7 +23,6 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     user_without_microposts
   end
 
-
   private
 
   def invalid_submission
@@ -35,9 +35,11 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
 
   def valid_submission
     content = "This micropost blah blah blah"
+    image = fixture_file_upload("test/fixtures/kitten.jpg","image/jpeg")
     assert_difference "Micropost.count" do
-      post microposts_path, params: {micropost: {content: content}}
+      post microposts_path, params: {micropost: {content: content, image: image}}
     end
+    assert @user.microposts.first.image.attached?
     assert_redirected_to root_url
     follow_redirect!
     assert_match content, response.body

@@ -2680,3 +2680,32 @@ has_man_attached :image for few images
   Hint: To check for a valid image attribute, use the assigns method mentioned in Section 11.3.3 to access the micropost
   in the create action after valid submission.
   
+  ```rb
+  test "micropost interface" do
+    log_in_as(@user)
+    get root_path
+    assert_select "div.pagination"
+    assert_select "input[type=file]"
+    invalid_submission
+    valid_submission
+    delete_post
+    visit_as_different_user
+  end
+  
+  def valid_submission
+    content = "This micropost blah blah blah"
+    image = fixture_file_upload("test/fixtures/kitten.jpg","image/jpeg")
+    assert_difference "Micropost.count" do
+      post microposts_path, params: {micropost: {content: content, image: image}}
+    end
+    assert @user.microposts.first.image.attached?
+    assert_redirected_to root_url
+    follow_redirect!
+    assert_match content, response.body
+  end
+  ```
+  
+
+
+
+### Image validation
