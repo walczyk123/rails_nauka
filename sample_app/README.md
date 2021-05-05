@@ -2709,3 +2709,17 @@ has_man_attached :image for few images
 
 
 ### Image validation
+
+[Active storage validations](https://github.com/igorkasyanchuk/active_storage_validations)  
+
+
+* ex1 - What happens if you try uploading an image bigger than 5 megabytes?  
+  __Error flash message: _Maximum file size is 5MB. Chose a smaller file.___
+
+
+* ex2 - What happens if you try uploading a file with an invalid extension?  
+  __Error message: _Image must be a valid image format_ .__
+
+
+
+### Image resizing
