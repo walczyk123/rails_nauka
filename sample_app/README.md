@@ -2730,3 +2730,8 @@ ImageMagick - image manipulation program, like resizing etc.
 * ex1 - Upload a large image and confirm directly that the resizing is working. Does the resizing work even if the image
   isn’t square?   
   __Yes, it resizes image to max height or width 500px, and second parameter is then proportionally scaled.__
+  
+
+### Image upload in production
+
+__Not now, waiting for production env.__
