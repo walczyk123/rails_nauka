@@ -38,21 +38,24 @@ Links doesn't work in RM, but github reads them correctly.
   * [Partial refactoring](#partial-refactoring)
   * [Deleting users](#deleting-users)
     
-*[Link to Chapter 11 - Account activation](#account-activation)
-  * [Account activation emails](#account-activation-emails)
-  * [Activating the account](#activating-the-account)
-  * [Email in production](#email-in-production)
+* [Link to Chapter 11 - Account activation](#account-activation)  
+  * [Account activation emails](#account-activation-emails)  
+  * [Activating the account](#activating-the-account)  
+  * [Email in production](#email-in-production)  
 
-*[Link to Chapter 12 - Password reset](#chapter-12)
-  *[Password resets resource](#password-resets-resource)
-  *[Password reset emails](#password-reset-emails)
-  *[Resetting the password](#resetting-the-password)
-  *[Email in production](#email-in-production-2)
+* [Link to Chapter 12 - Password reset](#chapter-12)  
+  * [Password resets resource](#password-resets-resource)  
+  * [Password reset emails](#password-reset-emails)  
+  * [Resetting the password](#resetting-the-password)  
+  * [Email in production](#email-in-production-2)  
+  
+* [Link to chapter 13 - User microposts](#chapter-13)  
+  * [A micropost model](#a-micropost-model)  
+  * [Showing microposts](#showing-microposts)  
+  * [Micropost images](#micropost-images)  
 
-*[Link to chapter 13 - User microposts](#chapter-13)
-  *[A micropost model](#a-micropost-model)
-  *[Showing microposts](#showing-microposts)
-  *[Micropost images](#micropost-images)
+* [Link to chapter 14 - Following Users](#chapter-14)   
+  * [Relationship model](relationship-model)  
 
 
 # Chapter 3  
@@ -2735,3 +2738,26 @@ ImageMagick - image manipulation program, like resizing etc.
 ### Image upload in production
 
 __Not now, waiting for production env.__
+
+[Page top](#README)
+
+# Chapter 14
+## Following users
+
+* build relationship between users,
+
+
+
+## Relationship model
+
+### Problem with data model
+`rails generate model Relationship follower_id:integer followed_id:integer`
+
+* ex1 - For the user with id equal to1fromFigure 14.7, what would the value of user.following.map(&:id)be? 
+  (Recall the map(&:method_name) pattern from Section 4.3.2; user.following.map(&:id) just returns the array of ids.)  
+  `[2,7,8,10]`
+
+
+* ex2 - By referring again to Figure 14.7, determine the ids of user.following for the user with id equal to 2. 
+  What would the value of user.following.map(&:id)be for this user?  
+  `[1]`
