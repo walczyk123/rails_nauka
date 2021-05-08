@@ -2761,3 +2761,31 @@ __Not now, waiting for production env.__
 * ex2 - By referring again to Figure 14.7, determine the ids of user.following for the user with id equal to 2. 
   What would the value of user.following.map(&:id)be for this user?  
   `[1]`
+  
+
+### User/relationship associations
+User has_many relationships.  
+Relationship belongs_to follower and followed user.  
+
+
+* ex1 - Using the create method from Table 14.1 in the console, create an active relationship for the first user
+  in the database where the followed id is the second user.  
+  ```sh
+  >> u1=User.first
+  >> u2=User.second
+  >> u1.active_relationships.create(followed_id: u2.id)
+  => #<Relationship id: 1, follower_id: 1, followed_id: 2, created_at: "2021-05-08 08:55:49.827106000 +0000", updated_at: "2021-05-08 08:55:49.827106000 +0000"
+  ```
+  
+
+* ex2 - Confirm that the values for `active_relationship.followed` and `active_relationship.follower` are correct.  
+  ```sh
+  >> u1.active_relationships
+  Relationship Load (0.2ms)  SELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? /* loading for inspect */ LIMIT ?  [["follower_id", 1], ["LIMIT", 11]]
+  => #<ActiveRecord::Associations::CollectionProxy [#<Relationship id: 1, follower_id: 1, followed_id: 2, created_at: "2021-05-08 08:55:49.827106000 +0000", updated_at: "2021-05-08 08:55:49.827106000 +0000">]>
+  >> u2.active_relationships
+  Relationship Load (0.3ms)  SELECT "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? /* loading for inspect */ LIMIT ?  [["follower_id", 2], ["LIMIT", 11]]
+  => #<ActiveRecord::Associations::CollectionProxy []>
+  ```
+  
+### Relationship validations
