@@ -2789,3 +2789,10 @@ Relationship belongs_to follower and followed user.
   ```
   
 ### Relationship validations
+
+* ex1 - Verify by commenting out the validations inListing 14.5that the tests still pass. (This is a change as of Rails 
+  5, and in previous versions of Rails the validations are required. We’ll plan to leave them in for completeness, 
+  but it’s worth bearing in mind that you may see these validations omitted in other people’s code.)   
+  __Tests still pass after commenting out validations in model.__
+  
+### Followed user
