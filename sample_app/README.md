@@ -2790,9 +2790,77 @@ Relationship belongs_to follower and followed user.
   
 ### Relationship validations
 
-* ex1 - Verify by commenting out the validations inListing 14.5that the tests still pass. (This is a change as of Rails 
+* ex1 - Verify by commenting out the validations inListing 14.5 that the tests still pass. (This is a change as of Rails 
   5, and in previous versions of Rails the validations are required. We’ll plan to leave them in for completeness, 
   but it’s worth bearing in mind that you may see these validations omitted in other people’s code.)   
   __Tests still pass after commenting out validations in model.__
   
 ### Followed user
+
+
+* ex1 - At the console, replicate the steps shown in Listing 14.9.  
+  ```sh
+  >> u1=User.first
+  >> u3=User.third
+  >> u1.following?(u3)
+  => false
+  >> u1.follow(u3)
+  >> u1.following?(u3)
+  => true
+  >> u1.unfollow(u3)
+  >> u1.following?(u3)
+  => false
+  ```
+  
+
+* ex2 - What is the SQL for each of the commands in the previous exercise?    
+  ```sh
+  >> u1=User.first
+  (1.1ms)  SELECT sqlite_version(*)
+  User Load (0.8ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?  [["LIMIT", 1]]
+  >> u3=User.third
+  User Load (0.8ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?  [["LIMIT", 1], ["OFFSET", 2]]
+  >> u1.following?(u3)
+  User Exists? (0.3ms)  SELECT 1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" 
+  WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  => false
+  >> u1.follow(u3)
+  TRANSACTION (0.1ms)  begin transaction
+  User Load (0.4ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Relationship Create (1.9ms)  INSERT INTO "relationships" ("follower_id", "followed_id", "created_at", "updated_at") 
+  VALUES (?, ?, ?, ?)  [["follower_id", 1], ["followed_id", 3], ["created_at", "2021-05-12 21:17:32.349862"], 
+  ["updated_at", "2021-05-12 21:17:32.349862"]]
+  TRANSACTION (70.6ms)  commit transaction
+  User Load (0.6ms)  SELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" 
+  WHERE "relationships"."follower_id" = ? /* loading for inspect */ LIMIT ?  [["follower_id", 1], ["LIMIT", 11]]
+  => #<ActiveRecord::Associations::CollectionProxy [#<User id: 2, name: "Londa Christiansen", email: "example-1@railstutorial.org", 
+  # created_at: "2021-04-27 08:24:46.936494000 +0000", updated_at: "2021-04-27 08:24:46.936494000 +0000", password_digest: 
+  # [FILTERED], remember_digest: nil, admin: nil, activation_digest: "$2a$12$1NJbknhsYCZy0Lw0YXJDQe03ElkW7flucPWBr/Eo9Xx...", 
+  # activated: true, activated_at: "2021-04-27 08:24:46.292028000 +0000", reset_digest: nil, reset_sent_at: nil>, 
+  # <User id: 3, name: "Mrs. Rashida O'Reilly", email: "example-2@railstutorial.org", created_at: "2021-04-27 
+  # 08:24:48.216607000 +0000", updated_at: "2021-04-27 08:24:48.216607000 +0000", password_digest: [FILTERED], 
+  # remember_digest: nil, admin: nil, activation_digest: "$2a$12$Z9OQythU7fiKiQdLxU2LrupdZ72UkHM/ENDXCO9Or0D...", 
+  # activated: true, activated_at: "2021-04-27 08:24:47.712315000 +0000", reset_digest: nil, reset_sent_at: nil>]>
+  >> u1.following?(u3)
+  User Exists? (0.4ms)  SELECT 1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" 
+  WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  => true
+  >> u1.unfollow(u3)
+  TRANSACTION (0.2ms)  begin transaction
+  Relationship Destroy (1.0ms)  DELETE FROM "relationships" WHERE "relationships"."follower_id" = ? AND 
+  "relationships"."followed_id" = ?  [["follower_id", 1], ["followed_id", 3]]
+  TRANSACTION (75.5ms)  commit transaction
+  => [#<User id: 3, name: "Mrs. Rashida O'Reilly", email: "example-2@railstutorial.org", created_at: 
+  # "2021-04-27 08:24:48.216607000 +0000", updated_at: "2021-04-27 08:24:48.216607000 +0000", password_digest: [FILTERED], 
+  # remember_digest: nil, admin: nil, activation_digest: "$2a$12$Z9OQythU7fiKiQdLxU2LrupdZ72UkHM/ENDXCO9Or0D...", 
+  # activated: true, activated_at: "2021-04-27 08:24:47.712315000 +0000", reset_digest: nil, reset_sent_at: nil>]
+  >> u1.following?(u3)
+  User Exists? (0.4ms)  SELECT 1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" 
+  WHERE "relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?  [["follower_id", 1], ["id", 3], ["LIMIT", 1]]
+  => false
+
+  ```
+  
+
+
+### Followers
