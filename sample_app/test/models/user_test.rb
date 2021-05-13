@@ -91,6 +91,7 @@ class UserTest < ActiveSupport::TestCase
 
     testowy.follow(smollboy)
     assert testowy.following?(smollboy)
+    assert smollboy.followers.include?(testowy)
 
     testowy.unfollow(smollboy)
     assert_not testowy.following?(smollboy)

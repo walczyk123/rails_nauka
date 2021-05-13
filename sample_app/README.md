@@ -56,7 +56,7 @@ Links doesn't work in RM, but github reads them correctly.
 
 * [Link to chapter 14 - Following Users](#chapter-14)   
   * [Relationship model](relationship-model)  
-
+  * [A web interface for following users](#a-web-interface-for-following-users)
 
 # Chapter 3  
 
@@ -2864,3 +2864,42 @@ Relationship belongs_to follower and followed user.
 
 
 ### Followers
+
+* ex1 - At the console, create several followers for the first user in the database(which you should call user). 
+  What is the value of user.followers.map(&:id)?
+  ```sh
+  >> u1=User.first
+  >> u2=User.fourth
+  >> u3=User.find_by(id: 6)
+  >> u4=User.find_by(id: 7)
+  >> u5=User.find_by(id: 8)
+  >> u2.follow(u1)
+  >> u3.follow(u1)
+  >> u4.follow(u1)
+  >> u5.follow(u1)
+  >> u1.followers.map(&:id)
+  => [4, 6, 7, 8]
+  ```
+  
+
+* ex2 - Confirm that `user.followers.count` matches the number of followers you created in the previous exercise.
+  ```sh
+  >> u1.followers.count
+  => 4
+  ```
+  __Counts correctly.__
+  
+
+* ex3 - What is the SQL used by `user.followers.count`? How is this different from `user.followers.to_a.count`? 
+  Hint: Suppose that the user had a million followers.  
+  
+  `user.followers.count` -> `SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" =
+  "relationships"."follower_id" WHERE "relationships"."followed_id" = ?`
+  
+  `user.followers.to_a.count` -> __It performs operation directly on database, so it dont need to 
+  take sth from db, then count.__
+
+
+[Page top](#README)
+
+## A web interface for following users
