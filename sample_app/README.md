@@ -2903,3 +2903,27 @@ Relationship belongs_to follower and followed user.
 [Page top](#README)
 
 ## A web interface for following users
+
+* interface, followers, following,   
+* followers and following pages
+
+### Sample following data
+
+>Fill database with relationships via `rails db:seed`
+
+
+* ex1 - Using the console, confirm that `User.first.followers.count` matches the value expected from Listing 14.14.   
+  ```sh
+  >> (3..40).each.count == User.first.followers.count
+  => true
+  ````
+
+
+* ex2 - Confirm that `User.first.following.count` is correct as well.   
+  ```sh
+  >> (2..50).each.count == User.first.following.count
+  => true
+  ````
+   
+
+### Stats anda follow form
