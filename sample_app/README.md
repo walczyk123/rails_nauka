@@ -2927,3 +2927,53 @@ Relationship belongs_to follower and followed user.
    
 
 ### Stats anda follow form
+
+* ex1 - Verify that /users/2 has a follow form and that /users/5 has an unfollow form. Is there a follow form on /users/1?   
+  __/users/2__ -> There isn't a follow form (can't follow himself)   
+  __/users/5__ -> There is only `follow` button  
+  __/users/1__ -> Yes   
+  
+
+
+* ex2 - Confirm in the browser that the stats appear correctly on the Home page and on the profile page.   
+  __Everything ok.__   
+  
+
+* ex3 - Write tests for the stats on the Home page.   
+  ```rb
+  test "layout_links" do
+
+    main_page_logged_out
+    main_page_logged_in
+  end
+  
+  #  =================== private ==============
+  private
+  
+  def main_page_logged_out
+  get root_path
+  assert_template 'static_pages/home'
+  assert_select "a[href=?]", root_path, count: 2
+  assert_select "a[href=?]", help_path
+  assert_select "a[href=?]", about_path
+  assert_select "a[href=?]", contact_path
+  end
+  
+  def main_page_logged_in
+  @user = users(:testowy)
+  log_in_as(@user, remember_me: "0")
+  get root_path
+  assert_template 'static_pages/home'
+  assert_select "a[href=?]", root_path, count: 2
+  assert_select "a[href=?]", help_path
+  assert_select "a[href=?]", users_path
+  assert_select "a[href=?]", user_path(@user)
+  assert_select "a[href=?]", logout_path
+  assert_select "a[href=?]", about_path
+  assert_select "a[href=?]", contact_path
+  assert_select "a[href=?]", signup_path, count: 0
+  assert_match @user.followers.count.to_s, response.body
+  assert_match @user.following.count.to_s, response.body
+  end
+  ```
+  
