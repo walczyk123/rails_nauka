@@ -2977,3 +2977,6 @@ Relationship belongs_to follower and followed user.
   end
   ```
   
+
+### Following and followers pages
+  

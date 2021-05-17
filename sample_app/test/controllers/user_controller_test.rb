@@ -1,13 +1,18 @@
 require "test_helper"
 
 class UserControllerTest < ActionDispatch::IntegrationTest
-  # test "should get name:string" do
-  #   get user_name:string_url
-  #   assert_response :success
-  # end
-  #
-  # test "should get email:string" do
-  #   get user_email:string_url
-  #   assert_response :success
-  # end
+  def setup
+    @user = users(:testowy)
+    @other_user = users(:smollboy)
+  end
+
+  test "should redirect following when not logged in" do
+    get following_user_path(@user)
+    assert_redirected_to login_url
+  end
+
+  test "should redirect followers when not logged in" do
+    get followers_user_path(@user)
+    assert_redirected_to login_url
+  end
 end
