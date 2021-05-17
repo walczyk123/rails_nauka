@@ -27,6 +27,13 @@ bigboy:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+gib:
+  name: "gibbi"
+  email: "gibbig@boy.com"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
 inactiveboy:
   name: "kinda big"
   email: "inactiv@boy.com"

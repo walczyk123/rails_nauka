@@ -2,7 +2,7 @@ require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(name: "ziomek12", email: "ziom12@ziom.com", password: "1qaz233", password_confirmation:"1qaz233")
+    @user = User.new(name: "ziomek12", email: "ziom12@ziom.com", password: "1qaz233", password_confirmation: "1qaz233")
   end
 
   test "should be valid" do
@@ -73,7 +73,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "authenticated? false for user with nil digest" do
-    assert_not @user.authenticated?(:remember,"")
+    assert_not @user.authenticated?(:remember, "")
   end
 
   test "associated microposts should be destroyed" do
@@ -85,8 +85,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should follow and unfollow a user" do
-    testowy=users(:testowy)
-    smollboy=users(:smollboy)
+    testowy = users(:testowy)
+    smollboy = users(:smollboy)
     assert_not testowy.following?(smollboy)
 
     testowy.follow(smollboy)
@@ -95,6 +95,6 @@ class UserTest < ActiveSupport::TestCase
 
     testowy.unfollow(smollboy)
     assert_not testowy.following?(smollboy)
-    end
+  end
 
 end

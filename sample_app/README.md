@@ -2980,3 +2980,12 @@ Relationship belongs_to follower and followed user.
 
 ### Following and followers pages
   
+* ex1 - Verify in a browser that `/users/1/followers` and `/users/1/following` work. 
+  Do the image links in the sidebar work as well?  
+  __Works fine.__
+  
+
+* ex2 - Comment out the application code needed to turn the assert_select tests in Listing 14.29 red 
+  to confirm they’re testing the right thing.  
+  ` # assert_select "a[href=?]", user_path(user)`   
+  __Yes, test goes red.__    
