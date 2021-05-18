@@ -2989,3 +2989,31 @@ Relationship belongs_to follower and followed user.
   to confirm they’re testing the right thing.  
   ` # assert_select "a[href=?]", user_path(user)`   
   __Yes, test goes red.__    
+  
+
+### A working follow button the standard way
+
+Following button needs to create and destroy relationships, so it needs controller.  
+`rails generate controller Relationships`
+
+
+* ex1 - Follow and unfollow /users/2 through the web. Did it work?  
+  __Everything is now working fine.__  
+  
+
+* ex2 - According to the server log, which templates are rendered in each case?  
+  When `follow` button is clicked -> 
+  ```sh
+  Rendering layout layouts/application.html.erb
+  Rendered users/_follow.html.erb (Duration: 27.7ms | Allocations: 2941)
+  Rendered users/_follow_form.html.erb (Duration: 43.2ms | Allocations: 4805)
+  ```
+  When 'unfollow' button is clicked -> 
+  ```sh
+  Rendered users/_unfollow.html.erb (Duration: 3.9ms | Allocations: 913)
+  Rendered users/_follow_form.html.erb (Duration: 7.8ms | Allocations: 1862)
+  ```
+ 
+
+
+### A working follow button with Ajax
