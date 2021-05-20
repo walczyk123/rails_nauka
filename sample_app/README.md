@@ -3017,3 +3017,17 @@ Following button needs to create and destroy relationships, so it needs controll
 
 
 ### A working follow button with Ajax
+  
+  application.rb -> `config.action_view.embed_authenticity_token_in_remote_forms = true`  
+  when js is enabled in browser rails automatically calls an embedded js `.js.erb`
+
+* ex1 - Unfollow and refollow /users/2 through the web. Did it work?  
+  __Yes, everything is working fine.__
+  
+
+* ex2 - According to the server log, which templates are rendered in each case?  
+  * When following -> `Rendered relationships/create.js.erb (Duration: 10.4ms | Allocations: 2173)`
+  * When unfollowing -> `Rendered relationships/destroy.js.erb (Duration: 7.1ms | Allocations: 1484)`
+
+
+### Following tests
