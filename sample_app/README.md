@@ -3031,3 +3031,23 @@ Following button needs to create and destroy relationships, so it needs controll
 
 
 ### Following tests
+
+  `xhr` -> __X__ ml __H__ ttp __R__ equest.
+  
+* ex1 - By commenting and uncommenting each of the lines in the `respond_to` blocks (Listing 14.36), verify that the tests
+  are testing the right things. Which test fails in each case?   
+  * When commenting out respond_to block in create method, "test_should_follow_a_user_the_standard_way" fails  
+  * When commenting out respond_to block in delete method, "test_should_unfollow_a_user_the_standard_way" fails
+  
+
+* ex2 - What happens if you delete one of the occurrences of xhr: true in Listing 14.40? Explain why this is a problem, 
+  and why the procedure in the previous exercise would catch it.  
+  
+  When  `xhr: true` is deleted, all tests still passes. The procedure in ex1 can catch it because both tests for follow
+  will fail, when thuth is that only one of them should.
+  
+
+
+  
+## The status feed
+  
