@@ -3048,6 +3048,18 @@ Following button needs to create and destroy relationships, so it needs controll
   
 
 
-  
+[Top page](#readme)
+
 ## The status feed
+  
+
+### Strategy
+
+
+* ex1 - Assuming the micropost’s ids are numbered sequentially, with larger numbers being more recent, what would 
+  user.feed.map(&:id) return for the feed shown in Figure 14.22?
+  __It should return a map of ID's, of all microposts from this user.__
+  
+### A first feed implementation
+
   
