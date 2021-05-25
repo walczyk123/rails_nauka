@@ -3062,4 +3062,54 @@ Following button needs to create and destroy relationships, so it needs controll
   
 ### A first feed implementation
 
+
+  ```rb
+  [1,2,3,4].map(&:to_s)
+  ["1","2","3","4"]
+  [1,2,3,4].map(&:to_s).join(',')
+  ["1,2,3,4"]
+  ```
+  ```rb
+  User.first.following.map(&:id)
+  User.first.following_ids
+  ```
+  ```sh
+  >> User.first.following.map(&:id)==User.first.following_ids
+  => true
+  ```
   
+* ex1 - In Listing 14.44, remove the part of the query that finds the user’s own posts. Which test in Listing 14.42 breaks?   
+  ```rb
+  def feed
+    # Micropost.where("user_id IN (?) OR user_id = ?", following_ids,id)
+    Micropost.where("user_id IN (?) = ?", following_ids,id) #ex1 p.885
+    # Micropost.where("user_id = ?", following_ids,id)  #ex2 p. 885
+    # Micropost.all #ex3 p. 855
+  end
+  ```
+  __It breaks "test feed should have the right post" and "test micropost interface".__
+
+
+* ex2 - In Listing 14.44, remove the part of the query that finds the followed users’ posts. Which test in Listing 14.42 breaks?  
+  ```rb
+  def feed
+    # Micropost.where("user_id IN (?) OR user_id = ?", following_ids,id)
+    # Micropost.where("user_id IN (?) = ?", following_ids,id) #ex1 p.885
+    Micropost.where("user_id = ?", following_ids,id)  #ex2 p. 885
+    # Micropost.all #ex3 p. 855
+  end
+  ```
+  __It breaks "test micropost sidebar count" and "test micropost interface".__
+
+
+* ex3 - How could you change the query in Listing 14.44 to have the feed erroneously return microposts of unfollowed 
+  users, thereby breaking the third test in Listing 14.42? Hint: Returning all the microposts would do the trick.
+  ```rb
+  def feed
+    # Micropost.where("user_id IN (?) OR user_id = ?", following_ids,id)
+    # Micropost.where("user_id IN (?) = ?", following_ids,id) #ex1 p.885
+    # Micropost.where("user_id = ?", following_ids,id)  #ex2 p. 885
+    Micropost.all #ex3 p. 855
+  end
+  ```
+  __It breaks "test feed should have the right posts".__

@@ -104,13 +104,15 @@ class UserTest < ActiveSupport::TestCase
     bigboy.microposts.each do |post_following|
       assert testowy.feed.include?(post_following)
     end
-    testowy.micropost.each do |post_self|
+    testowy.microposts.each do |post_self|
       assert testowy.feed.include?(post_self)
     end
-    smollboy.micropost.each do |post_unfollowed|
+    smollboy.microposts.each do |post_unfollowed|
       assert_not testowy.feed.include?(post_unfollowed)
     end
   end
+
+
 
 
 end
