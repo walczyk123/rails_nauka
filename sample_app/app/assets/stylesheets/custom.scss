@@ -17,16 +17,20 @@ $col_strong_gray: #454545;
   li {
     padding: 10px 0;
     border-top: 1px solid $col_light_red;
+    border-bottom:1px solid #2E2F30;
+    width: 70%;
   }
 
   .user {
     margin-top: 5em;
     padding-top: 0;
+
   }
 
   .content {
     display: block;
     margin-left: 60px;
+    background-color: #EEE;
 
     img {
       display: block;
