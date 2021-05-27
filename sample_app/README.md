@@ -3113,3 +3113,9 @@ Following button needs to create and destroy relationships, so it needs controll
   end
   ```
   __It breaks "test feed should have the right posts".__
+
+
+### Subselect 
+ `following_ids = "SELECT followed_id FROM relationships WHERE   
+  follower_id = :user_id"`
+ 
