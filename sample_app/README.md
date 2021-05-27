@@ -3118,4 +3118,7 @@ Following button needs to create and destroy relationships, so it needs controll
 ### Subselect 
  `following_ids = "SELECT followed_id FROM relationships WHERE   
   follower_id = :user_id"`
- 
+
+* ex1 -  Write an integration test to verify that the first page of the feed appears on the Home page as required. 
+  A template appears in Listing 14.49
+  
