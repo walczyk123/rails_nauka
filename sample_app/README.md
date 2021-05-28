@@ -3119,6 +3119,35 @@ Following button needs to create and destroy relationships, so it needs controll
  `following_ids = "SELECT followed_id FROM relationships WHERE   
   follower_id = :user_id"`
 
-* ex1 -  Write an integration test to verify that the first page of the feed appears on the Home page as required. 
+* ex1 - Write an integration test to verify that the first page of the feed appears on the Home page as required. 
   A template appears in Listing 14.49
+  ```rb
+  test "feed on Home page" do
+    get root_path
+    @user.feed.paginate(page:1).each do |micropost|
+      assert_match CGI.escapeHTML(micropost.content),response.body
+    end
+  end
+  ```
+
+* ex2 - Note  that Listing  14.49 escapes  the  expected  HTML  using CGI.escapeHTML (which is closely related to the 
+  CGI.escape method we used in Section 11.2.3 to escape URLs). Why is escaping the HTML necessary in this case?  
+  __I think because its try to match `/my\+wine\+is\+good/`, with `my wine is good\n`.__
   
+
+* ex3 - The code inListing 14.47 can be expressed directly in Rails using a socalle dinner join using the join method.
+  By running the tests, show that the code in Listing 14.50 returns a valid feed. What is the SQL query generated
+  by this code?  
+  ```rb
+  def feed
+    part_of_feed = "relationships.follower_id = :id or microposts.user_id = :id"
+    Micropost.joins(user: :followers).where(part_of_feed, {id:id})
+  end
+  ```
+  SQL query:  
+  ```sql
+  SELECT "microposts".* FROM "microposts" INNER JOIN "users" ON "users"."id" = "microposts"."user_id" INNER JOIN 
+  "relationships" ON "relationships"."followed_id" = "users"."id" INNER JOIN "users" "followers_users" ON 
+  "followers_users"."id" = "relationships"."follower_id" WHERE (relationships.follower_id = 1 or microposts.user_id = 1) 
+  ORDER BY "microposts"."created_at" DESC LIMIT ?  [["LIMIT", 11]]
+  ```
