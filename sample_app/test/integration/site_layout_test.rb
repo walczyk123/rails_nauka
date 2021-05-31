@@ -3,9 +3,9 @@ require "test_helper"
 class SiteLayoutTest < ActionDispatch::IntegrationTest
 
   test "layout_links" do
-
     main_page_logged_out
     main_page_logged_in
+    about_page_layout
   end
 
 #  =================== private ==============
@@ -18,6 +18,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", help_path
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
+    footer_elements
   end
 
   def main_page_logged_in
@@ -35,5 +36,18 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", signup_path, count: 0
     assert_match @user.followers.count.to_s, response.body
     assert_match @user.following.count.to_s, response.body
+    footer_elements
   end
+
+  def footer_elements
+    assert_select "a[href=?]", "https://github.com/walczyk123"
+    assert_select "a[href=?]", about_path
+  end
+
+  def about_page_layout
+    assert_select "a[href=?]", about_path
+    assert_select "a[href=?]", root_path
+    assert_select "a[href=?]", help_path
+  end
+
 end
